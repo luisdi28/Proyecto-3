@@ -1,2 +1,4 @@
-package AntVillage;public class Juego10 {
+package AntVillage;
+
+public class Juego10 {
 }

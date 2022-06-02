@@ -1,4 +1,4 @@
 package AntVillage;
 
-public class Juego12 {
+public class Juego8{
 }
