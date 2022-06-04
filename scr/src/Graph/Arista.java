@@ -40,5 +40,13 @@ public class Arista {
         this.distancia = distancia;
     }
 
-    
+    // Método que se encarga de mostrar el nodo de origen, el nodo destino y la distancia entre ellos
+    // Lo muestra en formato String
+    @Override
+    public String toString(){
+
+        return "\n Arista [Sector de origen = " + nodoOrigen.getSector() +
+                "; Sector destino = " + nodoDestino.getSector() +
+                "; Distancia = " + distancia + " ]";
+    }
 }
