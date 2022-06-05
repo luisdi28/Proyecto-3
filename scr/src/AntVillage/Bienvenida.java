@@ -176,19 +176,19 @@ public class Bienvenida extends javax.swing.JFrame {
         if (elegir_grafo1.isSelected() == true) {
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-                new Juego5().setVisible(true);
+                //new Juego5().setVisible(true);
             }
         }
         else if (elegir_grafo2.isSelected() == true){
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-                new Juego7().setVisible(true);
+                //new Juego7().setVisible(true);
             }
         }
         else {
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-                new Juego9().setVisible(true);
+                //new Juego9().setVisible(true);
             }
         }
     }
