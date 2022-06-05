@@ -45,7 +45,7 @@ public class Arista {
     @Override
     public String toString(){
 
-        return "\n Arista [Sector de origen = " + nodoOrigen.getSector() +
+        return "\n \t Arista [Sector de origen = " + nodoOrigen.getSector() +
                 "; Sector destino = " + nodoDestino.getSector() +
                 "; Distancia = " + distancia + " ]";
     }
