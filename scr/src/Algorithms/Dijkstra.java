@@ -71,7 +71,7 @@ public class Dijkstra {
         for (int i = 0; i < grafo.totalNodos(); i++){
 
             aux = nodos.get(grafoNodos.get(i));
-            
+
             if (aux <= menor && grafoNodos.get(i).getDatos().equals("") == true){
 
                 menor = aux;
@@ -85,6 +85,12 @@ public class Dijkstra {
     // Método que se encarga de verificar si se han recorrido todos los nodos
     public boolean recorridoCompleto(){
 
+        for (int i = 0; i < grafo.totalNodos(); i++){
+
+            if (!grafoNodos.get(i).getDatos().equals("Recorrido")){
+                return false;
+            }
+        }
         return true;
     }
 }
