@@ -10,7 +10,9 @@ public class NodoG {
     private String sector;
     private HashMap<NodoG, Arista> adyacentes = new HashMap<NodoG, Arista>();
     private String datos;
-
+    private int posicion_x;
+    private int posicion_y;
+    
     // Constructor de la clase Nodo
     public NodoG(String sector){
 
