@@ -11,6 +11,7 @@ public class NodoG {
 
     // Constructor de la clase Nodo
     public NodoG(String sector){
+
         this.sector = sector;
     }
 
