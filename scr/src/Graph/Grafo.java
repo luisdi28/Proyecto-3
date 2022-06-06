@@ -1,5 +1,7 @@
 package Graph;
 
+import Lists.Nodo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,17 @@ public class Grafo {
         }
         // Si no está vacía
         nodos.add(nodoG);
+    }
+
+    // Método que se encarga de realizar la conexión entre dos nodos
+    public void conectarNodos(NodoG nodoOrigen, NodoG nodoDestino, Arista arista){
+
+        if (!nodoOrigen.getAdyacentes().containsKey(nodoDestino)){
+            nodoOrigen.agregarArista(arista, nodoDestino);
+        }
+        else{
+            System.out.println("La conexión entre el nodo " + nodoOrigen + " y el nodo " + nodoDestino + " existe.");
+        }
     }
 
     // Método getter de la clase
