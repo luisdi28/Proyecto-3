@@ -1,6 +1,5 @@
 package AntVillage;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class Bienvenida extends javax.swing.JFrame {
@@ -13,9 +12,28 @@ public class Bienvenida extends javax.swing.JFrame {
      */
     public Bienvenida() {
         initComponents();
+        CrearInterfaz();
     }
 
+    public void CrearInterfaz() {
 
+        Bienvenida.setOpaque(true);
+        Bienvenida.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+
+        Escogencia_A.setOpaque(true);
+        Escogencia_A.setFont(new Font("Times New Roman", Font.PLAIN, 18));
+
+        c_alimento.setOpaque(true);
+        c_alimento.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+
+        c_alimento1.setOpaque(true);
+        c_alimento1.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+
+        ali.setFont(new Font("Times New Roman", Font.ROMAN_BASELINE, 15));
+
+        Escogencia_C.setOpaque(true);
+        Escogencia_C.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,6 +48,7 @@ public class Bienvenida extends javax.swing.JFrame {
         panelPresentacion = new javax.swing.JPanel();
         Bienvenida = new javax.swing.JLabel();
         Escogencia_A = new javax.swing.JLabel();
+        c_alimento = new javax.swing.JLabel();
         c_alimento1 = new javax.swing.JLabel();
         ali = new javax.swing.JTextField();
         Escogencia_C = new javax.swing.JLabel();
@@ -37,32 +56,23 @@ public class Bienvenida extends javax.swing.JFrame {
         elegir_grafo3 = new javax.swing.JRadioButton();
         elegir_grafo1 = new javax.swing.JRadioButton();
         elegir_grafo2 = new javax.swing.JRadioButton();
-        Boton_registro_partidas = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ventana_bienvenida");
 
-        panelPresentacion.setBackground(new java.awt.Color(0, 153, 153));
+        panelPresentacion.setBackground(new java.awt.Color(0, 255, 255));
 
-        Bienvenida.setFont(new java.awt.Font("Times New Roman", 1, 18));
         Bienvenida.setText("Bienvenid@ a AntVillage");
 
-        Escogencia_A.setFont(new java.awt.Font("Times New Roman", 1, 18));
-        Escogencia_A.setText("Digite la cantidad de alimento que desea para la partida, debe ser igual o menor a 5.");
+        Escogencia_A.setText("Digite la cantidad de alimento que desea para la partida:");
 
-        ali.setBackground(new java.awt.Color(102, 102, 102));
-        ali.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        ali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aliActionPerformed(evt);
-            }
-        });
+        c_alimento.setText("Cantidad de alimento:");
 
-        Escogencia_C.setFont(new java.awt.Font("Times New Roman", 1, 18));
+        c_alimento1.setText("Inserte un número menor o igual que 5");
+
         Escogencia_C.setText("Escoga UNA de las categorias dadas");
 
-        Boton_validar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        Boton_validar.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         Boton_validar.setText("Jugar");
         Boton_validar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,89 +81,77 @@ public class Bienvenida extends javax.swing.JFrame {
         });
 
         categorias.add(elegir_grafo3);
-        elegir_grafo3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        elegir_grafo3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         elegir_grafo3.setText("Grafo de 9 nodos");
 
         categorias.add(elegir_grafo1);
-        elegir_grafo1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        elegir_grafo1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         elegir_grafo1.setText("Grafo de 5 nodos");
 
         categorias.add(elegir_grafo2);
-        elegir_grafo2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        elegir_grafo2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         elegir_grafo2.setText("Grafo de 7 nodos");
-
-        Boton_registro_partidas.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        Boton_registro_partidas.setText("Historial de partidas");
-        Boton_registro_partidas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_registro_partidasActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Si desea ver el historial de partidas puede acceder por medio del siguiente botón");
 
         javax.swing.GroupLayout panelPresentacionLayout = new javax.swing.GroupLayout(panelPresentacion);
         panelPresentacion.setLayout(panelPresentacionLayout);
         panelPresentacionLayout.setHorizontalGroup(
                 panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                .addContainerGap()
+                                .addGap(60, 60, 60)
                                 .addComponent(elegir_grafo1)
-                                .addGap(74, 74, 74)
+                                .addGap(77, 77, 77)
                                 .addComponent(elegir_grafo2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                                 .addComponent(elegir_grafo3)
-                                .addContainerGap())
+                                .addGap(44, 44, 44))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Boton_registro_partidas)
-                                .addGap(249, 249, 249))
+                                .addComponent(Boton_validar)
+                                .addGap(264, 264, 264))
                         .addGroup(panelPresentacionLayout.createSequentialGroup()
                                 .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(234, 234, 234)
-                                                .addComponent(Bienvenida))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(Escogencia_A))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(296, 296, 296)
-                                                .addComponent(Boton_validar))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(jLabel1))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(298, 298, 298)
+                                                .addGap(269, 269, 269)
                                                 .addComponent(ali, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(183, 183, 183)
-                                                .addComponent(Escogencia_C)))
+                                                .addGap(167, 167, 167)
+                                                .addComponent(Bienvenida))
+                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
+                                                .addGap(225, 225, 225)
+                                                .addComponent(c_alimento))
+                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
+                                                .addGap(104, 104, 104)
+                                                .addComponent(Escogencia_A))
+                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
+                                                .addGap(182, 182, 182)
+                                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(Escogencia_C)
+                                                        .addComponent(c_alimento1))))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPresentacionLayout.setVerticalGroup(
                 panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                .addGap(56, 56, 56)
+                                .addGap(54, 54, 54)
                                 .addComponent(Bienvenida)
-                                .addGap(50, 50, 50)
+                                .addGap(36, 36, 36)
                                 .addComponent(Escogencia_A)
-                                .addGap(19, 19, 19)
+                                .addGap(51, 51, 51)
+                                .addComponent(c_alimento1)
+                                .addGap(47, 47, 47)
+                                .addComponent(c_alimento)
+                                .addGap(28, 28, 28)
                                 .addComponent(ali, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
+                                .addGap(53, 53, 53)
                                 .addComponent(Escogencia_C)
-                                .addGap(38, 38, 38)
+                                .addGap(37, 37, 37)
                                 .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(elegir_grafo1)
                                         .addComponent(elegir_grafo2)
                                         .addComponent(elegir_grafo3))
-                                .addGap(30, 30, 30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                                 .addComponent(Boton_validar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addGap(28, 28, 28)
-                                .addComponent(Boton_registro_partidas)
-                                .addGap(76, 76, 76))
+                                .addGap(70, 70, 70))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -196,13 +194,6 @@ public class Bienvenida extends javax.swing.JFrame {
             }
         }
     }
-    private void Boton_registro_partidasActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void aliActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
 
     /**
      * @param args the command line arguments
@@ -220,7 +211,13 @@ public class Bienvenida extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -235,17 +232,16 @@ public class Bienvenida extends javax.swing.JFrame {
 
     // Variables declaration - do not modify
     private javax.swing.JLabel Bienvenida;
-    private javax.swing.JButton Boton_registro_partidas;
     private javax.swing.JButton Boton_validar;
     private javax.swing.JLabel Escogencia_A;
     private javax.swing.JLabel Escogencia_C;
     private javax.swing.JTextField ali;
+    private javax.swing.JLabel c_alimento;
     private javax.swing.JLabel c_alimento1;
     private javax.swing.ButtonGroup categorias;
     private javax.swing.JRadioButton elegir_grafo1;
     private javax.swing.JRadioButton elegir_grafo2;
     private javax.swing.JRadioButton elegir_grafo3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPresentacion;
     // End of variables declaration
 }
