@@ -68,6 +68,16 @@ public class Dijkstra {
         Integer aux;
         NodoG nodoMenor = null;
 
+        for (int i = 0; i < grafo.totalNodos(); i++){
+
+            aux = nodos.get(grafoNodos.get(i));
+            
+            if (aux <= menor && grafoNodos.get(i).getDatos().equals("") == true){
+
+                menor = aux;
+                nodoMenor = grafoNodos.get(i);
+            }
+        }
 
         return nodoMenor;
     }
