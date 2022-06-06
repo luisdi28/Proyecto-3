@@ -61,7 +61,6 @@ public class Bienvenida extends javax.swing.JFrame {
         setTitle("ventana_bienvenida");
 
         panelPresentacion.setBackground(new java.awt.Color(0, 255, 255));
-        panelPresentacion.setForeground(new java.awt.Color(0, 255, 255));
 
         Bienvenida.setText("Bienvenid@ a AntVillage");
 
@@ -176,31 +175,22 @@ public class Bienvenida extends javax.swing.JFrame {
         if (elegir_grafo1.isSelected() == true) {
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-<<<<<<< HEAD
-                //new Juego5().setVisible(true);
-=======
-                new Juego5().setVisible(true);
->>>>>>> parent of f5de7c6... Creación de las ventanas de juego y modificaciones a la pantalla inicial
+                new Juego5(alimento).setVisible(true);
+
             }
         }
         else if (elegir_grafo2.isSelected() == true){
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-<<<<<<< HEAD
-                //new Juego7().setVisible(true);
-=======
-                new Juego7().setVisible(true);
->>>>>>> parent of f5de7c6... Creación de las ventanas de juego y modificaciones a la pantalla inicial
+                new Juego7(alimento).setVisible(true);
+
             }
         }
         else {
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-<<<<<<< HEAD
-                //new Juego9().setVisible(true);
-=======
-                new Juego9().setVisible(true);
->>>>>>> parent of f5de7c6... Creación de las ventanas de juego y modificaciones a la pantalla inicial
+                new Juego9(alimento).setVisible(true);
+
             }
         }
     }
