@@ -6,7 +6,7 @@ import java.util.List;
 public class Grafo {
 
     // Atributo de la clase
-    private List<NodoG> nodos;
+    private static ArrayList<NodoG> nodos;
 
     // Método que se encarga de agregar nodos al grafo
     public void agregarNodo(NodoG nodoG){
@@ -20,8 +20,23 @@ public class Grafo {
     }
 
     // Método getter de la clase
-    public List<NodoG> getNodos(){
+    public ArrayList<NodoG> getNodos() {
         return nodos;
+    }
+
+    // Método que se encarga de retornar el total de nodos en el grafo
+    public int totalNodos(){
+        return nodos.size();
+    }
+
+    // Método que se encarga de verificar si el nodo existe
+    public static boolean existeNodo(NodoG nodoG){
+
+        if (nodos.contains(nodoG)){
+            return true;
+        }
+
+        return false;
     }
 
     // Método que se encarga de retornar los nodos (grafo) existentes en el grafo en formato String

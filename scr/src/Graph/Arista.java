@@ -8,11 +8,11 @@ public class Arista {
     private int distancia;
 
     // Constructor de la clase Arista
-    public Arista(NodoG nodoOrigen, NodoG nodoDestino, int peso){
+    public Arista(NodoG nodoOrigen, NodoG nodoDestino, int distancia){
 
         this.nodoOrigen = nodoOrigen;
         this.nodoDestino = nodoDestino;
-        this.distancia = peso;
+        this.distancia = distancia;
     }
 
     // Métodos getter y setter
