@@ -30,7 +30,33 @@ public class Dijkstra {
             nodos.put(grafoNodos.get(i), Integer.MAX_VALUE);
         }
 
+        // Nodo origen es 0
         nodos.put(origen, 0);
+
+        // Variables propias del método
+        int peso, pesoNodo;
+        NodoG nodoAux;
+        HashMap<NodoG, Arista> aristas = null;
+        Object[] adyacentes;
+
+        do{
+
+            nodoAux = obtenerMenor();
+            nodoAux.setDatos("Recorrido");
+            aristas = nodoAux.getAdyacentes();
+            adyacentes = nodoAux.getAdyacentes().keySet().toArray();
+            pesoNodo = nodos.get(nodoAux);
+
+            for (int i = 0; i < aristas.size(); i++){
+
+                peso = aristas.get(adyacentes[i]).getDistancia();
+
+                if ((pesoNodo + peso) < nodos.get((NodoG)adyacentes[i])){
+                    nodos.put((NodoG) adyacentes[i], pesoNodo + peso);
+                }
+            }
+
+        }while(recorridoCompleto() == false);
 
         return nodos.get(destino);
     }
