@@ -24,7 +24,14 @@ public class Dijkstra {
     // Método que se encarga de detectar la ruta más corta entre dos nodos
     public int rutaCostoMinimo(NodoG origen, NodoG destino){
 
-        
+        grafoNodos = grafo.getNodos();
+
+        for (int i = 0; i < grafo.totalNodos(); i++){
+            nodos.put(grafoNodos.get(i), Integer.MAX_VALUE);
+        }
+
+        nodos.put(origen, 0);
+
         return nodos.get(destino);
     }
 
