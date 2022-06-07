@@ -9,16 +9,16 @@ public class Grafo {
 
     // Atributo de la clase
     private static ArrayList<NodoG> nodos;
+    private ArrayList<NodoG> visitados, arbolViitados;
 
     // Método que se encarga de agregar nodos al grafo
     public void agregarNodo(NodoG nodoG){
-        // Si la lista está vacía
-        if (nodos == null){
-            // Crea un nuevo ArrayList
-            nodos = new ArrayList<>();
+
+        // Se verifica que el nodo no exista
+        if (!nodos.contains(nodoG)){
+            // Se agrega el nodo al ArrayList
+            nodos.add(nodoG);
         }
-        // Si no está vacía
-        nodos.add(nodoG);
     }
 
     // Método que se encarga de realizar la conexión entre dos nodos
