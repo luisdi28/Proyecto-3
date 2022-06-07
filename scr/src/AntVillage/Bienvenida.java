@@ -1,7 +1,6 @@
 package AntVillage;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JOptionPane;
 
 public class Bienvenida extends javax.swing.JFrame {
 
@@ -14,6 +13,7 @@ public class Bienvenida extends javax.swing.JFrame {
     public Bienvenida() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,7 +28,6 @@ public class Bienvenida extends javax.swing.JFrame {
         panelPresentacion = new javax.swing.JPanel();
         Bienvenida = new javax.swing.JLabel();
         Escogencia_A = new javax.swing.JLabel();
-        c_alimento1 = new javax.swing.JLabel();
         ali = new javax.swing.JTextField();
         Escogencia_C = new javax.swing.JLabel();
         Boton_validar = new javax.swing.JButton();
@@ -36,28 +35,24 @@ public class Bienvenida extends javax.swing.JFrame {
         elegir_grafo1 = new javax.swing.JRadioButton();
         elegir_grafo2 = new javax.swing.JRadioButton();
         Boton_registro_partidas = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        Historial = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ventana_bienvenida");
+        setResizable(false);
 
         panelPresentacion.setBackground(new java.awt.Color(0, 153, 153));
 
-        Bienvenida.setFont(new java.awt.Font("Times New Roman", 1, 18));
+        Bienvenida.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         Bienvenida.setText("Bienvenid@ a AntVillage");
 
-        Escogencia_A.setFont(new java.awt.Font("Times New Roman", 1, 18));
+        Escogencia_A.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         Escogencia_A.setText("Digite la cantidad de alimento que desea para la partida, debe ser igual o menor a 5.");
 
         ali.setBackground(new java.awt.Color(102, 102, 102));
         ali.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        ali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aliActionPerformed(evt);
-            }
-        });
 
-        Escogencia_C.setFont(new java.awt.Font("Times New Roman", 1, 18));
+        Escogencia_C.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         Escogencia_C.setText("Escoga UNA de las categorias dadas");
 
         Boton_validar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -88,46 +83,53 @@ public class Bienvenida extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Si desea ver el historial de partidas puede acceder por medio del siguiente botón");
+        Historial.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        Historial.setText("Si desea ver el historial de partidas puede acceder por medio del siguiente botón");
 
         javax.swing.GroupLayout panelPresentacionLayout = new javax.swing.GroupLayout(panelPresentacion);
         panelPresentacion.setLayout(panelPresentacionLayout);
         panelPresentacionLayout.setHorizontalGroup(
                 panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(elegir_grafo1)
-                                .addGap(74, 74, 74)
-                                .addComponent(elegir_grafo2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(elegir_grafo3)
+                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(elegir_grafo1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(elegir_grafo2)
+                                                .addGap(80, 80, 80)
+                                                .addComponent(elegir_grafo3))
+                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
+                                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
+                                                                .addGap(234, 234, 234)
+                                                                .addComponent(Bienvenida))
+                                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
+                                                                .addContainerGap()
+                                                                .addComponent(Escogencia_A)))
+                                                .addGap(0, 4, Short.MAX_VALUE)))
                                 .addContainerGap())
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Boton_registro_partidas)
-                                .addGap(249, 249, 249))
-                        .addGroup(panelPresentacionLayout.createSequentialGroup()
                                 .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(234, 234, 234)
-                                                .addComponent(Bienvenida))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(Escogencia_A))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(296, 296, 296)
-                                                .addComponent(Boton_validar))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(jLabel1))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(298, 298, 298)
-                                                .addComponent(ali, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGap(183, 183, 183)
-                                                .addComponent(Escogencia_C)))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                                .addComponent(Historial)
+                                                .addGap(23, 23, 23))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                                .addComponent(Boton_registro_partidas)
+                                                .addGap(235, 235, 235))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                                .addComponent(ali, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(304, 304, 304))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                                .addComponent(Escogencia_C)
+                                                .addGap(191, 191, 191))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                                .addComponent(Boton_validar)
+                                                .addGap(289, 289, 289))))
         );
         panelPresentacionLayout.setVerticalGroup(
                 panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,9 +138,9 @@ public class Bienvenida extends javax.swing.JFrame {
                                 .addComponent(Bienvenida)
                                 .addGap(50, 50, 50)
                                 .addComponent(Escogencia_A)
-                                .addGap(19, 19, 19)
+                                .addGap(18, 18, 18)
                                 .addComponent(ali, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
+                                .addGap(45, 45, 45)
                                 .addComponent(Escogencia_C)
                                 .addGap(38, 38, 38)
                                 .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -148,21 +150,21 @@ public class Bienvenida extends javax.swing.JFrame {
                                 .addGap(30, 30, 30)
                                 .addComponent(Boton_validar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addGap(28, 28, 28)
+                                .addComponent(Historial)
+                                .addGap(29, 29, 29)
                                 .addComponent(Boton_registro_partidas)
-                                .addGap(76, 76, 76))
+                                .addGap(75, 75, 75))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelPresentacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelPresentacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelPresentacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelPresentacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -176,30 +178,35 @@ public class Bienvenida extends javax.swing.JFrame {
             if (alimento <= 5){
                 Bienvenida.this.dispose();
                 new Juego5(alimento).setVisible(true);
-
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
         }
         else if (elegir_grafo2.isSelected() == true){
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-                new Juego7(alimento).setVisible(true);
-
+                new Juego5(alimento).setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
         }
         else {
             if (alimento <= 5){
                 Bienvenida.this.dispose();
-                new Juego9(alimento).setVisible(true);
-
+                new Juego5(alimento).setVisible(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
         }
     }
-    private void Boton_registro_partidasActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
 
-    private void aliActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    private void Boton_registro_partidasActionPerformed(java.awt.event.ActionEvent evt) {
+
+        Bienvenida.this.dispose();
+        new Historial().setVisible(true);
     }
 
     /**
@@ -218,7 +225,13 @@ public class Bienvenida extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -237,13 +250,12 @@ public class Bienvenida extends javax.swing.JFrame {
     private javax.swing.JButton Boton_validar;
     private javax.swing.JLabel Escogencia_A;
     private javax.swing.JLabel Escogencia_C;
+    private javax.swing.JLabel Historial;
     private javax.swing.JTextField ali;
-    private javax.swing.JLabel c_alimento1;
     private javax.swing.ButtonGroup categorias;
     private javax.swing.JRadioButton elegir_grafo1;
     private javax.swing.JRadioButton elegir_grafo2;
     private javax.swing.JRadioButton elegir_grafo3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelPresentacion;
     // End of variables declaration
 }
