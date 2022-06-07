@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="RSScaleLabel">
+  <library name="RSScaleLabel1">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../../Java/RSScaleLabel.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/RSScaleLabel.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

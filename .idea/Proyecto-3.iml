@@ -5,6 +5,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="RSScaleLabel" level="project" />
+    <orderEntry type="library" name="RSScaleLabel1" level="project" />
   </component>
 </module>
