@@ -22,7 +22,7 @@ public class Dijkstra {
     }
 
     // Método que se encarga de detectar la ruta más corta entre dos nodos
-    public int rutaCostoMinimo(NodoG origen, NodoG destino){
+    public int rutaCostoMinimoDijkstra(NodoG origen, NodoG destino){
 
         grafoNodos = grafo.getNodos();
 
