@@ -52,43 +52,57 @@ public class Juego7 extends javax.swing.JFrame {
         Comida_verde = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         panelJuego.setBackground(new java.awt.Color(161, 130, 98));
 
         panelInfo.setBackground(new java.awt.Color(0, 102, 102));
 
+        Cantidad.setFont(new java.awt.Font("Times New Roman", 1, 12));
         Cantidad.setText("Cantidad de comida escogida:");
 
-        Comida_Esco.setText("..............");
+        Comida_Esco.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Comida_Esco.setText("...");
 
+        Hormiga_v.setFont(new java.awt.Font("Times New Roman", 1, 12));
         Hormiga_v.setText("Hormigas Verdes:");
 
+        Hormiga_a.setFont(new java.awt.Font("Times New Roman", 1, 12));
         Hormiga_a.setText("Hormigas Azules:");
 
-        Comida_azul.setText("...............");
+        Comida_azul.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Comida_azul.setText("...");
 
-        Comida_verde.setText("...............");
+        Comida_verde.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Comida_verde.setText("...");
 
         javax.swing.GroupLayout panelInfoLayout = new javax.swing.GroupLayout(panelInfo);
         panelInfo.setLayout(panelInfoLayout);
         panelInfoLayout.setHorizontalGroup(
                 panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelInfoLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(Cantidad)
-                                .addGap(95, 95, 95)
-                                .addComponent(Hormiga_v)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
-                                .addComponent(Hormiga_a)
-                                .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(Comida_Esco)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Comida_verde)
-                                .addGap(181, 181, 181)
-                                .addComponent(Comida_azul)
-                                .addGap(32, 32, 32))
+                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(panelInfoLayout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(Cantidad))
+                                        .addGroup(panelInfoLayout.createSequentialGroup()
+                                                .addGap(84, 84, 84)
+                                                .addComponent(Comida_Esco)))
+                                .addGap(72, 72, 72)
+                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(Hormiga_v, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(Comida_verde, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(37, 37, 37)))
+                                .addGap(74, 74, 74)
+                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(Hormiga_a)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Comida_azul)
+                                                .addGap(43, 43, 43)))
+                                .addGap(84, 84, 84))
         );
         panelInfoLayout.setVerticalGroup(
                 panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,12 +110,12 @@ public class Juego7 extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(Cantidad)
-                                        .addComponent(Hormiga_v)
-                                        .addComponent(Hormiga_a))
-                                .addGap(18, 18, 18)
+                                        .addComponent(Hormiga_a)
+                                        .addComponent(Hormiga_v, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, Short.MAX_VALUE)
                                 .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(Comida_verde)
                                         .addComponent(Comida_Esco)
+                                        .addComponent(Comida_verde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(Comida_azul))
                                 .addContainerGap(21, Short.MAX_VALUE))
         );

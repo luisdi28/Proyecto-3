@@ -3,19 +3,19 @@ package AntVillage;
 import javax.swing.*;
 
 public class Juego5 extends javax.swing.JFrame {
-    int alimento;
+
     String hormiguero = "imagenes/Imagen1.png";
 
     public Juego5(int alimento) {
-        this.alimento = alimento;
+
 
         initComponents();
-        Comida_Esco.setText(String.valueOf(this.alimento));
-        rsscalelabel.RSScaleLabel.setScaleLabel(Nodo1, hormiguero);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Nodo2, hormiguero);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Nodo3, hormiguero);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Nodo4, hormiguero);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Nodo5, hormiguero);
+        Comida_Esco.setText(String.valueOf(alimento));
+        rsscalelabel.RSScaleLabel.setScaleLabel(A, hormiguero);
+        rsscalelabel.RSScaleLabel.setScaleLabel(B, hormiguero);
+        rsscalelabel.RSScaleLabel.setScaleLabel(C, hormiguero);
+        rsscalelabel.RSScaleLabel.setScaleLabel(D, hormiguero);
+        rsscalelabel.RSScaleLabel.setScaleLabel(E, hormiguero);
     }
 
     public Juego5() {
@@ -33,11 +33,11 @@ public class Juego5 extends javax.swing.JFrame {
     private void initComponents() {
 
         panelJuego = new javax.swing.JPanel();
-        Nodo1 = new javax.swing.JLabel();
-        Nodo2 = new javax.swing.JLabel();
-        Nodo3 = new javax.swing.JLabel();
-        Nodo4 = new javax.swing.JLabel();
-        Nodo5 = new javax.swing.JLabel();
+        A = new javax.swing.JLabel();
+        B = new javax.swing.JLabel();
+        C = new javax.swing.JLabel();
+        D = new javax.swing.JLabel();
+        E = new javax.swing.JLabel();
         panelInfo = new javax.swing.JPanel();
         Cantidad = new javax.swing.JLabel();
         Comida_Esco = new javax.swing.JLabel();
@@ -47,25 +47,29 @@ public class Juego5 extends javax.swing.JFrame {
         Comida_verde = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAutoRequestFocus(false);
-        setBackground(new java.awt.Color(102, 102, 102));
+        setResizable(false);
 
-        panelJuego.setBackground(new java.awt.Color(102, 51, 0));
-
+        panelJuego.setBackground(new java.awt.Color(161, 130, 98));
 
         panelInfo.setBackground(new java.awt.Color(0, 102, 102));
 
+        Cantidad.setFont(new java.awt.Font("Times New Roman", 1, 12));
         Cantidad.setText("Cantidad de comida escogida:");
 
-        Comida_Esco.setText("..............");
+        Comida_Esco.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Comida_Esco.setText("...");
 
+        Hormiga_v.setFont(new java.awt.Font("Times New Roman", 1, 12));
         Hormiga_v.setText("Hormigas Verdes:");
 
+        Hormiga_a.setFont(new java.awt.Font("Times New Roman", 1, 12));
         Hormiga_a.setText("Hormigas Azules:");
 
-        Comida_azul.setText("...............");
+        Comida_azul.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Comida_azul.setText("...");
 
-        Comida_verde.setText("...............");
+        Comida_verde.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Comida_verde.setText("...");
 
         javax.swing.GroupLayout panelInfoLayout = new javax.swing.GroupLayout(panelInfo);
         panelInfo.setLayout(panelInfoLayout);
@@ -110,19 +114,19 @@ public class Juego5 extends javax.swing.JFrame {
             panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJuegoLayout.createSequentialGroup()
                 .addGap(72, 72, 72)
-                .addComponent(Nodo4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(D, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Nodo5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(E, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJuegoLayout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addComponent(Nodo1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(A, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Nodo2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(B, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(132, 132, 132))
             .addGroup(panelJuegoLayout.createSequentialGroup()
                 .addGap(256, 256, 256)
-                .addComponent(Nodo3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(C, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(panelInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -133,20 +137,20 @@ public class Juego5 extends javax.swing.JFrame {
                 .addGroup(panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelJuegoLayout.createSequentialGroup()
                         .addGap(81, 81, 81)
-                        .addComponent(Nodo1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(A, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelJuegoLayout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addComponent(Nodo2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(B, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addComponent(Nodo3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(C, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelJuegoLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(Nodo5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(E, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(89, 89, 89))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJuegoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Nodo4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(D, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37))))
         );
 
@@ -200,11 +204,11 @@ public class Juego5 extends javax.swing.JFrame {
     private javax.swing.JLabel Comida_verde;
     private javax.swing.JLabel Hormiga_a;
     private javax.swing.JLabel Hormiga_v;
-    private javax.swing.JLabel Nodo1;
-    private javax.swing.JLabel Nodo2;
-    private javax.swing.JLabel Nodo3;
-    private javax.swing.JLabel Nodo4;
-    private javax.swing.JLabel Nodo5;
+    private javax.swing.JLabel A;
+    private javax.swing.JLabel B;
+    private javax.swing.JLabel C;
+    private javax.swing.JLabel D;
+    private javax.swing.JLabel E;
     private javax.swing.JPanel panelInfo;
     private javax.swing.JPanel panelJuego;
     // End of variables declaration//GEN-END:variables
