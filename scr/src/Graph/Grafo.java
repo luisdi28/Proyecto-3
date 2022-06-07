@@ -9,7 +9,7 @@ public class Grafo {
 
     // Atributo de la clase
     private static ArrayList<NodoG> nodos;
-    private ArrayList<NodoG> visitados, arbolViitados;
+    // Tal vez se usará más adelante -> private ArrayList<NodoG> visitados;
 
     // Método que se encarga de agregar nodos al grafo
     public void agregarNodo(NodoG nodoG){
@@ -18,6 +18,9 @@ public class Grafo {
         if (!nodos.contains(nodoG)){
             // Se agrega el nodo al ArrayList
             nodos.add(nodoG);
+        }
+        else{
+            System.out.println("El nodo " + nodoG.toString() + " ya existe.");
         }
     }
 
