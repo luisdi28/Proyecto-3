@@ -1,5 +1,6 @@
 package Graph;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 // Clase creada como prototipo a una idea
@@ -68,6 +69,8 @@ public class GrafoGenerado {
         int i, j;
         int distancia;
 
+        ArrayList arrayList;
+
         switch (opcion){
 
             case 5:
@@ -114,7 +117,6 @@ public class GrafoGenerado {
                 sectores = new String[]{"SectorA", "SectorB", "SectorC",
                                         "SectorD", "SectorE", "SectorF",
                                         "SectorG", "SectorH", "SectorI"};
-                arrayLength = sectores.length;
 
                 // Cada elemento del arreglo sectores se convierte en un nodo del grafo
                 for(i = 0; i < sectores.length; i++){
@@ -124,17 +126,33 @@ public class GrafoGenerado {
                     grafo.agregarNodo(nodoG);
                 }
 
+                // La variable creada en este método toma el ArrayList que retorna el método getNodos()
+                arrayList = grafo.getNodos();
+                // arrayLength toma el tamaño del arrayList
+                arrayLength = arrayList.size();
+
                 // Se crean las conexiones entre nodos para el grafo dirigido
+                // Se ejecuta m veces donde m es igual al tamaño del ArrayList
                 for (i = 0; i < arrayLength; i++){
+                    // Se ejecuta n veces donde n es igual al tamaño del ArrayList * tamaño del ArrayList
                     for (j = 0; j < arrayLength; j++){
 
+                        // Se ejecuta solo si el valor generado es true
                         if (randomBoolean.nextBoolean() == true){
-                            if (sectores[i].equals(sectores[j])){
+
+                            // Si los valores son los mismos se continua sin generar una conexión
+                            // Esto se hace para que el nodo no esté relacionado consigo mismo
+                            if (arrayList.get(i).equals(arrayList.get(j))){
                                 continue;
                             }
+                            // En caso de ser true y diferentes
                             else{
+                                // Se genera una distancia aleatoria entre 10 y 40
                                 distancia = randomInt.nextInt(10, 40);
-                                //grafo.conectarNodos(sectores[i], sectores[j], new Arista(distancia));
+                                // Se realiza la conexión
+                                grafo.conectarNodos(grafo.getNodos().get(i), grafo.getNodos().get(j), new Arista(distancia));
+                                // Segunda opción
+                                // grafo.conectarNodos((NodoG) arrayList.get(i), (NodoG) arrayList.get(j), new Arista(distancia));
                             }
                         }
                     }
