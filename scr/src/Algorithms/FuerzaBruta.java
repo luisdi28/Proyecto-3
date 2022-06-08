@@ -3,15 +3,13 @@ package Algorithms;
 import Graph.Grafo;
 import Graph.NodoG;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class FuerzaBruta {
 
     // Atributos de la clase
     private Grafo grafo;
+    private NodoG nodoG;
 
     // Constructor de la clase
     public FuerzaBruta(Grafo grafo){
@@ -33,6 +31,9 @@ public class FuerzaBruta {
     // Se efectúa de forma recursiva
     public void recorrerRuta(NodoG nodoOrigen, NodoG nodoDestino, Stack<NodoG> rutas){
 
+        int total, i;
+        total= grafo.totalNodos();
+
         // Si el nodo origen es igual al nodo destino
         if (nodoOrigen == nodoDestino){
 
@@ -41,6 +42,19 @@ public class FuerzaBruta {
                 System.out.print(nodoG.getSector());
                 System.out.print(" : " + evaluarRuta(rutas));
                 System.out.println();
+            }
+        }
+        // Si el nodo origen y nodo final son diferentes
+        else{
+
+            List<NodoG> nodoGList = (List<NodoG>) nodoG.getAdyacentes();
+
+            // Se realiza un for - each loop para recorrer las rutas adyacentes
+            for (NodoG nodoG1 : nodoGList){
+
+                rutas.push(nodoG1);
+                recorrerRuta(nodoG1, nodoDestino, rutas);
+                rutas.pop();
             }
         }
     }
