@@ -1,6 +1,17 @@
 package Algorithms;
 
+import Graph.Grafo;
+
 public class FuerzaBruta {
+
+    // Atributos de la clase
+    private Grafo grafo;
+
+    // Constructor de la clase
+    public FuerzaBruta(Grafo grafo){
+
+        this.grafo = grafo;
+    }
 
     // Método que se encarga de encontrar la ruta mínima entre dos nodos del grafo
     public void rutaCostoMinimoFuerzaBruta(){
