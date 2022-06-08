@@ -33,10 +33,20 @@ public class FuerzaBruta {
     // Se efectúa de forma recursiva
     public void recorrerRuta(NodoG nodoOrigen, NodoG nodoDestino, Stack<NodoG> rutas){
 
+        // Si el nodo origen es igual al nodo destino
+        if (nodoOrigen == nodoDestino){
+
+            for (NodoG nodoG : rutas){
+
+                System.out.print(nodoG.getSector());
+                System.out.print(" : " + evaluarRuta(rutas));
+                System.out.println();
+            }
+        }
     }
 
     // Método que se encarga de evaluar la longitud de la ruta
-    public int evaluarRuta(){
+    public int evaluarRuta(Stack<NodoG> rutas){
 
         int resultado = 0;
 
