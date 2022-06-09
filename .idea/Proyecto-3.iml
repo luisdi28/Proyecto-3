@@ -6,5 +6,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="RSScaleLabel" level="project" />
+    <orderEntry type="library" name="AbsoluteLayout" level="project" />
   </component>
 </module>
