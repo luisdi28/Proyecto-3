@@ -2,14 +2,15 @@ package AntVillage;
 
 public class Juego7 extends javax.swing.JFrame {
 
-    String hormiguero = "imagenes/Imagen1.png";
+    String hormiguero = "imagenes/imagen1.png";
+    String comida_juego = "imagenes/Comida.png";
 
     /**
      * Creates new form Juego7
      */
     public Juego7(int alimento) {
-        initComponents();
 
+        initComponents();
 
         Comida_Esco.setText(String.valueOf(alimento));
 
@@ -20,6 +21,14 @@ public class Juego7 extends javax.swing.JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(E, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(F, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(G, hormiguero);
+
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_F,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_G,comida_juego);
 
     }
 
@@ -36,12 +45,19 @@ public class Juego7 extends javax.swing.JFrame {
     private void initComponents() {
 
         panelJuego = new javax.swing.JPanel();
+        Comida_A = new javax.swing.JLabel();
         A = new javax.swing.JLabel();
+        Comida_B = new javax.swing.JLabel();
         B = new javax.swing.JLabel();
+        Comida_C = new javax.swing.JLabel();
         C = new javax.swing.JLabel();
+        Comida_D = new javax.swing.JLabel();
         D = new javax.swing.JLabel();
+        Comida_E = new javax.swing.JLabel();
         E = new javax.swing.JLabel();
+        Comida_F = new javax.swing.JLabel();
         F = new javax.swing.JLabel();
+        Comida_G = new javax.swing.JLabel();
         G = new javax.swing.JLabel();
         panelInfo = new javax.swing.JPanel();
         Cantidad = new javax.swing.JLabel();
@@ -55,54 +71,62 @@ public class Juego7 extends javax.swing.JFrame {
         setResizable(false);
 
         panelJuego.setBackground(new java.awt.Color(161, 130, 98));
+        panelJuego.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 80, 80));
+        panelJuego.add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 100, 100));
+        panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 80, 80));
+        panelJuego.add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 100, 100));
+        panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 80, 80));
+        panelJuego.add(C, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 100, 100));
+        panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 80, 80));
+        panelJuego.add(D, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, 100));
+        panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 80, 80));
+        panelJuego.add(E, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 100, 100));
+        panelJuego.add(Comida_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 80, 80));
+        panelJuego.add(F, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 101, 100));
+        panelJuego.add(Comida_G, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 80, 80));
+        panelJuego.add(G, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 100, 100));
 
         panelInfo.setBackground(new java.awt.Color(0, 102, 102));
 
-        Cantidad.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Cantidad.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         Cantidad.setText("Cantidad de comida escogida:");
 
-        Comida_Esco.setFont(new java.awt.Font("Times New Roman", 1, 12));
-        Comida_Esco.setText("...");
+        Comida_Esco.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Comida_Esco.setText("..............");
 
-        Hormiga_v.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Hormiga_v.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         Hormiga_v.setText("Hormigas Verdes:");
 
-        Hormiga_a.setFont(new java.awt.Font("Times New Roman", 1, 12));
+        Hormiga_a.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         Hormiga_a.setText("Hormigas Azules:");
 
-        Comida_azul.setFont(new java.awt.Font("Times New Roman", 1, 12));
-        Comida_azul.setText("...");
+        Comida_azul.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Comida_azul.setText("...............");
 
-        Comida_verde.setFont(new java.awt.Font("Times New Roman", 1, 12));
-        Comida_verde.setText("...");
+        Comida_verde.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Comida_verde.setText("...............");
 
         javax.swing.GroupLayout panelInfoLayout = new javax.swing.GroupLayout(panelInfo);
         panelInfo.setLayout(panelInfoLayout);
         panelInfoLayout.setHorizontalGroup(
                 panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelInfoLayout.createSequentialGroup()
-                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(panelInfoLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(Cantidad))
-                                        .addGroup(panelInfoLayout.createSequentialGroup()
-                                                .addGap(84, 84, 84)
-                                                .addComponent(Comida_Esco)))
-                                .addGap(72, 72, 72)
-                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(Hormiga_v, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(Comida_verde, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(37, 37, 37)))
-                                .addGap(74, 74, 74)
-                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(Hormiga_a)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(Comida_azul)
-                                                .addGap(43, 43, 43)))
-                                .addGap(84, 84, 84))
+                                .addContainerGap()
+                                .addComponent(Cantidad)
+                                .addGap(95, 95, 95)
+                                .addComponent(Hormiga_v)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                                .addComponent(Hormiga_a)
+                                .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(Comida_Esco)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Comida_verde)
+                                .addGap(181, 181, 181)
+                                .addComponent(Comida_azul)
+                                .addGap(32, 32, 32))
         );
         panelInfoLayout.setVerticalGroup(
                 panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,73 +134,17 @@ public class Juego7 extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(Cantidad)
-                                        .addComponent(Hormiga_a)
-                                        .addComponent(Hormiga_v, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, Short.MAX_VALUE)
+                                        .addComponent(Hormiga_v)
+                                        .addComponent(Hormiga_a))
+                                .addGap(18, 18, 18)
                                 .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(Comida_verde)
                                         .addComponent(Comida_Esco)
-                                        .addComponent(Comida_verde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(Comida_azul))
                                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout panelJuegoLayout = new javax.swing.GroupLayout(panelJuego);
-        panelJuego.setLayout(panelJuegoLayout);
-        panelJuegoLayout.setHorizontalGroup(
-                panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(panelJuegoLayout.createSequentialGroup()
-                                .addGroup(panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJuegoLayout.createSequentialGroup()
-                                                .addGap(70, 70, 70)
-                                                .addComponent(E, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(G, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJuegoLayout.createSequentialGroup()
-                                                .addGap(34, 34, 34)
-                                                .addComponent(D, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(B, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJuegoLayout.createSequentialGroup()
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(A, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(86, 86, 86)))
-                                .addGroup(panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(panelJuegoLayout.createSequentialGroup()
-                                                .addGap(91, 91, 91)
-                                                .addComponent(F, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addContainerGap())
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJuegoLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(C, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(54, 54, 54))))
-        );
-        panelJuegoLayout.setVerticalGroup(
-                panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panelJuegoLayout.createSequentialGroup()
-                                .addComponent(panelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(panelJuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(panelJuegoLayout.createSequentialGroup()
-                                                .addGap(107, 107, 107)
-                                                .addComponent(D, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(E, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(48, 48, 48))
-                                        .addGroup(panelJuegoLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(C, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(99, 99, 99)
-                                                .addComponent(F, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(76, 76, 76))
-                                        .addGroup(panelJuegoLayout.createSequentialGroup()
-                                                .addGap(22, 22, 22)
-                                                .addComponent(B, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
-                                                .addComponent(A, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(61, 61, 61)
-                                                .addComponent(G, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(38, 38, 38))))
-        );
+        panelJuego.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,7 +154,7 @@ public class Juego7 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelJuego, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(panelJuego, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
@@ -231,7 +199,14 @@ public class Juego7 extends javax.swing.JFrame {
     private javax.swing.JLabel B;
     private javax.swing.JLabel C;
     private javax.swing.JLabel Cantidad;
+    private javax.swing.JLabel Comida_A;
+    private javax.swing.JLabel Comida_B;
+    private javax.swing.JLabel Comida_C;
+    private javax.swing.JLabel Comida_D;
+    private javax.swing.JLabel Comida_E;
     private javax.swing.JLabel Comida_Esco;
+    private javax.swing.JLabel Comida_F;
+    private javax.swing.JLabel Comida_G;
     private javax.swing.JLabel Comida_azul;
     private javax.swing.JLabel Comida_verde;
     private javax.swing.JLabel D;
@@ -244,5 +219,4 @@ public class Juego7 extends javax.swing.JFrame {
     private javax.swing.JPanel panelJuego;
     // End of variables declaration
 }
-
 
