@@ -11,7 +11,7 @@ public class Arista {
         this.distancia = distancia;
     }
 
-    // Métodos getter y setter
+    // Método getter y setter del atributo distancia
     public int getDistancia() {
         return distancia;
     }
@@ -20,15 +20,11 @@ public class Arista {
         this.distancia = distancia;
     }
 
-    // Método que se encarga de mostrar el nodo de origen, el nodo destino y la distancia entre ellos
+    // Método que se encarga de mostrar la distancia establecida entre dos nodos
     // Lo muestra en formato String
     @Override
     public String toString(){
-        /*
-        return "\n \t Arista [Sector de origen = " + nodoOrigen.getSector() +
-                "; Sector destino = " + nodoDestino.getSector() +
-                "; Distancia = " + distancia + " ]";
-         */
-        return null;
+
+        return "\n \n Clase --> Arista --> Distancia = " + distancia;
     }
 }
