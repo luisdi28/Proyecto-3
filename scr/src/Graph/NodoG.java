@@ -77,10 +77,10 @@ public class NodoG {
         }
     }
 
-    // Método que se encarga de mostrar los nodos y su relaciones en formato String
+    // Método que se encarga de mostrar el nodo solicitado en formato String
     @Override
     public String toString(){
 
-        return "\n \t NodoG [Sector = " + sector + "; aristas = " + adyacentes + " ]";
+        return "\n \n Clase --> NodoG --> Sector = " + sector;
     }
 }
