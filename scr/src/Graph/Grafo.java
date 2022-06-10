@@ -1,7 +1,7 @@
 package Graph;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 public class Grafo {
 
@@ -69,6 +69,15 @@ public class Grafo {
 
         // Retorna false en caso de que no exista el nodo
         return false;
+    }
+
+    // Método que se encarga de retornar la cantidad de nodos adyacentes que tiene el nodo dado
+    public int grado(NodoG nodoG){
+        return nodoG.getAdyacentes().size();
+    }
+    // Método que se encarga de mostrar los nodos adyacentes al nodo dado
+    public Set<NodoG> nodosAdyacentes(NodoG nodoG){
+        return nodoG.getAdyacentes().keySet();
     }
 
     // Método que se encarga de retornar los nodos (grafo) existentes en el grafo en formato String
