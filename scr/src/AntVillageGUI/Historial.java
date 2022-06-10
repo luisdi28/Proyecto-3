@@ -1,4 +1,4 @@
-package AntVillage;
+package AntVillageGUI;
 
 public class Historial extends javax.swing.JFrame {
 

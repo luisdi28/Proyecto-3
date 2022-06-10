@@ -1,4 +1,4 @@
-package AntVillage;
+package AntVillageGUI;
 
 import javax.swing.JOptionPane;
 

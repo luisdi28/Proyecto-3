@@ -1,4 +1,4 @@
-package AntVillage;
+package AntVillageGUI;
 
 import org.netbeans.lib.awtextra.AbsoluteLayout;
 

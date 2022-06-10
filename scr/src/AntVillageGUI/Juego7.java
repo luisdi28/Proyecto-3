@@ -1,11 +1,14 @@
-package AntVillage;
+package AntVillageGUI;
 
-public class Juego5 extends javax.swing.JFrame {
+public class Juego7 extends javax.swing.JFrame {
 
     String hormiguero = "imagenes/imagen1.png";
     String comida_juego = "imagenes/Comida.png";
 
-    public Juego5(int alimento) {
+    /**
+     * Creates new form Juego7
+     */
+    public Juego7(int alimento) {
 
         initComponents();
 
@@ -16,16 +19,20 @@ public class Juego5 extends javax.swing.JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(C, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(D, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(E, hormiguero);
+        rsscalelabel.RSScaleLabel.setScaleLabel(F, hormiguero);
+        rsscalelabel.RSScaleLabel.setScaleLabel(G, hormiguero);
 
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A,comida_juego);
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B,comida_juego);
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C,comida_juego);
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D,comida_juego);
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_F,comida_juego);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_G,comida_juego);
+
     }
 
-    public Juego5() {
-
+    private Juego7() {
     }
 
     /**
@@ -48,6 +55,10 @@ public class Juego5 extends javax.swing.JFrame {
         D = new javax.swing.JLabel();
         Comida_E = new javax.swing.JLabel();
         E = new javax.swing.JLabel();
+        Comida_F = new javax.swing.JLabel();
+        F = new javax.swing.JLabel();
+        Comida_G = new javax.swing.JLabel();
+        G = new javax.swing.JLabel();
         panelInfo = new javax.swing.JPanel();
         Cantidad = new javax.swing.JLabel();
         Comida_Esco = new javax.swing.JLabel();
@@ -57,23 +68,24 @@ public class Juego5 extends javax.swing.JFrame {
         Comida_verde = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAutoRequestFocus(false);
-        setBackground(new java.awt.Color(102, 102, 102));
-        setForeground(new java.awt.Color(102, 102, 102));
         setResizable(false);
 
         panelJuego.setBackground(new java.awt.Color(161, 130, 98));
         panelJuego.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 80, 80));
-        panelJuego.add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 100));
-        panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 80, 80));
-        panelJuego.add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 100, 100));
-        panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, 80, 80));
-        panelJuego.add(C, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 100, 100));
-        panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 80, 80));
-        panelJuego.add(D, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 100, 100));
-        panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 80, 80));
-        panelJuego.add(E, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, 100, 100));
+        panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 80, 80));
+        panelJuego.add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 100, 100));
+        panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 80, 80));
+        panelJuego.add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 100, 100));
+        panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 80, 80));
+        panelJuego.add(C, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 100, 100));
+        panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 80, 80));
+        panelJuego.add(D, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, 100));
+        panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 80, 80));
+        panelJuego.add(E, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 100, 100));
+        panelJuego.add(Comida_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 80, 80));
+        panelJuego.add(F, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 101, 100));
+        panelJuego.add(Comida_G, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 80, 80));
+        panelJuego.add(G, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 100, 100));
 
         panelInfo.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -102,19 +114,19 @@ public class Juego5 extends javax.swing.JFrame {
                         .addGroup(panelInfoLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(Cantidad)
-                                .addGap(99, 99, 99)
+                                .addGap(95, 95, 95)
                                 .addComponent(Hormiga_v)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
                                 .addComponent(Hormiga_a)
                                 .addContainerGap())
-                        .addGroup(panelInfoLayout.createSequentialGroup()
-                                .addGap(54, 54, 54)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
+                                .addGap(48, 48, 48)
                                 .addComponent(Comida_Esco)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Comida_verde)
                                 .addGap(181, 181, 181)
                                 .addComponent(Comida_azul)
-                                .addGap(42, 42, 42))
+                                .addGap(32, 32, 32))
         );
         panelInfoLayout.setVerticalGroup(
                 panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,8 +138,8 @@ public class Juego5 extends javax.swing.JFrame {
                                         .addComponent(Hormiga_a))
                                 .addGap(18, 18, 18)
                                 .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(Comida_Esco)
                                         .addComponent(Comida_verde)
+                                        .addComponent(Comida_Esco)
                                         .addComponent(Comida_azul))
                                 .addContainerGap(21, Short.MAX_VALUE))
         );
@@ -151,7 +163,7 @@ public class Juego5 extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IllegalAccessException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -165,20 +177,19 @@ public class Juego5 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Juego5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Juego7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Juego5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Juego5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Juego7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Juego5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Juego7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Juego5().setVisible(true);
+                new Juego7().setVisible(true);
             }
         });
     }
@@ -194,13 +205,18 @@ public class Juego5 extends javax.swing.JFrame {
     private javax.swing.JLabel Comida_D;
     private javax.swing.JLabel Comida_E;
     private javax.swing.JLabel Comida_Esco;
+    private javax.swing.JLabel Comida_F;
+    private javax.swing.JLabel Comida_G;
     private javax.swing.JLabel Comida_azul;
     private javax.swing.JLabel Comida_verde;
     private javax.swing.JLabel D;
     private javax.swing.JLabel E;
+    private javax.swing.JLabel F;
+    private javax.swing.JLabel G;
     private javax.swing.JLabel Hormiga_a;
     private javax.swing.JLabel Hormiga_v;
     private javax.swing.JPanel panelInfo;
     private javax.swing.JPanel panelJuego;
     // End of variables declaration
 }
+
