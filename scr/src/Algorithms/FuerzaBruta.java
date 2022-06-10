@@ -8,7 +8,7 @@ import java.util.*;
 public class FuerzaBruta {
 
     // La clase será modificada implemnetando otra lógica
-    
+
     // Atributos de la clase
     private Grafo grafo;
     private NodoG nodoG;

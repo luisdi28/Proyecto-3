@@ -20,7 +20,7 @@ public class NodoG {
         datos = "";
     }
 
-    // Métodos getter y setter
+    // Método getter y setter del atributo sector
     public String getSector() {
         return sector;
     }
@@ -29,6 +29,7 @@ public class NodoG {
         this.sector = sector;
     }
 
+    // Método getter y setter del atributo adyacentes
     public HashMap<NodoG, Arista> getAdyacentes() {
         return adyacentes;
     }
@@ -37,12 +38,29 @@ public class NodoG {
         this.adyacentes = adyacentes;
     }
 
+    // Método getter y setter del atributo datos
     public String getDatos() {
         return datos;
     }
 
     public void setDatos(String datos) {
         this.datos = datos;
+    }
+
+    // Método getter y setter del atributo posicion_x
+    public int getPosicion_x() {
+        return posicion_x;
+    }
+    public void setPosicion_x(int posicion_x) {
+        this.posicion_x = posicion_x;
+    }
+
+    // Método getter y setter del atributo posicion_y
+    public int getPosicion_y() {
+        return posicion_y;
+    }
+    public void setPosicion_y(int posicion_y) {
+        this.posicion_y = posicion_y;
     }
 
     // Método para agregar una arista
