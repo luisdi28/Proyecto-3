@@ -45,9 +45,13 @@ public class Grafo {
         }
     }
 
-    // Método getter de la clase
+    // Método getter y setter del atributo nodos
     public ArrayList<NodoG> getNodos() {
         return nodos;
+    }
+
+    public static void setNodos(ArrayList<NodoG> nodos) {
+        Grafo.nodos = nodos;
     }
 
     // Método que se encarga de retornar el total de nodos en el grafo
@@ -58,10 +62,12 @@ public class Grafo {
     // Método que se encarga de verificar si el nodo existe
     public static boolean existeNodo(NodoG nodoG){
 
+        // Retorna true en caso de que exista el nodo
         if (nodos.contains(nodoG)){
             return true;
         }
 
+        // Retorna false en caso de que no exista el nodo
         return false;
     }
 
