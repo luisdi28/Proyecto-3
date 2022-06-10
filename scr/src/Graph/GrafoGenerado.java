@@ -3,7 +3,6 @@ package Graph;
 import java.util.ArrayList;
 import java.util.Random;
 
-// Clase creada como prototipo a una idea
 public class GrafoGenerado {
 
     // Atributos de la clase
@@ -19,7 +18,7 @@ public class GrafoGenerado {
         randomInt = new Random();
     }
 
-    // Métodos getter y setter
+    // Método getter y setter del atributo opcion
     public int getOpcion() {
         return opcion;
     }
@@ -28,6 +27,7 @@ public class GrafoGenerado {
         this.opcion = opcion;
     }
 
+    // Método getter y setter del atributo randomInt
     public Random getRandomInt() {
         return randomInt;
     }
@@ -35,6 +35,7 @@ public class GrafoGenerado {
         this.randomInt = randomInt;
     }
 
+    // Método getter y setter del atributo randomBoolean
     public Random getRandomBoolean() {
         return randomBoolean;
     }
@@ -44,31 +45,28 @@ public class GrafoGenerado {
     }
 
     // Método que se encarga de crear el grafo
+    // Lo crea mediante un método Switch-case
+    // Este método se maneja de acuerdo a un valor entero
+    // Donde cada valor entero posee un tamaño de nodos diferente
     public Grafo generarGrafo(){
 
         // Se guarda el valor dado en una variable para el método Switch-case
         int opcion = this.opcion;
-
         // Se inicializa el grafo
         Grafo grafo = new Grafo();
-
         // Se inicializa el nodo
         NodoG nodoG;
-
         // Se inicializa la arista
         Arista arista;
-
         // Se crea un arreglo de tipo String sin declarar tamaño ni valores
         String[] sectores;
-
         // Largo del arreglo
         int arrayLength;
-
         // Variables globales en el método donde i y j serán para recorrer arreglos y
         // distancia guarda el valor generado aleatoriamente con el atributo randomInt
         int i, j;
         int distancia;
-
+        // ArrayList que se usa para tomar el Arraylist que retorna el método getNodos() de la clase Grafo
         ArrayList arrayList;
 
         switch (opcion){
