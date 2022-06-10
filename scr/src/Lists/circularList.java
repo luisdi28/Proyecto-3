@@ -56,10 +56,11 @@ public class circularList {
         return this.Size;
     }
 
-    public void displayList() {//arreglar este metodo
+    public void displayList() {//arreglar este metodo , seria cambiarlo a que recorra por largo de lista
         Nodo current = getHead();
         System.out.println("el head es:" + getTail().getNext().getData());
         while (current.getNext() != getHead()) {
+            System.out.println("se llego aca");
             System.out.println(current.getData());
             current = current.getNext(); //al recorrer la lista hay un error
         }

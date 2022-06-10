@@ -48,6 +48,6 @@ the argument is a path name, which is taken from a list when the game ends.
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         xmlReader xmlReader = new xmlReader();
-        xmlReader.readXML("game1.xml");
+        xmlReader.readXML("GameRecords\\game2.xml");
     }
 }

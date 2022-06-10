@@ -18,7 +18,7 @@ public class xmlBuilder {
     private DocumentBuilder builder;
     private DOMImplementation implementation;
     /* xml class constructor
-
+C:\Users\Luis\Documents\repositorio gitkraken\Proyecto-3\GameRecords
      */
     public xmlBuilder() throws ParserConfigurationException {
         factory = DocumentBuilderFactory.newInstance();
@@ -42,7 +42,7 @@ public class xmlBuilder {
         document.getDocumentElement().appendChild(GreenAnt);
         document.getDocumentElement().appendChild(BlueAnt);
         Source source = new DOMSource(document); //this pathname must be changed later on, remember to store the xml in a directory
-        Result result = new StreamResult(new File("game" + gamemode + ".xml"));
+        Result result = new StreamResult(new File("GameRecords\\game" + gamemode + ".xml"));
         Transformer transformer = new TransformerFactory() {
             @Override
             public Transformer newTransformer(Source source) throws TransformerConfigurationException {
@@ -110,6 +110,6 @@ public class xmlBuilder {
 
     public static void main(String[] args) throws ParserConfigurationException, TransformerException {
         xmlBuilder xmlBuilder = new xmlBuilder();
-        xmlBuilder.endGamexml("8" , "9" , "1");
+        xmlBuilder.endGamexml("3" , "1" , "8");
     }
 }
