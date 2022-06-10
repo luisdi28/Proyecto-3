@@ -76,6 +76,7 @@ public class Grafo {
         return nodoG.getAdyacentes().size();
     }
     // Método que se encarga de mostrar los nodos adyacentes al nodo dado
+    // Los muestra en un conjunto
     public Set<NodoG> nodosAdyacentes(NodoG nodoG){
         return nodoG.getAdyacentes().keySet();
     }
@@ -83,7 +84,6 @@ public class Grafo {
     // Método que se encarga de retornar los nodos (grafo) existentes en el grafo en formato String
     @Override
     public String toString(){
-
-        return "\n \t Grafo [ Nodos = " + nodos + " ]";
+        return nodos.toString();
     }
 }
