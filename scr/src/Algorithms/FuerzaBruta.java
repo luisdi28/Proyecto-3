@@ -7,6 +7,8 @@ import java.util.*;
 
 public class FuerzaBruta {
 
+    // La clase será modificada implemnetando otra lógica
+    
     // Atributos de la clase
     private Grafo grafo;
     private NodoG nodoG;
@@ -22,6 +24,7 @@ public class FuerzaBruta {
 
         // Se crea una pila para almacenar cada ruta que se evaluará
         Stack<NodoG> rutas = new Stack<NodoG>();
+        // Se agregar el nodo origen a la pila
         rutas.add(nodoOrigen);
         // Se dirige al método recorrerRuta()
         recorrerRuta(nodoOrigen, nodoDestino, rutas);
