@@ -18,6 +18,7 @@ public class xmlReader {
     private Document doc;
     private String greenscore;
     private String blueScore;
+    private String gameloop;
     public xmlReader() throws ParserConfigurationException {
         factory = DocumentBuilderFactory.newInstance();
         builder = factory.newDocumentBuilder();
@@ -45,9 +46,25 @@ the argument is a path name, which is taken from a list when the game ends.
         System.out.println("el contenido es: " + hijo.getTextContent());
         blueScore = hijo.getTextContent();
     }
+    public void readLoops(String name) throws ParserConfigurationException, IOException, SAXException {
+        System.out.println("el nombre del archivo es: " + name);
+        factory = DocumentBuilderFactory.newInstance();
+        builder = factory.newDocumentBuilder();
+        doc = builder.parse(new File(name));
+        NodeList listanodo = doc.getElementsByTagName("gamesplayed");
+        Node nodo = listanodo.item(0);
+        Element e = (Element) nodo;
+        Node hijo = e.getFirstChild();
+        System.out.println("el contenido es: " + hijo.getTextContent());
+        gameloop = hijo.getTextContent();
+    }
+    public int getgamelop(){
+        return Integer.parseInt(this.gameloop);
+    }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         xmlReader xmlReader = new xmlReader();
-        xmlReader.readXML("GameRecords\\game2.xml");
+        xmlReader.readLoops("GameLoops\\gameplayed.xml");
+        //xmlReader.readXML("GameRecords\\game2.xml");
     }
 }

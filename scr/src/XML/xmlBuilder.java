@@ -105,11 +105,85 @@ C:\Users\Luis\Documents\repositorio gitkraken\Proyecto-3\GameRecords
             }
         }.newInstance().newTransformer();
         transformer.transform(source, result); ///
-        ;
+    }
+    public void xmlLoops(String number) throws TransformerException {
+        Document document = implementation.createDocument(null, "loops", null);
+        document.setXmlVersion("1.0");
+        Element gameplayed = document.createElement("gamesplayed");
+
+        Text gamesPlayed = document.createTextNode(number);
+        gameplayed.appendChild(gamesPlayed);
+        document.getDocumentElement().appendChild(gameplayed);
+        Source source = new DOMSource(document); //this pathname must be changed later on, remember to store the xml in a directory
+        Result result = new StreamResult(new File("Gameloops\\gameplayed.xml"));
+        Transformer transformer = new TransformerFactory() {
+            @Override
+            public Transformer newTransformer(Source source) throws TransformerConfigurationException {
+                return null;
+            }
+
+            @Override
+            public Transformer newTransformer() throws TransformerConfigurationException {
+                return null;
+            }
+
+            @Override
+            public Templates newTemplates(Source source) throws TransformerConfigurationException {
+                return null;
+            }
+
+            @Override
+            public Source getAssociatedStylesheet(Source source, String media, String title, String charset) throws TransformerConfigurationException {
+                return null;
+            }
+
+            @Override
+            public void setURIResolver(URIResolver resolver) {
+
+            }
+
+            @Override
+            public URIResolver getURIResolver() {
+                return null;
+            }
+
+            @Override
+            public void setFeature(String name, boolean value) throws TransformerConfigurationException {
+
+            }
+
+            @Override
+            public boolean getFeature(String name) {
+                return false;
+            }
+
+            @Override
+            public void setAttribute(String name, Object value) {
+
+            }
+
+            @Override
+            public Object getAttribute(String name) {
+                return null;
+            }
+
+            @Override
+            public void setErrorListener(ErrorListener listener) {
+
+            }
+
+            @Override
+            public ErrorListener getErrorListener() {
+                return null;
+            }
+        }.newInstance().newTransformer();
+        transformer.transform(source, result); ///
+
     }
 
     public static void main(String[] args) throws ParserConfigurationException, TransformerException {
         xmlBuilder xmlBuilder = new xmlBuilder();
-        xmlBuilder.endGamexml("3" , "1" , "8");
+        //xmlBuilder.endGamexml("3" , "1" , "8");
+        xmlBuilder.xmlLoops("0");
     }
 }
