@@ -44,6 +44,50 @@ public class GrafoGenerado {
         this.randomBoolean = randomBoolean;
     }
 
+    // Método que se encarga de tomar el valor entero dado
+    // Se usa el método Switch-case para definir los nodos
+    // Mediante arreglos con tamaños predeterminados
+
+    public void crearGrafo(){
+
+        // Variables del método
+        int opcion;
+        opcion = this.opcion;
+        String[] sectores;
+
+        switch (opcion){
+
+            case 5:
+                // Se inicializa el arreglo de tipo String con los sectores establecidos
+                sectores = new String[]{"SectorA", "SectorB", "SectorC", "SectorD", "SectorE"};
+                break;
+
+            case 7:
+                // Se inicializa el arreglo de tipo String con los sectores establecidos
+                sectores = new String[]{"SectorA", "SectorB", "SectorC", "SectorD", "SectorE", "SectorF", "SectorG"};
+                break;
+
+            case 9:
+                // Se inicializa el arreglo de tipo String con los sectores establecidos
+                sectores = new String[]{"SectorA", "SectorB", "SectorC",
+                                        "SectorD", "SectorE", "SectorF",
+                                        "SectorG", "SectorH", "SectorI"};
+                break;
+
+            default:
+
+                System.out.println("No se ha logrado generar el grafo.");
+                break;
+        }
+    }
+
+    public Grafo establecerGrafo(){
+
+         Grafo grafo = new Grafo();
+
+        return grafo;
+    }
+
     // Método que se encarga de crear el grafo
     // Lo crea mediante un método Switch-case
     // Este método se maneja de acuerdo a un valor entero
@@ -69,44 +113,18 @@ public class GrafoGenerado {
         // ArrayList que se usa para tomar el Arraylist que retorna el método getNodos() de la clase Grafo
         ArrayList arrayList;
 
+        // Se usa para tomar valores de un arreglo con tamaño predeterminado con el fin de ahorrar código
         switch (opcion){
 
             case 5:
-
                 // Se inicializa el arreglo de tipo String con los sectores establecidos
                 sectores = new String[]{"SectorA", "SectorB", "SectorC", "SectorD", "SectorE"};
-                arrayLength = sectores.length;
-
-                // Cada elemento del arreglo sectores se convierte en un nodo del grafo
-                for(i = 0; i < sectores.length; i++){
-
-                    // Se crea un nuevo nodo y se añade al grafo
-                    nodoG = new NodoG(sectores[i]);
-                    grafo.agregarNodo(nodoG);
-                }
-
-                // Se crean las conexiones entre nodos para el grafo dirigido
-                // Se tiene em mente crear un bucle donde se relicen las conexiones enre nodos de forma aleatoria
-
                 break;
 
             case 7:
 
                 // Se inicializa el arreglo de tipo String con los sectores establecidos
                 sectores = new String[]{"SectorA", "SectorB", "SectorC", "SectorD", "SectorE", "SectorF", "SectorG"};
-                arrayLength = sectores.length;
-
-                // Cada elemento del arreglo sectores se convierte en un nodo del grafo
-                for(i = 0; i < sectores.length; i++){
-
-                    // Se crea un nuevo nodo y se añade al grafo
-                    nodoG = new NodoG(sectores[i]);
-                    grafo.agregarNodo(nodoG);
-                }
-
-                // Se crean las conexiones entre nodos para el grafo dirigido
-                // Se tiene em mente crear un bucle donde se relicen las conexiones enre nodos de forma aleatoria
-
                 break;
 
             case 9:
