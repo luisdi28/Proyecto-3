@@ -3,7 +3,7 @@ package Graph;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class GrafoGenerado {
+public class ConstructorG {
 
     // Atributos de la clase
     private int opcion;
@@ -11,7 +11,7 @@ public class GrafoGenerado {
     private Random randomBoolean;
 
     // Constructor de la clase
-    public GrafoGenerado(int opcion){
+    public ConstructorG(int opcion){
 
         this.opcion = opcion;
         randomBoolean = new Random();
@@ -52,7 +52,7 @@ public class GrafoGenerado {
 
         int opcionS = opcion;
         String[] sectores;
-        
+
         // Se inicializa el grafo
         Grafo grafo = new Grafo();
         NodoG nodoG;
