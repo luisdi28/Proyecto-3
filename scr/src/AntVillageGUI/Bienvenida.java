@@ -191,7 +191,7 @@ public class Bienvenida extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
         }
-        else {
+        else if (elegir_grafo3.isSelected() == true){
             if (alimento <= 5){
                 Bienvenida.this.dispose();
                 new Juego9(alimento).setVisible(true);
@@ -199,6 +199,9 @@ public class Bienvenida extends javax.swing.JFrame {
             else{
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "ATENCIÓN: Debe seleccionar una categoría de juego");
         }
     }
 

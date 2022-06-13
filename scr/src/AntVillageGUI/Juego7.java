@@ -22,14 +22,6 @@ public class Juego7 extends javax.swing.JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(F, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(G, hormiguero);
 
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A,comida_juego);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B,comida_juego);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C,comida_juego);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D,comida_juego);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E,comida_juego);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_F,comida_juego);
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_G,comida_juego);
-
     }
 
     private Juego7() {
@@ -72,6 +64,43 @@ public class Juego7 extends javax.swing.JFrame {
 
         panelJuego.setBackground(new java.awt.Color(161, 130, 98));
         panelJuego.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Comida_A.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comida_AMouseClicked(evt);
+            }
+        });
+        Comida_B.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comida_BMouseClicked(evt);
+            }
+        });
+        Comida_C.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comida_CMouseClicked(evt);
+            }
+        });
+        Comida_D.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comida_DMouseClicked(evt);
+            }
+        });
+        Comida_E.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comida_EMouseClicked(evt);
+            }
+        });
+        Comida_F.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comida_FMouseClicked(evt);
+            }
+        });
+        Comida_G.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Comida_GMouseClicked(evt);
+            }
+        });
+
         panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 80, 80));
         panelJuego.add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 100, 100));
         panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 80, 80));
@@ -88,63 +117,33 @@ public class Juego7 extends javax.swing.JFrame {
         panelJuego.add(G, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 100, 100));
 
         panelInfo.setBackground(new java.awt.Color(0, 102, 102));
+        panelInfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Cantidad.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Cantidad.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Cantidad.setText("Cantidad de comida escogida:");
+        panelInfo.add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        Comida_Esco.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        Comida_Esco.setText("..............");
+        Comida_Esco.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Comida_Esco.setText(".....");
+        panelInfo.add(Comida_Esco, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, -1, -1));
 
-        Hormiga_v.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        Hormiga_v.setText("Hormigas Verdes:");
-
-        Hormiga_a.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Hormiga_a.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Hormiga_a.setText("Hormigas Azules:");
+        panelInfo.add(Hormiga_a, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, -1, -1));
 
-        Comida_azul.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        Comida_azul.setText("...............");
+        Comida_azul.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Comida_azul.setText(".....");
+        panelInfo.add(Comida_azul, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, -1, -1));
 
-        Comida_verde.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        Comida_verde.setText("...............");
+        Comida_verde.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Comida_verde.setText(".....");
+        panelInfo.add(Comida_verde, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 34, -1));
 
-        javax.swing.GroupLayout panelInfoLayout = new javax.swing.GroupLayout(panelInfo);
-        panelInfo.setLayout(panelInfoLayout);
-        panelInfoLayout.setHorizontalGroup(
-                panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panelInfoLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(Cantidad)
-                                .addGap(95, 95, 95)
-                                .addComponent(Hormiga_v)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
-                                .addComponent(Hormiga_a)
-                                .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(Comida_Esco)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Comida_verde)
-                                .addGap(181, 181, 181)
-                                .addComponent(Comida_azul)
-                                .addGap(32, 32, 32))
-        );
-        panelInfoLayout.setVerticalGroup(
-                panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panelInfoLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(Cantidad)
-                                        .addComponent(Hormiga_v)
-                                        .addComponent(Hormiga_a))
-                                .addGap(18, 18, 18)
-                                .addGroup(panelInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(Comida_verde)
-                                        .addComponent(Comida_Esco)
-                                        .addComponent(Comida_azul))
-                                .addContainerGap(21, Short.MAX_VALUE))
-        );
+        Hormiga_v.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Hormiga_v.setText("Hormigas Verdes:");
+        panelInfo.add(Hormiga_v, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
-        panelJuego.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        panelJuego.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,6 +158,36 @@ public class Juego7 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>
+
+    private void Comida_AMouseClicked(java.awt.event.MouseEvent evt) {
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+    }
+
+    private void Comida_BMouseClicked(java.awt.event.MouseEvent evt) {
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
+    }
+
+    private void Comida_CMouseClicked(java.awt.event.MouseEvent evt) {
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
+    }
+
+    private void Comida_DMouseClicked(java.awt.event.MouseEvent evt) {
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
+    }
+
+    private void Comida_EMouseClicked(java.awt.event.MouseEvent evt) {
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
+    }
+
+    private void Comida_FMouseClicked(java.awt.event.MouseEvent evt) {
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_F, comida_juego);
+    }
+
+    private void Comida_GMouseClicked(java.awt.event.MouseEvent evt) {
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_G, comida_juego);
+    }
+
+
 
     /**
      * @param args the command line arguments
