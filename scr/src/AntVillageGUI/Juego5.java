@@ -52,6 +52,7 @@ public class Juego5 extends javax.swing.JFrame {
         panelJuego = new javax.swing.JPanel();
         Comida_A = new javax.swing.JLabel();
         A = new javax.swing.JLabel();
+        Nombre_A = new javax.swing.JLabel();
         Comida_B = new javax.swing.JLabel();
         B = new javax.swing.JLabel();
         Comida_C = new javax.swing.JLabel();
@@ -103,6 +104,11 @@ public class Juego5 extends javax.swing.JFrame {
 
         panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 80, 80));
         panelJuego.add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 100));
+
+        Nombre_A.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Nombre_A.setText("A");
+        panelJuego.add(Nombre_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 100, 100));
+
         panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 80, 80));
         panelJuego.add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 100, 100));
         panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, 80, 80));
@@ -214,6 +220,7 @@ public class Juego5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify
+    private javax.swing.JLabel Nombre_A;
     private javax.swing.JLabel A;
     private javax.swing.JLabel B;
     private javax.swing.JLabel C;
