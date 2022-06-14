@@ -84,6 +84,6 @@ public class Grafo {
     // Método que se encarga de retornar los nodos (grafo) existentes en el grafo en formato String
     @Override
     public String toString(){
-        return nodos.toString();
+        return nodos.toString().replace("[", "").replace("]", "").replace(",", "");
     }
 }
