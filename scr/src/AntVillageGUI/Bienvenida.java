@@ -1,10 +1,13 @@
 package AntVillageGUI;
 
+import AntNFood.Comida;
+
 import javax.swing.JOptionPane;
 
 public class Bienvenida extends javax.swing.JFrame {
 
     String alimen;
+    String modo_juego;
     int alimento;
 
     /**
@@ -173,10 +176,14 @@ public class Bienvenida extends javax.swing.JFrame {
 
         alimen = ali.getText();
         alimento = Integer.parseInt(alimen);
+
         if (elegir_grafo1.isSelected() == true) {
             if (alimento <= 5){
                 Bienvenida.this.dispose();
+                modo_juego = "Juego 5";
                 new Juego5(alimento).setVisible(true);
+                Comida obj = new Comida(modo_juego);
+                Comida.main();
             }
             else{
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
@@ -185,7 +192,10 @@ public class Bienvenida extends javax.swing.JFrame {
         else if (elegir_grafo2.isSelected() == true){
             if (alimento <= 5){
                 Bienvenida.this.dispose();
+                modo_juego = "Juego 7";
                 new Juego7(alimento).setVisible(true);
+                Comida obj = new Comida(modo_juego);
+                Comida.main();
             }
             else{
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
@@ -194,7 +204,10 @@ public class Bienvenida extends javax.swing.JFrame {
         else if (elegir_grafo3.isSelected() == true){
             if (alimento <= 5){
                 Bienvenida.this.dispose();
+                modo_juego = "Juego 9";
                 new Juego9(alimento).setVisible(true);
+                Comida obj = new Comida(modo_juego);
+                Comida.main();
             }
             else{
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
@@ -212,9 +225,8 @@ public class Bienvenida extends javax.swing.JFrame {
     }
 
     /**
-     * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
