@@ -24,6 +24,22 @@ public class Juego7 extends javax.swing.JFrame {
 
     }
 
+    public static String getComida_verde() {
+        return Comida_verde.getText();
+    }
+
+    public static void setComida_verde(String comida_verde) {
+        Comida_verde.setText(comida_verde);
+    }
+
+    public static String getComida_azul() {
+        return Comida_azul.getText();
+    }
+
+    public static void setComida_azul(String comida_azul) {
+        Comida_azul.setText(comida_azul);
+    }
+
     private Juego7() {
     }
 
@@ -236,8 +252,8 @@ public class Juego7 extends javax.swing.JFrame {
     private javax.swing.JLabel Comida_Esco;
     private javax.swing.JLabel Comida_F;
     private javax.swing.JLabel Comida_G;
-    private javax.swing.JLabel Comida_azul;
-    private javax.swing.JLabel Comida_verde;
+    private static javax.swing.JLabel Comida_azul;
+    private static javax.swing.JLabel Comida_verde;
     private javax.swing.JLabel D;
     private javax.swing.JLabel E;
     private javax.swing.JLabel F;

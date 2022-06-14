@@ -1,5 +1,7 @@
 package AntVillageGUI;
 
+import javax.swing.*;
+
 public class Juego5 extends javax.swing.JFrame {
 
     String hormiguero = "imagenes/imagen1.png";
@@ -16,6 +18,22 @@ public class Juego5 extends javax.swing.JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(C, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(D, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(E, hormiguero);
+    }
+
+    public static String getComida_verde() {
+        return Comida_verde.getText();
+    }
+
+    public static void setComida_verde(String comida_verde) {
+        Comida_verde.setText(comida_verde);
+    }
+
+    public static String getComida_azul() {
+        return Comida_azul.getText();
+    }
+
+    public static void setComida_azul(String comida_azul) {
+        Comida_azul.setText(comida_azul);
     }
 
     public Juego5() {
@@ -206,8 +224,8 @@ public class Juego5 extends javax.swing.JFrame {
     private javax.swing.JLabel Comida_D;
     private javax.swing.JLabel Comida_E;
     private javax.swing.JLabel Comida_Esco;
-    private javax.swing.JLabel Comida_azul;
-    private javax.swing.JLabel Comida_verde;
+    private static javax.swing.JLabel Comida_azul;
+    private static javax.swing.JLabel Comida_verde;
     private javax.swing.JLabel D;
     private javax.swing.JLabel E;
     private javax.swing.JLabel Hormiga_a;

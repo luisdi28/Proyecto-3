@@ -182,7 +182,7 @@ public class Bienvenida extends javax.swing.JFrame {
                 Bienvenida.this.dispose();
                 modo_juego = "Juego 5";
                 new Juego5(alimento).setVisible(true);
-                Comida obj = new Comida(modo_juego);
+                Comida obj = new Comida(modo_juego, alimento, "verde");
                 Comida.main();
             }
             else{
@@ -194,7 +194,7 @@ public class Bienvenida extends javax.swing.JFrame {
                 Bienvenida.this.dispose();
                 modo_juego = "Juego 7";
                 new Juego7(alimento).setVisible(true);
-                Comida obj = new Comida(modo_juego);
+                Comida obj = new Comida(modo_juego, alimento, "verde");
                 Comida.main();
             }
             else{
@@ -206,7 +206,7 @@ public class Bienvenida extends javax.swing.JFrame {
                 Bienvenida.this.dispose();
                 modo_juego = "Juego 9";
                 new Juego9(alimento).setVisible(true);
-                Comida obj = new Comida(modo_juego);
+                Comida obj = new Comida(modo_juego, alimento, "verde");
                 Comida.main();
             }
             else{
