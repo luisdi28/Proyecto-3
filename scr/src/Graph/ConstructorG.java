@@ -6,25 +6,14 @@ import java.util.Random;
 public class ConstructorG {
 
     // Atributos de la clase
-    private int opcion;
     private Random randomInt;
     private Random randomBoolean;
 
     // Constructor de la clase
-    public ConstructorG(int opcion){
+    public ConstructorG(){
 
-        this.opcion = opcion;
         randomBoolean = new Random();
         randomInt = new Random();
-    }
-
-    // Método getter y setter del atributo opcion
-    public int getOpcion() {
-        return opcion;
-    }
-
-    public void setOpcion(int opcion) {
-        this.opcion = opcion;
     }
 
     // Método getter y setter del atributo randomInt

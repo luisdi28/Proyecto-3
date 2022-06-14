@@ -115,7 +115,7 @@ public class Hormiga{
 
     // Métodos de lógica
 
-    
+
 
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
