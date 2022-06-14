@@ -55,12 +55,16 @@ public class Juego5 extends javax.swing.JFrame {
         Nombre_A = new javax.swing.JLabel();
         Comida_B = new javax.swing.JLabel();
         B = new javax.swing.JLabel();
+        Nombre_B = new javax.swing.JLabel();
         Comida_C = new javax.swing.JLabel();
         C = new javax.swing.JLabel();
+        Nombre_C = new javax.swing.JLabel();
         Comida_D = new javax.swing.JLabel();
         D = new javax.swing.JLabel();
+        Nombre_D = new javax.swing.JLabel();
         Comida_E = new javax.swing.JLabel();
         E = new javax.swing.JLabel();
+        Nombre_E = new javax.swing.JLabel();
         panelInfo = new javax.swing.JPanel();
         Cantidad = new javax.swing.JLabel();
         Comida_Esco = new javax.swing.JLabel();
@@ -111,13 +115,31 @@ public class Juego5 extends javax.swing.JFrame {
 
         panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 80, 80));
         panelJuego.add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 100, 100));
+
+        Nombre_B.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Nombre_B.setText("B");
+        panelJuego.add(Nombre_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 100, 100));
+
         panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, 80, 80));
         panelJuego.add(C, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 100, 100));
+
+        Nombre_C.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Nombre_C.setText("C");
+        panelJuego.add(Nombre_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 100, 100));
+
         panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 80, 80));
         panelJuego.add(D, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 100, 100));
+
+        Nombre_D.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Nombre_D.setText("D");
+        panelJuego.add(Nombre_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 100, 100));
+
         panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 80, 80));
         panelJuego.add(E, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, 100, 100));
 
+        Nombre_E.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        Nombre_E.setText("E");
+        panelJuego.add(Nombre_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 380, 100, 100));
 
         panelInfo.setBackground(new java.awt.Color(0, 102, 102));
         panelInfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -221,6 +243,10 @@ public class Juego5 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify
     private javax.swing.JLabel Nombre_A;
+    private javax.swing.JLabel Nombre_B;
+    private javax.swing.JLabel Nombre_C;
+    private javax.swing.JLabel Nombre_D;
+    private javax.swing.JLabel Nombre_E;
     private javax.swing.JLabel A;
     private javax.swing.JLabel B;
     private javax.swing.JLabel C;

@@ -194,8 +194,8 @@ public class Bienvenida extends javax.swing.JFrame {
                 Bienvenida.this.dispose();
                 modo_juego = "Juego 7";
                 new Juego7(alimento).setVisible(true);
-                Comida obj = new Comida(modo_juego, alimento, "verde");
-                Comida.main();
+                //Comida obj = new Comida(modo_juego, alimento, "verde");
+                //Comida.main();
             }
             else{
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
@@ -206,8 +206,8 @@ public class Bienvenida extends javax.swing.JFrame {
                 Bienvenida.this.dispose();
                 modo_juego = "Juego 9";
                 new Juego9(alimento).setVisible(true);
-                Comida obj = new Comida(modo_juego, alimento, "verde");
-                Comida.main();
+                //Comida obj = new Comida(modo_juego, alimento, "verde");
+                //Comida.main();
             }
             else{
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
