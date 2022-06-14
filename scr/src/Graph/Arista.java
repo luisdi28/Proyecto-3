@@ -24,7 +24,6 @@ public class Arista {
     // Lo muestra en formato String
     @Override
     public String toString(){
-
-        return "\n \n Clase --> Arista --> Distancia = " + distancia;
+        return " Clase --> Arista --> Distancia = " + distancia;
     }
 }

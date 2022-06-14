@@ -1,7 +1,6 @@
 package Graph;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 public class Grafo {
 
@@ -77,8 +76,8 @@ public class Grafo {
     }
     // Método que se encarga de mostrar los nodos adyacentes al nodo dado
     // Los muestra en un conjunto
-    public Set<NodoG> nodosAdyacentes(NodoG nodoG){
-        return nodoG.getAdyacentes().keySet();
+    public String nodosAdyacentes(NodoG nodoG){
+        return "\nClase --> Grafo --> Nodo --> " + nodoG.getSector() + "\nNodos Adyacentes:" + nodoG.getAdyacentes().toString().replace("{", "").replace("}", "").replace(",", "");
     }
 
     // Método que se encarga de retornar los nodos (grafo) existentes en el grafo en formato String

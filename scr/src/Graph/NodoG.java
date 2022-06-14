@@ -80,7 +80,6 @@ public class NodoG {
     // Método que se encarga de mostrar el nodo solicitado en formato String
     @Override
     public String toString(){
-
-        return "\n \n Clase --> NodoG --> Sector = " + sector;
+        return "\nClase --> NodoG --> Sector = " + sector + " ";
     }
 }
