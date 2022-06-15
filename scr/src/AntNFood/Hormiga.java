@@ -1,5 +1,9 @@
 package AntNFood;
 
+import Graph.Arista;
+import Graph.Grafo;
+import Graph.NodoG;
+
 import javax.swing.*;
 import java.awt.Image;
 import java.util.ArrayList;
@@ -8,7 +12,7 @@ import java.util.List;
 public class Hormiga{
 
     // Atributos de la clase
-
+    private Grafo grafo;
     private String nombre;              // Nombre para identificar la hormiga, útil para el método mostrarInfo()
     private String tipo;                // Determina el tipo de hormiga (Azul o Verde) Ejemplo: "HormigaAzul.png"
     private ArrayList recorridos;       // Cada índice cuenta con su respectivo numero de recorrido y los sectores
@@ -20,8 +24,9 @@ public class Hormiga{
     private Image image;                // Imagen
 
     // Constructor de la clase
-    public Hormiga(String nombre, String tipo, int posicion_x, int posicion_y, int posicion_dx, int posicion_dy){
+    public Hormiga(Grafo grafo, String nombre, String tipo, int posicion_x, int posicion_y, int posicion_dx, int posicion_dy){
 
+        this.grafo = grafo;
         this.nombre = nombre;
         this.tipo = tipo;
         this.recorridos = new ArrayList<>();
@@ -114,8 +119,39 @@ public class Hormiga{
     }
 
     // Métodos de lógica
+    // Método que se encarga de mover la hormiga mediante el algoritmo de Dikstra
+    public void moverHormigaVerde(List list){
 
+        NodoG nodoG;
+        String punto;
+        int x, y;
 
+        for (int i = 0; i < list.size(); i++){                  // Lista de puntos
+            for (int j = 0; j < grafo.totalNodos(); j++){       // ArrayList de nodos
+
+                nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
+                punto = (String) list.get(i);       // Toma el valor del punto (Lista de puntos)
+
+                if (nodoG.equals(punto) == true){   // Si ambos valores son iguales
+
+                    x = nodoG.getPosicion_x();      // Toma el valor x del nodo
+                    y = nodoG.getPosicion_y();      // Toma el valor y del nodo
+
+                    moverHVerde(x, y);              // Llama al método
+                }
+            }
+        }
+    }
+
+    // Método que se encarga de mover y actualizar la posición de la hormiga Verde
+    public void moverHVerde(int x, int y){
+
+    }
+
+    // Método que se encarga de mover la hormiga mediante el algoritmo de fuerza bruta
+    public void moverHormigaVAzul(){
+
+    }
 
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
