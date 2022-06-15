@@ -198,6 +198,79 @@ public class ConstructorG {
                 break;
         }
 
+        agregarXY(grafo);
         return grafo;
+    }
+
+    // Método que se encarga de establecer las posiciones "x" y "y" de los nodos de forma manual
+    public void agregarXY(Grafo grafo){
+
+        int total = grafo.totalNodos();
+
+        switch (total){
+
+            case 5:
+
+                grafo.getNodos().get(0).setPosicion_x(60);  // A
+                grafo.getNodos().get(0).setPosicion_y(160); // A
+                grafo.getNodos().get(1).setPosicion_x(440); // B
+                grafo.getNodos().get(1).setPosicion_y(120); // B
+                grafo.getNodos().get(2).setPosicion_x(50);  // C
+                grafo.getNodos().get(2).setPosicion_y(450); // C
+                grafo.getNodos().get(3).setPosicion_x(270); // D
+                grafo.getNodos().get(3).setPosicion_y(270); // D
+                grafo.getNodos().get(4).setPosicion_x(420); // E
+                grafo.getNodos().get(4).setPosicion_y(440); // E
+
+                break;
+
+            case 7:
+
+                grafo.getNodos().get(0).setPosicion_x(120); // A
+                grafo.getNodos().get(0).setPosicion_y(270); // A
+                grafo.getNodos().get(1).setPosicion_x(300); // B
+                grafo.getNodos().get(1).setPosicion_y(100); // B
+                grafo.getNodos().get(2).setPosicion_x(480); // C
+                grafo.getNodos().get(2).setPosicion_y(160); // C
+                grafo.getNodos().get(3).setPosicion_x(20);  // D
+                grafo.getNodos().get(3).setPosicion_y(120); // D
+                grafo.getNodos().get(4).setPosicion_x(30);  // E
+                grafo.getNodos().get(4).setPosicion_y(450); // E
+                grafo.getNodos().get(5).setPosicion_x(450); // F
+                grafo.getNodos().get(5).setPosicion_y(340); // F
+                grafo.getNodos().get(6).setPosicion_x(290); // G
+                grafo.getNodos().get(6).setPosicion_y(480); // G
+
+                break;
+
+            case 9:
+
+                grafo.getNodos().get(0).setPosicion_x(25);  // A
+                grafo.getNodos().get(0).setPosicion_y(119); // A
+                grafo.getNodos().get(1).setPosicion_x(239); // B
+                grafo.getNodos().get(1).setPosicion_y(105); // B
+                grafo.getNodos().get(2).setPosicion_x(440); // C
+                grafo.getNodos().get(2).setPosicion_y(130); // C
+                grafo.getNodos().get(3).setPosicion_x(490); // D
+                grafo.getNodos().get(3).setPosicion_y(510); // D
+                grafo.getNodos().get(4).setPosicion_x(250); // E
+                grafo.getNodos().get(4).setPosicion_y(280); // E
+                grafo.getNodos().get(5).setPosicion_x(470); // F
+                grafo.getNodos().get(5).setPosicion_y(290); // F
+                grafo.getNodos().get(6).setPosicion_x(290); // G
+                grafo.getNodos().get(6).setPosicion_y(440); // G
+                grafo.getNodos().get(7).setPosicion_x(70);  // H
+                grafo.getNodos().get(7).setPosicion_y(510); // H
+                grafo.getNodos().get(8).setPosicion_x(30);  // I
+                grafo.getNodos().get(8).setPosicion_y(340); // I
+
+                break;
+
+            default:
+
+                System.out.println("No se pudo agregar la posicion x,y");
+
+                break;
+        }
     }
 }
