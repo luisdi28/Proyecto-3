@@ -6,34 +6,21 @@ public class Juego5 extends javax.swing.JFrame {
 
     String hormiguero = "imagenes/imagen1.png";
     String comida_juego = "imagenes/Comida.png";
+    boolean flag_comida = false;
 
     public Juego5(int alimento) {
 
         initComponents();
 
         Comida_Esco.setText(String.valueOf(alimento));
+        Comida_azul.setText("0");
+        Comida_verde.setText("0");
 
         rsscalelabel.RSScaleLabel.setScaleLabel(A, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(B, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(C, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(D, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(E, hormiguero);
-    }
-
-    public static String getComida_verde() {
-        return Comida_verde.getText();
-    }
-
-    public static void setComida_verde(String comida_verde) {
-        Comida_verde.setText(comida_verde);
-    }
-
-    public static String getComida_azul() {
-        return Comida_azul.getText();
-    }
-
-    public static void setComida_azul(String comida_azul) {
-        Comida_azul.setText(comida_azul);
     }
 
     public Juego5() {
@@ -186,25 +173,93 @@ public class Juego5 extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void Comida_AMouseClicked(java.awt.event.MouseEvent evt) {
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+        if (flag_comida == false){
+            flag_comida=true;
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+        }
+        else{
+            reinicia_labels();
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+        }
+
     }
 
     private void Comida_BMouseClicked(java.awt.event.MouseEvent evt) {
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
+        if (flag_comida == false){
+            flag_comida=true;
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
+        }
+        else{
+            reinicia_labels();
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
+        }
+
     }
 
     private void Comida_CMouseClicked(java.awt.event.MouseEvent evt) {
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
+        if (flag_comida == false){
+            flag_comida=true;
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
+        }
+        else{
+            reinicia_labels();
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
+        }
     }
 
     private void Comida_DMouseClicked(java.awt.event.MouseEvent evt) {
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
+        if (flag_comida == false){
+            flag_comida=true;
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
+        }
+        else{
+            reinicia_labels();
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
+        }
     }
 
     private void Comida_EMouseClicked(java.awt.event.MouseEvent evt) {
-        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
+        if (flag_comida == false){
+            flag_comida=true;
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
+        }
+        else{
+            reinicia_labels();
+            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
+        }
     }
 
+    public static String getComida_verde() {
+        return Comida_verde.getText();
+    }
+
+    public static void setComida_verde(String comida_verde) {
+        Comida_verde.setText(comida_verde);
+    }
+
+    public static String getComida_azul() {
+        return Comida_azul.getText();
+    }
+
+    public static void setComida_azul(String comida_azul) {
+        Comida_azul.setText(comida_azul);
+    }
+
+    public boolean isFlag_comida() {
+        return flag_comida;
+    }
+
+    public void setFlag_comida(boolean flag_comida) {
+        this.flag_comida = flag_comida;
+    }
+
+    public static void reinicia_labels(){
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, null);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B, null);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C, null);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D, null);
+        rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, null);
+    }
 
     /**
      * @param args the command line arguments
@@ -241,28 +296,33 @@ public class Juego5 extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify
+    private javax.swing.JLabel Cantidad;
+    private javax.swing.JLabel Comida_Esco;
+    private static javax.swing.JLabel Comida_azul;
+    private static javax.swing.JLabel Comida_verde;
+    private javax.swing.JLabel Hormiga_a;
+    private javax.swing.JLabel Hormiga_v;
+
     private javax.swing.JLabel Nombre_A;
     private javax.swing.JLabel Nombre_B;
     private javax.swing.JLabel Nombre_C;
     private javax.swing.JLabel Nombre_D;
     private javax.swing.JLabel Nombre_E;
+
     private javax.swing.JLabel A;
     private javax.swing.JLabel B;
     private javax.swing.JLabel C;
-    private javax.swing.JLabel Cantidad;
-    private javax.swing.JLabel Comida_A;
-    private javax.swing.JLabel Comida_B;
-    private javax.swing.JLabel Comida_C;
-    private javax.swing.JLabel Comida_D;
-    private javax.swing.JLabel Comida_E;
-    private javax.swing.JLabel Comida_Esco;
-    private static javax.swing.JLabel Comida_azul;
-    private static javax.swing.JLabel Comida_verde;
     private javax.swing.JLabel D;
     private javax.swing.JLabel E;
-    private javax.swing.JLabel Hormiga_a;
-    private javax.swing.JLabel Hormiga_v;
+
+    private static javax.swing.JLabel Comida_A;
+    private static javax.swing.JLabel Comida_B;
+    private static javax.swing.JLabel Comida_C;
+    private static javax.swing.JLabel Comida_D;
+    private static javax.swing.JLabel Comida_E;
+
+
+
     private javax.swing.JPanel panelInfo;
     private javax.swing.JPanel panelJuego;
     // End of variables declaration
