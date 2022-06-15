@@ -2,6 +2,7 @@ package Algorithms;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 // Se hace el llamado de las clases que están el paquete Graph
 import Graph.NodoG;
@@ -22,7 +23,7 @@ public class Dijkstra {
     }
 
     // Método que se encarga de detectar la ruta más corta entre dos nodos
-    public int rutaCostoMinimoDijkstra(NodoG origen, NodoG destino){
+    public List<NodoG> rutaCostoMinimoDijkstra(NodoG origen, NodoG destino){
 
         grafoNodos = grafo.getNodos();
 
@@ -39,9 +40,12 @@ public class Dijkstra {
         HashMap<NodoG, Arista> aristas = null;
         Object[] adyacentes;
 
+        List<NodoG> puntos = new ArrayList<>(); // Lista de los puntos (nodos) por recorrer
+
         do{
 
             nodoAux = obtenerMenor();
+            puntos.add(nodoAux);
             nodoAux.setDatos("Recorrido");
             aristas = nodoAux.getAdyacentes();
             adyacentes = nodoAux.getAdyacentes().keySet().toArray();
@@ -58,7 +62,9 @@ public class Dijkstra {
 
         }while(recorridoCompleto() == false);
 
-        return nodos.get(destino);
+        //return nodos.get(destino);
+
+        return puntos;
     }
 
     // Método que se encarga de retornar el nodo con la ruta registrada más corta
