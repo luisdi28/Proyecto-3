@@ -7,12 +7,10 @@ public class ConstructorG {
 
     // Atributos de la clase
     private Random randomInt;
-    private Random randomBoolean;
 
     // Constructor de la clase
     public ConstructorG(){
 
-        randomBoolean = new Random();
         randomInt = new Random();
     }
 
@@ -24,19 +22,9 @@ public class ConstructorG {
         this.randomInt = randomInt;
     }
 
-    // Método getter y setter del atributo randomBoolean
-    public Random getRandomBoolean() {
-        return randomBoolean;
-    }
-
-    public void setRandomBoolean(Random randomBoolean) {
-        this.randomBoolean = randomBoolean;
-    }
-
     // Método que se encarga de tomar el valor entero dado
     // Se usa el método Switch-case para definir los nodos
     // Mediante arreglos con tamaños predeterminados
-
     public Grafo crearGrafo(int opcion){
 
         int opcionS = opcion;
@@ -48,8 +36,12 @@ public class ConstructorG {
         Arista arista;
 
         // Variables globales en el método donde i y j serán para recorrer arreglos y
-        // distancia guarda el valor generado aleatoriamente con el atributo randomInt
-        int arrayLength, i, j, distancia;
+        // distancia guarda el valor generado aleatoriamente con el atributo randomInt en cuanto a peso
+        // Se usa contador para que cada nodo tengan como mínimo dos nodos adyacentes
+        // Esto usa para que al aplicar el algoritmo de Dijkstra el algoritmo no se caiga debido
+        // A que el nodo destino no sea adyacente del algún otro nodo
+        // posRandom se usa para tomar una posicion random en el ArrayList de nodos, usa randomInt
+        int arrayLength, i, j, distancia, contador, posRandom;
 
         // ArrayList que se usa para tomar el Arraylist que retorna el método getNodos() de la clase Grafo
         ArrayList nodos;
@@ -79,22 +71,22 @@ public class ConstructorG {
                     // Se ejecuta n veces donde n es igual al tamaño del ArrayList * tamaño del ArrayList
                     for (j = 0; j < arrayLength; j++){
 
-                        // Se ejecuta solo si el valor generado es true
-                        if (randomBoolean.nextBoolean() == true){
+                        contador = 2;
 
-                            // Si los valores son los mismos se continua sin generar una conexión
-                            // Esto se hace para que el nodo no esté relacionado consigo mismo
-                            if (nodos.get(i).equals(nodos.get(j))){
+                        while (contador > 0){
+
+                            posRandom = randomInt.nextInt(0, 5);
+
+                            NodoG nodoO = grafo.getNodos().get(i);
+                            NodoG nodoD = grafo.getNodos().get(posRandom);
+
+                            if (nodoO.equals(nodoD) == true){
                                 continue;
                             }
-                            // En caso de ser true y diferentes
                             else{
-                                // Se genera una distancia aleatoria entre 10 y 40
                                 distancia = randomInt.nextInt(10, 40);
-                                // Se realiza la conexión
-                                grafo.conectarNodos(grafo.getNodos().get(i), grafo.getNodos().get(j), new Arista(distancia));
-                                // Segunda opción
-                                // grafo.conectarNodos((NodoG) arrayList.get(i), (NodoG) arrayList.get(j), new Arista(distancia));
+                                grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                                contador--;
                             }
                         }
                     }
@@ -124,22 +116,22 @@ public class ConstructorG {
                     // Se ejecuta n veces donde n es igual al tamaño del ArrayList * tamaño del ArrayList
                     for (j = 0; j < arrayLength; j++){
 
-                        // Se ejecuta solo si el valor generado es true
-                        if (randomBoolean.nextBoolean() == true){
+                        contador = 2;
 
-                            // Si los valores son los mismos se continua sin generar una conexión
-                            // Esto se hace para que el nodo no esté relacionado consigo mismo
-                            if (nodos.get(i).equals(nodos.get(j))){
+                        while (contador > 0){
+
+                            posRandom = randomInt.nextInt(0, 7);
+
+                            NodoG nodoO = grafo.getNodos().get(i);
+                            NodoG nodoD = grafo.getNodos().get(posRandom);
+
+                            if (nodoO.equals(nodoD) == true){
                                 continue;
                             }
-                            // En caso de ser true y diferentes
                             else{
-                                // Se genera una distancia aleatoria entre 10 y 40
                                 distancia = randomInt.nextInt(10, 40);
-                                // Se realiza la conexión
-                                grafo.conectarNodos(grafo.getNodos().get(i), grafo.getNodos().get(j), new Arista(distancia));
-                                // Segunda opción
-                                // grafo.conectarNodos((NodoG) arrayList.get(i), (NodoG) arrayList.get(j), new Arista(distancia));
+                                grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                                contador--;
                             }
                         }
                     }
@@ -171,22 +163,22 @@ public class ConstructorG {
                     // Se ejecuta n veces donde n es igual al tamaño del ArrayList * tamaño del ArrayList
                     for (j = 0; j < arrayLength; j++){
 
-                        // Se ejecuta solo si el valor generado es true
-                        if (randomBoolean.nextBoolean() == true){
+                        contador = 2;
 
-                            // Si los valores son los mismos se continua sin generar una conexión
-                            // Esto se hace para que el nodo no esté relacionado consigo mismo
-                            if (nodos.get(i).equals(nodos.get(j))){
+                        while (contador > 0){
+
+                            posRandom = randomInt.nextInt(0, 9);
+
+                            NodoG nodoO = grafo.getNodos().get(i);
+                            NodoG nodoD = grafo.getNodos().get(posRandom);
+
+                            if (nodoO.equals(nodoD) == true){
                                 continue;
                             }
-                            // En caso de ser true y diferentes
                             else{
-                                // Se genera una distancia aleatoria entre 10 y 40
                                 distancia = randomInt.nextInt(10, 40);
-                                // Se realiza la conexión
-                                grafo.conectarNodos(grafo.getNodos().get(i), grafo.getNodos().get(j), new Arista(distancia));
-                                // Segunda opción
-                                // grafo.conectarNodos((NodoG) arrayList.get(i), (NodoG) arrayList.get(j), new Arista(distancia));
+                                grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                                contador--;
                             }
                         }
                     }
