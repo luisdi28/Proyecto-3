@@ -145,7 +145,7 @@ public class Hormiga{
 
     // Método que se encarga de mover y actualizar la posición de la hormiga Verde
     public void moverHVerde(int x, int y){
-
+        
     }
 
     // Método que se encarga de mover la hormiga mediante el algoritmo de fuerza bruta
