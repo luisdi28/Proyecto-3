@@ -18,8 +18,13 @@ public class pruebaGUI extends JPanel implements ActionListener {
     int x2 =0;
     int y2 = 0;
     pruebaGUI(){
+        int[] directions = new int[5];
+        directions[0] = 100;
+        directions[1] = 100;
+        directions[2] = 100;
+        directions[3] = 100;
         this.setPreferredSize(new Dimension(ancho,alto));
-        this.setBackground(Color.black);
+        //this.setBackground(Color.black);
         enemy = new ImageIcon("imagenes\\hormiga verde.png").getImage();
         enemy2 = new ImageIcon("imagenes\\hormiga azul.png").getImage();
         timer = new Timer(10 , this);
@@ -34,12 +39,6 @@ public class pruebaGUI extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (x >ancho-enemy.getWidth(null)){
-            xVelocity = xVelocity * -1;
-        }
-        x= x+xVelocity;
-        //y2 =y2+yVelocity;
-        repaint();
     }
 }
 

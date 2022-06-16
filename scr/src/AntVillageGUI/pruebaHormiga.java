@@ -10,8 +10,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TimerTask;
+//import java.util.Timer;
 
 public class pruebaHormiga extends JPanel implements ActionListener {
+    private List list;
     final int alto = 500;
     final int ancho = 600;
     Image enemy;
@@ -19,11 +22,10 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     Timer timer;
     int xVelocity = 1;
     int yVelocity = 1;
-    int x =0;
+    int x = 0;
     int y = 0;
-    int x2 =0;
+    int x2 = 0;
     int y2 = 0;
-
     // Atributos de la clase
     private Grafo grafo;
     private String nombre;              // Nombre para identificar la hormiga, útil para el método mostrarInfo()
@@ -35,11 +37,12 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     private int posicion_dx;            // Posicion dx de la imagen
     private int posicion_dy;            // Posicion dy de la imagen
     private Image image;                // Imagen
-    private int Gx;
-    private int Gy;
-    private boolean flag = false;
+    private int Gx = 0;
+    private int Gy = 0;
+    private boolean flag = true;
+
     // Constructor de la clase
-    public pruebaHormiga(Grafo grafo, int posicion_x, int posicion_y){
+    public pruebaHormiga(Grafo grafo, int posicion_x, int posicion_y) {
 
         this.grafo = grafo;
         this.nombre = nombre;
@@ -50,11 +53,11 @@ public class pruebaHormiga extends JPanel implements ActionListener {
         this.posicion_y = posicion_y;
         //ImageIcon imageIcon = new ImageIcon(this.getClass().getResource(tipo));
         //this.image = imageIcon.getImage();
-        this.setPreferredSize(new Dimension(ancho,alto));
-        this.setBackground(Color.black);
+        this.setPreferredSize(new Dimension(ancho, alto));
+        //this.setBackground(Color.black);
         enemy = new ImageIcon("imagenes\\hormiga verde.png").getImage();
         enemy2 = new ImageIcon("imagenes\\hormiga azul.png").getImage();
-        timer = new Timer(10 , this);
+        timer = new Timer(10, this);
         timer.start();
     }
 
@@ -133,57 +136,143 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     }
 
     // Método que se encarga de retornar el tamaño del ArrayList
-    public int totalRecorridos(){
+    public int totalRecorridos() {
         return recorridos.size();
     }
 
     // Métodos de lógica
     // Método que se encarga de mover la hormiga mediante el algoritmo de Dikstra
-    public void moverHormigaVerde(List list){
-
+    public void moverHormigaVerde(List list) { //pienso que se peude hacer esto automatico con un setlist.
+        //y con hilos
         NodoG nodoG;
         NodoG punto;
         int x, y;
-        for (int i = 0; i < list.size(); i++){                  // Lista de puntos
-            for (int j = 0; j < grafo.totalNodos(); j++){
-                nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
-                punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
-                if (nodoG.equals(punto) == true){   // Si ambos valores son iguales
+        int i = 0;
+        while (i < list.size()) {
+            if (flag == true) {
+                int j = 0;
+                System.out.println("el tamaño de la lista es" + list.size());
+                System.out.println("la iteracion es = " + i);
+                System.out.println("el j es:" + j);
+                System.out.println("el nodo de grafos es:" + grafo.totalNodos());
+                System.out.println("la flag es:" + flag);
+                while (j < grafo.totalNodos()) {
+                    if (flag == true) {
+                        System.out.println("flag verdadera");
+                        nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
+                        punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
+                        if (nodoG.equals(punto) == true) {   // Si ambos valores son iguales
+                            System.out.println("se encontro un destino");
+                            System.out.println("el sector a moverse es: " + nodoG);
 
-                    x = nodoG.getPosicion_x();      // Toma el valor x del nodo
-                    y = nodoG.getPosicion_y();      // Toma el valor y del nodo
-                    
-                    moverHVerde(x, y);              // Llama al método
+                            this.x = nodoG.getPosicion_x();      // Toma el valor x del nodo
+                            this.y = nodoG.getPosicion_y();
+                            flag = false;
+                            j += 1;
+                            System.out.println("posicion x= " + this.x);
+                            System.out.println("posicion y= " + this.y);
+                        } else {
+                            System.out.println("se suma 1");
+                            j += 1;
+                        }
+                    }
                 }
+                i+=1;
+            }
+            else{
             }
         }
     }
 
     // Método que se encarga de mover y actualizar la posición de la hormiga Verde
-    public void moverHVerde(int x, int y){
-        while (Gx != x && Gy != y){
+    public void moverHVerde(int x, int y) {
+        /*
+        if(Gx != x && Gy != y){
+            System.out.println("el x sumado es:" + Gx);
             if (Gx>x && Gy < y){
                 Gx = Gx-1;
                 Gy+=1;
                 repaint();
+                Timer timer = new Timer();
+
+                TimerTask tarea = new TimerTask() {
+                    @Override
+                    public void run() {
+                        moverHVerde(x, y);
+                    }
+                };
+                timer.schedule(tarea, 10);
             }
             else if(Gx<x && Gy > y){
                 Gx = Gx+1;
                 Gy-=1;
                 repaint();
+                Timer timer = new Timer();
+
+                TimerTask tarea = new TimerTask() {
+                    @Override
+                    public void run() {
+                        moverHVerde(x, y);
+                    }
+                };
+                timer.schedule(tarea, 10);
             }
             else if(Gx<x && Gy < y){
                 Gx +=1;
                 Gy +=1;
                 repaint();
+                Timer timer = new Timer();
+
+                TimerTask tarea = new TimerTask() {
+                    @Override
+                    public void run() {
+                        moverHVerde(x, y);
+                    }
+                };
+                timer.schedule(tarea, 10);
             }
             else{
                 Gx -=1;
                 Gy -=1;
                 repaint();
+                Timer timer = new Timer();
+
+                TimerTask tarea = new TimerTask() {
+                    @Override
+                    public void run() {
+                        moverHVerde(x, y);
+                    }
+                };
+                timer.schedule(tarea, 10);
             }
         }
-        flag = false;
+    }
+         */
+    }
+
+    // Método que se encarga de mover la hormiga mediante el algoritmo de fuerza bruta
+    public void moverHormigaVAzul(int x, int y) {
+        while (Gx != x && Gy != y) {
+            System.out.println("el x sumado es:" + Gx);
+            if (Gx > x && Gy < y) {
+                Gx = Gx - 1;
+                Gy += 1;
+                repaint();
+            } else if (Gx < x && Gy > y) {
+                Gx = Gx + 1;
+                Gy -= 1;
+                repaint();
+            } else if (Gx < x && Gy < y) {
+                Gx += 1;
+                Gy += 1;
+                repaint();
+
+            } else {
+                Gx -= 1;
+                Gy -= 1;
+                repaint();
+            }
+        }
     }
     public void paint(Graphics g){
         super.paint(g);
@@ -191,48 +280,42 @@ public class pruebaHormiga extends JPanel implements ActionListener {
         G2D.drawImage(enemy , Gx ,Gy , null);
         //G2D.drawImage(enemy2 , x2 ,y2 , null);
     }
-
-    // Método que se encarga de mover la hormiga mediante el algoritmo de fuerza bruta
-    public void moverHormigaVAzul(){
-
-
-    }
-
-    // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
-
-    // Método que se encarga de mostrar los recorridos de cada hormiga
-    public String mostrarRecorridos(){
-
-        for (int i = 0; i < totalRecorridos(); i++){
-
-            System.out.println("Recorrido: " + i + 1);
-            System.out.println("Sectores visitados: ");
-
-            List list = (List) recorridos.get(i);
-
-            for (int j = 0; j < list.size(); j++){
-                System.out.print(list.get(i) + " -> ");
-            }
-        }
-        return mostrarRecorridos();
-    }
-
-    // Método que se encarga de mostrar toda la información necesario con respecto a la hormiga
-    public String mostrarInfo(){
-
-        String registro = mostrarRecorridos();
-
-        return  "\n Hormiga: " + nombre +
-                "\n Comida recolectada: " + recolectado +
-                "\n Registro de movimiento: " +
-                "\n" + registro;
-    }
-
     @Override
-    public void actionPerformed(ActionEvent e) { // meto el recorrer nodo en el timer
+    public void actionPerformed(ActionEvent e) {
+        if (flag == false){
 
+            if (Gx != x && Gy != y){
+                if (Gx > x && Gy < y) {
+                    Gx = Gx - 1;
+                    Gy += 1;
+                    repaint();
+                } else if (Gx < x && Gy > y) {
+                    Gx = Gx + 1;
+                    Gy -= 1;
+                    repaint();
+                } else if (Gx < x && Gy < y) {
+                    Gx += 1;
+                    Gy += 1;
+                    repaint();
+                } else {
+                    Gx -= 1;
+                    Gy -= 1;
+                    repaint();
+                }
+            }
+            else{
+                System.out.println("la posicion x es:" + Gx);
+                System.out.println("la posicion y es:" + Gy);
+                System.out.println("la posicion que debio moverse en el nodo x:" + x);
+                System.out.println("la posicion que debio moverse en el nodo y:" + y);
+                System.out.println("se lego al cambio de flag");
+                flag = true;
+                System.out.println("el flag nuevo es:" + flag);
+            }
+
+        }
     }
-
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
-}
+        // Método que se encarga de mostrar los recorridos de cada hormiga
+    }
