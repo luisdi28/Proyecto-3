@@ -38,7 +38,7 @@ public class pruebaGUI extends JPanel implements ActionListener {
             xVelocity = xVelocity * -1;
         }
         x= x+xVelocity;
-        y2 =y2+yVelocity;
+        //y2 =y2+yVelocity;
         repaint();
     }
 }

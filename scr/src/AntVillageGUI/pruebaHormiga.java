@@ -1,15 +1,28 @@
-package AntNFood;
+package AntVillageGUI;
 
 import Graph.Arista;
 import Graph.Grafo;
 import Graph.NodoG;
 
 import javax.swing.*;
-import java.awt.Image;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hormiga{
+public class pruebaHormiga extends JPanel implements ActionListener {
+    final int alto = 500;
+    final int ancho = 600;
+    Image enemy;
+    Image enemy2;
+    Timer timer;
+    int xVelocity = 1;
+    int yVelocity = 1;
+    int x =0;
+    int y = 0;
+    int x2 =0;
+    int y2 = 0;
 
     // Atributos de la clase
     private Grafo grafo;
@@ -24,8 +37,9 @@ public class Hormiga{
     private Image image;                // Imagen
     private int Gx;
     private int Gy;
+    private boolean flag = false;
     // Constructor de la clase
-    public Hormiga(Grafo grafo, String nombre, String tipo, int posicion_x, int posicion_y, int posicion_dx, int posicion_dy){
+    public pruebaHormiga(Grafo grafo, int posicion_x, int posicion_y){
 
         this.grafo = grafo;
         this.nombre = nombre;
@@ -34,10 +48,14 @@ public class Hormiga{
         this.recolectado = 0;
         this.posicion_x = posicion_x;
         this.posicion_y = posicion_y;
-        this.posicion_dx = posicion_dx;
-        this.posicion_dy = posicion_dy;
-        ImageIcon imageIcon = new ImageIcon(this.getClass().getResource(tipo));
-        this.image = imageIcon.getImage();
+        //ImageIcon imageIcon = new ImageIcon(this.getClass().getResource(tipo));
+        //this.image = imageIcon.getImage();
+        this.setPreferredSize(new Dimension(ancho,alto));
+        this.setBackground(Color.black);
+        enemy = new ImageIcon("imagenes\\hormiga verde.png").getImage();
+        enemy2 = new ImageIcon("imagenes\\hormiga azul.png").getImage();
+        timer = new Timer(10 , this);
+        timer.start();
     }
 
     // Métodos getter y setter
@@ -124,20 +142,17 @@ public class Hormiga{
     public void moverHormigaVerde(List list){
 
         NodoG nodoG;
-        String punto;
+        NodoG punto;
         int x, y;
-
         for (int i = 0; i < list.size(); i++){                  // Lista de puntos
-            for (int j = 0; j < grafo.totalNodos(); j++){       // ArrayList de nodos
-
+            for (int j = 0; j < grafo.totalNodos(); j++){
                 nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
-                punto = (String) list.get(i);       // Toma el valor del punto (Lista de puntos)
-
+                punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
                 if (nodoG.equals(punto) == true){   // Si ambos valores son iguales
 
                     x = nodoG.getPosicion_x();      // Toma el valor x del nodo
                     y = nodoG.getPosicion_y();      // Toma el valor y del nodo
-
+                    
                     moverHVerde(x, y);              // Llama al método
                 }
             }
@@ -146,11 +161,40 @@ public class Hormiga{
 
     // Método que se encarga de mover y actualizar la posición de la hormiga Verde
     public void moverHVerde(int x, int y){
-
+        while (Gx != x && Gy != y){
+            if (Gx>x && Gy < y){
+                Gx = Gx-1;
+                Gy+=1;
+                repaint();
+            }
+            else if(Gx<x && Gy > y){
+                Gx = Gx+1;
+                Gy-=1;
+                repaint();
+            }
+            else if(Gx<x && Gy < y){
+                Gx +=1;
+                Gy +=1;
+                repaint();
+            }
+            else{
+                Gx -=1;
+                Gy -=1;
+                repaint();
+            }
+        }
+        flag = false;
+    }
+    public void paint(Graphics g){
+        super.paint(g);
+        Graphics2D G2D = (Graphics2D) g;
+        G2D.drawImage(enemy , Gx ,Gy , null);
+        //G2D.drawImage(enemy2 , x2 ,y2 , null);
     }
 
     // Método que se encarga de mover la hormiga mediante el algoritmo de fuerza bruta
     public void moverHormigaVAzul(){
+
 
     }
 
@@ -182,6 +226,11 @@ public class Hormiga{
                 "\n Comida recolectada: " + recolectado +
                 "\n Registro de movimiento: " +
                 "\n" + registro;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) { // meto el recorrer nodo en el timer
+
     }
 
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
