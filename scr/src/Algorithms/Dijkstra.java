@@ -39,7 +39,6 @@ public class Dijkstra {
         NodoG nodoAux;
         HashMap<NodoG, Arista> aristas = null;
         Object[] adyacentes;
-
         List<NodoG> puntos = new ArrayList<>(); // Lista de los puntos (nodos) por recorrer
 
         do{
@@ -51,12 +50,19 @@ public class Dijkstra {
             adyacentes = nodoAux.getAdyacentes().keySet().toArray();
             pesoNodo = nodos.get(nodoAux);
 
-            for (int i = 0; i < aristas.size(); i++){
+            if (nodoAux.equals(destino)){
 
-                peso = aristas.get(adyacentes[i]).getDistancia();
+                break;
+            }
+            else {
 
-                if ((pesoNodo + peso) < nodos.get((NodoG)adyacentes[i])){
-                    nodos.put((NodoG) adyacentes[i], pesoNodo + peso);
+                for (int i = 0; i < aristas.size(); i++){
+
+                    peso = aristas.get(adyacentes[i]).getDistancia();
+
+                    if ((pesoNodo + peso) < nodos.get((NodoG)adyacentes[i])){
+                        nodos.put((NodoG) adyacentes[i], pesoNodo + peso);
+                    }
                 }
             }
 
