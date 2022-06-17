@@ -197,8 +197,8 @@ public class Bienvenida extends javax.swing.JFrame {
             if (alimento <= 5) {
                 if (alimento > 0) {
                     Bienvenida.this.dispose();
-                    modo_juego = "Juego 5";
-                    new Juego5(alimento).setVisible(true);
+                    modo_juego = "Juego 7";
+                    new Juego7(alimento).setVisible(true);
                     JOptionPane.showMessageDialog(null, "ATENCIÓN: Para que el juego empiece, " +
                             "seleccione una aldea para colocar la comida");
                     //Comida obj = new Comida(modo_juego, alimento, "verde");
@@ -213,8 +213,8 @@ public class Bienvenida extends javax.swing.JFrame {
             if (alimento <= 5) {
                 if (alimento > 0) {
                     Bienvenida.this.dispose();
-                    modo_juego = "Juego 5";
-                    new Juego5(alimento).setVisible(true);
+                    modo_juego = "Juego 9";
+                    new Juego9(alimento).setVisible(true);
                     JOptionPane.showMessageDialog(null, "ATENCIÓN: Para que el juego empiece, " +
                             "seleccione una aldea para colocar la comida");
                     //Comida obj = new Comida(modo_juego, alimento, "verde");
