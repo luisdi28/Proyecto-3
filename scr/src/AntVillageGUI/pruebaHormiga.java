@@ -3,6 +3,7 @@ package AntVillageGUI;
 import Graph.Arista;
 import Graph.Grafo;
 import Graph.NodoG;
+import Lists.listaNormal;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,10 +23,9 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     Timer timer;
     int xVelocity = 1;
     int yVelocity = 1;
-    int x = 0;
-    int y = 0;
-    int x2 = 0;
-    int y2 = 0;
+    int x;
+    int y ;
+    int iteraciones = 0;
     // Atributos de la clase
     private Grafo grafo;
     private String nombre;              // Nombre para identificar la hormiga, útil para el método mostrarInfo()
@@ -37,13 +37,13 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     private int posicion_dx;            // Posicion dx de la imagen
     private int posicion_dy;            // Posicion dy de la imagen
     private Image image;                // Imagen
-    private int Gx = 0;
-    private int Gy = 0;
-    private boolean flag = true;
+    private int Gx;
+    private int Gy ;
+    private boolean flag = false;
+    private listaNormal listanormal;
 
     // Constructor de la clase
     public pruebaHormiga(Grafo grafo, int posicion_x, int posicion_y) {
-
         this.grafo = grafo;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -57,7 +57,11 @@ public class pruebaHormiga extends JPanel implements ActionListener {
         //this.setBackground(Color.black);
         enemy = new ImageIcon("imagenes\\hormiga verde.png").getImage();
         enemy2 = new ImageIcon("imagenes\\hormiga azul.png").getImage();
-        timer = new Timer(10, this);
+        this.x = 0;
+        this.y = 0;
+        this.Gx = 0;
+        this.Gy = 0;
+        timer = new Timer(20, this);
         timer.start();
     }
 
@@ -142,8 +146,13 @@ public class pruebaHormiga extends JPanel implements ActionListener {
 
     // Métodos de lógica
     // Método que se encarga de mover la hormiga mediante el algoritmo de Dikstra
-    public void moverHormigaVerde(List list) { //pienso que se peude hacer esto automatico con un setlist.
-        //y con hilos
+    public void setList(List list){
+        this.list = list;
+    }
+    public void setFlag(){
+        this.flag = true;
+    }
+    public void moverHormigaVerde(List list) {
         NodoG nodoG;
         NodoG punto;
         int x, y;
@@ -180,10 +189,50 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                 i+=1;
             }
             else{
+
             }
         }
     }
+    public void moverVerde(){
 
+        NodoG nodoG;
+        NodoG punto;
+        int x, y;
+        for (int i = 0; i < list.size(); i++){                  // Lista de puntos
+            for (int j = 0; j < grafo.totalNodos(); j++){       // ArrayList de nodos
+
+                nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
+                punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
+
+                if (nodoG.equals(punto) == true){   // Si ambos valores son iguales
+
+                    x = nodoG.getPosicion_x();      // Toma el valor x del nodo
+                    y = nodoG.getPosicion_y();      // Toma el valor y del nodo
+                    moverHGreen(x, y);              // Llama al método
+                    System.out.println("x" + x + "y" + y);
+                }
+            }
+        }
+        flag = false;
+    }
+
+    // Método que se encarga de mover y actualizar la posición de la hormiga Verde
+    public void moverHGreen(int x, int y) {
+        listanormal.insertFirst(x,y);
+    }
+    public void setListanormal(){
+        this.listanormal = new listaNormal();
+    }
+    public void checkIteraciones(){
+        if (iteraciones == listanormal.getSize()){
+            flag=false;
+            iteraciones=0;
+            listanormal = null;
+        }
+    }
+    public void getListanormal(){
+        listanormal.displayList();
+    }
     // Método que se encarga de mover y actualizar la posición de la hormiga Verde
     public void moverHVerde(int x, int y) {
         /*
@@ -252,27 +301,6 @@ public class pruebaHormiga extends JPanel implements ActionListener {
 
     // Método que se encarga de mover la hormiga mediante el algoritmo de fuerza bruta
     public void moverHormigaVAzul(int x, int y) {
-        while (Gx != x && Gy != y) {
-            System.out.println("el x sumado es:" + Gx);
-            if (Gx > x && Gy < y) {
-                Gx = Gx - 1;
-                Gy += 1;
-                repaint();
-            } else if (Gx < x && Gy > y) {
-                Gx = Gx + 1;
-                Gy -= 1;
-                repaint();
-            } else if (Gx < x && Gy < y) {
-                Gx += 1;
-                Gy += 1;
-                repaint();
-
-            } else {
-                Gx -= 1;
-                Gy -= 1;
-                repaint();
-            }
-        }
     }
     public void paint(Graphics g){
         super.paint(g);
@@ -280,40 +308,66 @@ public class pruebaHormiga extends JPanel implements ActionListener {
         G2D.drawImage(enemy , Gx ,Gy , null);
         //G2D.drawImage(enemy2 , x2 ,y2 , null);
     }
+    //lo que debo hacer es guardar una lista de las posiciones del ciclo for
+    //en una variable lista, tener una variable n
+    //tener variables x , y de destino(de la lista)
+    //tener una funcion que asigne las variables de las listas a las x , y
+    //tener un flag en la variable que asigna
+    //utilizar el timer con esas variables, cuando llega el timer se pone la flag en false, y regresa
+    //al while loop para asignar x y y leer la lista,similar a lo que ya tenemos hecho con las flags 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (flag == false){
-
-            if (Gx != x && Gy != y){
-                if (Gx > x && Gy < y) {
-                    Gx = Gx - 1;
-                    Gy += 1;
-                    repaint();
-                } else if (Gx < x && Gy > y) {
-                    Gx = Gx + 1;
-                    Gy -= 1;
-                    repaint();
-                } else if (Gx < x && Gy < y) {
-                    Gx += 1;
-                    Gy += 1;
-                    repaint();
-                } else {
-                    Gx -= 1;
-                    Gy -= 1;
-                    repaint();
+        if (flag==true){
+            if (iteraciones != listanormal.getSize()){
+                x = listanormal.buscarx(iteraciones);
+                y = listanormal.buscary(iteraciones);
+                if (Gx != x || Gy != y){
+                    if (Gx == x && Gy < y) {
+                        Gy += 1;
+                        repaint();
+                    }
+                    if (Gx == x && Gy > y) {
+                        Gy -= 1;
+                        repaint();
+                    }
+                    if (Gy == y && Gx < x) {
+                        Gx+= 1;
+                        repaint();
+                    }
+                    if (Gy == y && Gx > x) {
+                        Gx -= 1;
+                        repaint();
+                    }
+                    if (Gx > x && Gy < y) {
+                        Gx = Gx - 1;
+                        Gy += 1;
+                        repaint();
+                    } else if (Gx < x && Gy > y) {
+                        Gx = Gx + 1;
+                        Gy -= 1;
+                        repaint();
+                    } else if (Gx < x && Gy < y) {
+                        Gx += 1;
+                        Gy += 1;
+                        repaint();
+                    } else {
+                        Gx -= 1;
+                        Gy -= 1;
+                        repaint();
+                    }
+                }
+                else{
+                    iteraciones+=1;
                 }
             }
             else{
-                System.out.println("la posicion x es:" + Gx);
-                System.out.println("la posicion y es:" + Gy);
-                System.out.println("la posicion que debio moverse en el nodo x:" + x);
-                System.out.println("la posicion que debio moverse en el nodo y:" + y);
-                System.out.println("se lego al cambio de flag");
-                flag = true;
-                System.out.println("el flag nuevo es:" + flag);
-            }
+                System.out.println("el x es:" + Gx + "el y es:" + Gy);
+                checkIteraciones();
+                flag=false;
 
+            }
         }
+        repaint();
     }
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
