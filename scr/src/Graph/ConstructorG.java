@@ -1,6 +1,9 @@
 package Graph;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class ConstructorG {
@@ -229,7 +232,10 @@ public class ConstructorG {
                 break;
         }
 
+        // Llamado de métodos
+        crearMatrizAdyacencia(grafo);
         agregarXY(grafo);
+
         return grafo;
     }
 
@@ -303,5 +309,53 @@ public class ConstructorG {
 
                 break;
         }
+    }
+
+    // Método que se encarga de crear la matriz de adyacencia
+    public String crearMatrizAdyacencia(Grafo grafo){
+
+        int m = grafo.totalNodos();
+        int i, j;
+
+        // Matriz mxm donde m es la cantidad de nodos que tiene el grafo
+        String[][] matrizAdyacencia = new String[m][m];
+
+        for (i = 0; i < m; i++){
+            for (j = 0; j < m; j++){
+
+                // Nodo origen
+                NodoG nodoO = grafo.getNodos().get(i);
+                // Nodo destino
+                NodoG nodoD = grafo.getNodos().get(j);
+
+                // Si existe relación entre el nodo origen y el nodo destino
+                if (nodoO.getAdyacentes().containsKey(nodoD)){
+
+                    // Se agrega 1 como true
+                    matrizAdyacencia[i][j] = "1";
+                }
+
+                // Si no existe relación entre el nodo origen y el nodo destino
+                else {
+
+                    // Se agrega 0 como false
+                    matrizAdyacencia[i][j] = "0";
+                }
+            }
+        }
+
+        /*
+        // Se usa solamente para mostrar la matriz en la terminal
+        for (i = 0; i < m; i++){
+            for (j = 0; j < m; j++) {
+
+                System.out.print(matrizAdyacencia[i][j] + " ");
+            }
+            System.out.println();
+        }
+         */
+
+        // Retorna la matriz en formato String y [[][][]]
+        return Arrays.deepToString(matrizAdyacencia).toString();
     }
 }
