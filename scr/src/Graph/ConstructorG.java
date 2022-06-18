@@ -137,7 +137,7 @@ public class ConstructorG {
                     while (contador > 0){
 
                         // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
-                        posRandom = randomInt.nextInt(0, 8);
+                        posRandom = randomInt.nextInt(0, 7);
 
                         // Nodo origen
                         NodoG nodoO = grafo.getNodos().get(i);
@@ -170,8 +170,8 @@ public class ConstructorG {
             case 9:
                 // Se inicializa el arreglo de tipo String con los sectores establecidos
                 sectores = new String[]{"SectorA", "SectorB", "SectorC",
-                        "SectorD", "SectorE", "SectorF",
-                        "SectorG", "SectorH", "SectorI"};
+                                        "SectorD", "SectorE", "SectorF",
+                                        "SectorG", "SectorH", "SectorI"};
 
                 arrayLength = sectores.length;
 
@@ -197,7 +197,7 @@ public class ConstructorG {
                     while (contador > 0){
 
                         // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
-                        posRandom = randomInt.nextInt(0, 10);
+                        posRandom = randomInt.nextInt(0, 9);
 
                         // Nodo origen
                         NodoG nodoO = grafo.getNodos().get(i);
