@@ -55,4 +55,15 @@ public class Archivo {
             }
         }
     }
+
+    // Método que se encarga de limpiar todo lo escrito en el archivo Info.txt
+    public void limpiar() throws IOException {
+
+        // Toma el archivo
+        bufferedWriter = new BufferedWriter(new FileWriter(file));
+        // Limpia el archivo
+        bufferedWriter.write("");
+        // Cierra el archivo
+        bufferedWriter.close();
+    }
 }
