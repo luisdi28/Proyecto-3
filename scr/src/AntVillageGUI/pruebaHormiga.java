@@ -164,10 +164,10 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                 System.out.println("la iteracion es = " + i);
                 System.out.println("el j es:" + j);
                 System.out.println("el nodo de grafos es:" + grafo.totalNodos());
-                System.out.println("la flag es:" + flag);
+                //System.out.println("la flag es:" + flag);
                 while (j < grafo.totalNodos()) {
                     if (flag == true) {
-                        System.out.println("flag verdadera");
+                        //System.out.println("flag verdadera");
                         nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
                         punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
                         if (nodoG.equals(punto) == true) {   // Si ambos valores son iguales
@@ -177,11 +177,11 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                             this.x = nodoG.getPosicion_x();      // Toma el valor x del nodo
                             this.y = nodoG.getPosicion_y();
                             flag = false;
-                            j += 1;
                             System.out.println("posicion x= " + this.x);
                             System.out.println("posicion y= " + this.y);
+                            j += 1;
                         } else {
-                            System.out.println("se suma 1");
+                            //System.out.println("se suma 1");
                             j += 1;
                         }
                     }
@@ -361,9 +361,20 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                 }
             }
             else{
+<<<<<<< Updated upstream
                 System.out.println("el x es:" + Gx + "el y es:" + Gy);
                 checkIteraciones();
                 flag=false;
+=======
+                System.out.println("la posicion x es:" + Gx);
+                System.out.println("la posicion y es:" + Gy);
+                System.out.println("la posicion que debio moverse en el nodo x:" + x);
+                System.out.println("la posicion que debio moverse en el nodo y:" + y);
+               //System.out.println("se lego al cambio de flag");
+                flag = true;
+                //System.out.println("el flag nuevo es:" + flag);
+            }
+>>>>>>> Stashed changes
 
             }
         }

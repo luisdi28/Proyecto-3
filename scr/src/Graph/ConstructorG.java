@@ -68,24 +68,37 @@ public class ConstructorG {
                 // Se crean las conexiones entre nodos para el grafo dirigido
                 // Se ejecuta m veces donde m es igual al tamaño del ArrayList
                 for (i = 0; i < arrayLength; i++){
-                    // Se ejecuta n veces donde n es igual al tamaño del ArrayList * tamaño del ArrayList
-                    for (j = 0; j < arrayLength; j++){
 
-                        contador = 2;
+                    // Se toma un número entero para definir la cantidad de aristas
+                    contador = randomInt.nextInt(2, 5);
 
-                        while (contador > 0){
+                    // Se ejecuta mientras contador sea mayor a cero
+                    while (contador > 0){
 
-                            posRandom = randomInt.nextInt(0, 5);
+                        // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
+                        posRandom = randomInt.nextInt(0, 5);
 
-                            NodoG nodoO = grafo.getNodos().get(i);
-                            NodoG nodoD = grafo.getNodos().get(posRandom);
+                        // Nodo origen
+                        NodoG nodoO = grafo.getNodos().get(i);
+                        // Nodo destino
+                        NodoG nodoD = grafo.getNodos().get(posRandom);
 
-                            if (nodoO.equals(nodoD) == true){
-                                continue;
-                            }
-                            else{
-                                distancia = randomInt.nextInt(10, 40);
-                                grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                        // Compara ambos nodos y si son iguales, continua sin conectar nodos
+                        if (nodoO.equals(nodoD) == true){
+                            continue;
+                        }
+
+                        // En caso de ser diferentes
+                        else{
+
+                            // Se crea un peso aleatorio entre 10 y 30
+                            distancia = randomInt.nextInt(10, 30);
+                            // Se realiza la conexión entre nodos con una arista de peso aleatorio
+                            grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+
+                            // El contador se empieza a restar una vez el nodo tenga al menos un
+                            // nodo adyacente debido a los problemas con el algoritmo de Dijkstra
+                            if (nodoO.getAdyacentes().size() > 1){
                                 contador--;
                             }
                         }
@@ -113,24 +126,37 @@ public class ConstructorG {
                 // Se crean las conexiones entre nodos para el grafo dirigido
                 // Se ejecuta m veces donde m es igual al tamaño del ArrayList
                 for (i = 0; i < arrayLength; i++){
-                    // Se ejecuta n veces donde n es igual al tamaño del ArrayList * tamaño del ArrayList
-                    for (j = 0; j < arrayLength; j++){
 
-                        contador = 2;
+                    // Se toma un número entero para definir la cantidad de aristas
+                    contador = randomInt.nextInt(2, 7);
 
-                        while (contador > 0){
+                    // Se ejecuta mientras contador sea mayor a cero
+                    while (contador > 0){
 
-                            posRandom = randomInt.nextInt(0, 7);
+                        // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
+                        posRandom = randomInt.nextInt(0, 8);
 
-                            NodoG nodoO = grafo.getNodos().get(i);
-                            NodoG nodoD = grafo.getNodos().get(posRandom);
+                        // Nodo origen
+                        NodoG nodoO = grafo.getNodos().get(i);
+                        // Nodo destino
+                        NodoG nodoD = grafo.getNodos().get(posRandom);
 
-                            if (nodoO.equals(nodoD) == true){
-                                continue;
-                            }
-                            else{
-                                distancia = randomInt.nextInt(10, 40);
-                                grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                        // Compara ambos nodos y si son iguales, continua sin conectar nodos
+                        if (nodoO.equals(nodoD) == true){
+                            continue;
+                        }
+
+                        // En caso de ser diferentes
+                        else{
+
+                            // Se crea un peso aleatorio entre 10 y 30
+                            distancia = randomInt.nextInt(10, 30);
+                            // Se realiza la conexión entre nodos con una arista de peso aleatorio
+                            grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+
+                            // El contador se empieza a restar una vez el nodo tenga al menos un
+                            // nodo adyacente debido a los problemas con el algoritmo de Dijkstra
+                            if (nodoO.getAdyacentes().size() > 1){
                                 contador--;
                             }
                         }
@@ -141,8 +167,8 @@ public class ConstructorG {
             case 9:
                 // Se inicializa el arreglo de tipo String con los sectores establecidos
                 sectores = new String[]{"SectorA", "SectorB", "SectorC",
-                                        "SectorD", "SectorE", "SectorF",
-                                        "SectorG", "SectorH", "SectorI"};
+                        "SectorD", "SectorE", "SectorF",
+                        "SectorG", "SectorH", "SectorI"};
 
                 arrayLength = sectores.length;
 
@@ -160,24 +186,37 @@ public class ConstructorG {
                 // Se crean las conexiones entre nodos para el grafo dirigido
                 // Se ejecuta m veces donde m es igual al tamaño del ArrayList
                 for (i = 0; i < arrayLength; i++){
-                    // Se ejecuta n veces donde n es igual al tamaño del ArrayList * tamaño del ArrayList
-                    for (j = 0; j < arrayLength; j++){
 
-                        contador = 2;
+                    // Se toma un número entero para definir la cantidad de aristas
+                    contador = randomInt.nextInt(2, 9);
 
-                        while (contador > 0){
+                    // Se ejecuta mientras contador sea mayor a cero
+                    while (contador > 0){
 
-                            posRandom = randomInt.nextInt(0, 9);
+                        // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
+                        posRandom = randomInt.nextInt(0, 10);
 
-                            NodoG nodoO = grafo.getNodos().get(i);
-                            NodoG nodoD = grafo.getNodos().get(posRandom);
+                        // Nodo origen
+                        NodoG nodoO = grafo.getNodos().get(i);
+                        // Nodo destino
+                        NodoG nodoD = grafo.getNodos().get(posRandom);
 
-                            if (nodoO.equals(nodoD) == true){
-                                continue;
-                            }
-                            else{
-                                distancia = randomInt.nextInt(10, 40);
-                                grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                        // Compara ambos nodos y si son iguales, continua sin conectar nodos
+                        if (nodoO.equals(nodoD) == true){
+                            continue;
+                        }
+
+                        // En caso de ser diferentes
+                        else{
+
+                            // Se crea un peso aleatorio entre 10 y 30
+                            distancia = randomInt.nextInt(10, 30);
+                            // Se realiza la conexión entre nodos con una arista de peso aleatorio
+                            grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+
+                            // El contador se empieza a restar una vez el nodo tenga al menos un
+                            // nodo adyacente debido a los problemas con el algoritmo de Dijkstra
+                            if (nodoO.getAdyacentes().size() > 1){
                                 contador--;
                             }
                         }
