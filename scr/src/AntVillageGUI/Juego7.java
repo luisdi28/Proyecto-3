@@ -378,3 +378,4 @@ public class Juego7 extends javax.swing.JFrame {
     private javax.swing.JPanel panelJuego;
 }
 
+

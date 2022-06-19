@@ -14,19 +14,19 @@ public class Archivo {
     BufferedWriter bufferedWriter;
 
     // Constructor de la clase
-    public Archivo(){
+    public Archivo() {
 
         // Ruta y nombre del archivo
         this.file = new File("Registro/Info.txt");
     }
 
     // Método que se encarga de escribir en el archivo de texto
-    public  void escribir(String texto){
+    public void escribir(String texto) {
 
         // Si el archivo no existe
-        if(!file.exists()){
+        if (!file.exists()) {
 
-            try{
+            try {
 
                 // Crea el archivo
                 file.createNewFile();
@@ -36,14 +36,14 @@ public class Archivo {
                 printWriter.close();
                 fileWriter.close();
 
-            }catch (IOException e){
+            } catch (IOException e) {
                 Logger.getLogger(Archivo.class.getName()).log(Level.SEVERE, null, e);
             }
         }
         // Si el archivo ya existe
-        else{
+        else {
 
-            try{
+            try {
 
                 fileWriter = new FileWriter(file, true);
                 printWriter = new PrintWriter(fileWriter);
@@ -51,7 +51,7 @@ public class Archivo {
                 printWriter.close();
                 fileWriter.close();
 
-            }catch (IOException e){
+            } catch (IOException e) {
                 Logger.getLogger(Archivo.class.getName()).log(Level.SEVERE, null, e);
             }
         }

@@ -303,5 +303,4 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
         // Método que se encarga de mostrar los recorridos de cada hormiga
-
 }

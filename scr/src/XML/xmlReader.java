@@ -69,3 +69,4 @@ the argument is a path name, which is taken from a list when the game ends.
         //xmlReader.readXML("GameRecords\\game2.xml");
     }
 }
+

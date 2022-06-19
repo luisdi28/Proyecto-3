@@ -30,3 +30,4 @@ public class nodoNormal {
         this.next = nodo;
     }
 }
+

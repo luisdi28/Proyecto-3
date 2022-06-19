@@ -24,3 +24,4 @@ public class Nodo {
         this.next = nodo;
     }
 }
+
