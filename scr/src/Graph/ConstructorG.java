@@ -1,5 +1,7 @@
 package Graph;
 
+import ManejoDeArchivos.Archivo;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -8,11 +10,25 @@ public class ConstructorG {
 
     // Atributos de la clase
     private Random randomInt;
+    private String texto;
+    private Archivo archivo;
+    StringBuilder stringBuilder;
 
     // Constructor de la clase
     public ConstructorG(){
 
         randomInt = new Random();
+        texto = "";
+        archivo = new Archivo();
+        stringBuilder = new StringBuilder();
+    }
+
+    public StringBuilder getStringBuilder() {
+        return stringBuilder;
+    }
+
+    public void setStringBuilder(StringBuilder stringBuilder) {
+        this.stringBuilder = stringBuilder;
     }
 
     // Método getter y setter del atributo randomInt
@@ -29,12 +45,14 @@ public class ConstructorG {
     public Grafo crearGrafo(int opcion){
 
         int opcionS = opcion;
+
+        // Arreglo de sectores (para los nodos)
         String[] sectores;
 
         // Se inicializa el grafo
         Grafo grafo = new Grafo();
         NodoG nodoG;
-        Arista arista;
+        AristaH arista;
 
         // Variables globales en el método donde i y j serán para recorrer arreglos y
         // distancia guarda el valor generado aleatoriamente con el atributo randomInt en cuanto a peso
@@ -56,15 +74,12 @@ public class ConstructorG {
                 arrayLength = sectores.length;
 
                 // Cada elemento del arreglo sectores se convierte en un nodo del grafo
-                for(i = 0; i < sectores.length; i++){
+                for(i = 0; i < arrayLength; i++){
 
                     // Se crea un nuevo nodo y se añade al grafo
                     nodoG = new NodoG(sectores[i]);
                     grafo.agregarNodo(nodoG);
                 }
-
-                // La variable creada en este método toma el ArrayList que retorna el método getNodos()
-                nodos = grafo.getNodos();
 
                 // Se crean las conexiones entre nodos para el grafo dirigido
                 // Se ejecuta m veces donde m es igual al tamaño del ArrayList
@@ -92,14 +107,15 @@ public class ConstructorG {
                         // En caso de ser diferentes
                         else{
 
-                            // Se crea un peso aleatorio entre 10 y 30
-                            distancia = randomInt.nextInt(10, 30);
+                            // Se crea un peso aleatorio entre 10 y 41
+                            distancia = randomInt.nextInt(10, 41);
                             // Se realiza la conexión entre nodos con una arista de peso aleatorio
-                            grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                            nodoO.agregarArista(new Arista(nodoO, nodoD, distancia));
+                            grafo.conectarNodos(nodoO, nodoD, new AristaH(distancia));
 
                             // El contador se empieza a restar una vez el nodo tenga al menos un
                             // nodo adyacente debido a los problemas con el algoritmo de Dijkstra
-                            if (nodoO.getAdyacentes().size() > 1){
+                            if (nodoO.getAdyacentesLista().size() > 1){
                                 contador--;
                             }
                         }
@@ -135,7 +151,7 @@ public class ConstructorG {
                     while (contador > 0){
 
                         // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
-                        posRandom = randomInt.nextInt(0, 7);
+                        posRandom = randomInt.nextInt(0, 8);
 
                         // Nodo origen
                         NodoG nodoO = grafo.getNodos().get(i);
@@ -150,14 +166,16 @@ public class ConstructorG {
                         // En caso de ser diferentes
                         else{
 
-                            // Se crea un peso aleatorio entre 10 y 30
-                            distancia = randomInt.nextInt(10, 30);
+                            // Se crea un peso aleatorio entre 10 y 41
+                            distancia = randomInt.nextInt(10, 41);
                             // Se realiza la conexión entre nodos con una arista de peso aleatorio
-                            grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                            nodoO.agregarArista(new Arista(nodoO, nodoD, distancia));
+
+                            grafo.conectarNodos(nodoO, nodoD, new AristaH(distancia));
 
                             // El contador se empieza a restar una vez el nodo tenga al menos un
                             // nodo adyacente debido a los problemas con el algoritmo de Dijkstra
-                            if (nodoO.getAdyacentes().size() > 1){
+                            if (nodoO.getAdyacentesLista().size() > 1){
                                 contador--;
                             }
                         }
@@ -168,8 +186,8 @@ public class ConstructorG {
             case 9:
                 // Se inicializa el arreglo de tipo String con los sectores establecidos
                 sectores = new String[]{"SectorA", "SectorB", "SectorC",
-                                        "SectorD", "SectorE", "SectorF",
-                                        "SectorG", "SectorH", "SectorI"};
+                        "SectorD", "SectorE", "SectorF",
+                        "SectorG", "SectorH", "SectorI"};
 
                 arrayLength = sectores.length;
 
@@ -195,7 +213,7 @@ public class ConstructorG {
                     while (contador > 0){
 
                         // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
-                        posRandom = randomInt.nextInt(0, 9);
+                        posRandom = randomInt.nextInt(0, 10);
 
                         // Nodo origen
                         NodoG nodoO = grafo.getNodos().get(i);
@@ -210,14 +228,15 @@ public class ConstructorG {
                         // En caso de ser diferentes
                         else{
 
-                            // Se crea un peso aleatorio entre 10 y 30
-                            distancia = randomInt.nextInt(10, 30);
+                            // Se crea un peso aleatorio entre 10 y 41
+                            distancia = randomInt.nextInt(10, 41);
                             // Se realiza la conexión entre nodos con una arista de peso aleatorio
-                            grafo.conectarNodos(nodoO, nodoD, new Arista(distancia));
+                            nodoO.agregarArista(new Arista(nodoO, nodoD, distancia));
+                            grafo.conectarNodos(nodoO, nodoD, new AristaH(distancia));
 
                             // El contador se empieza a restar una vez el nodo tenga al menos un
                             // nodo adyacente debido a los problemas con el algoritmo de Dijkstra
-                            if (nodoO.getAdyacentes().size() > 1){
+                            if (nodoO.getAdyacentesLista().size() > 1){
                                 contador--;
                             }
                         }
@@ -231,7 +250,9 @@ public class ConstructorG {
         }
 
         // Llamado de métodos
+        registrarNodos(grafo);
         crearMatrizAdyacencia(grafo);
+        registrarAdyacentes(grafo);
         agregarXY(grafo);
 
         return grafo;
@@ -309,8 +330,22 @@ public class ConstructorG {
         }
     }
 
+    // Método que se encarga de escribir los nodos existentes en el txt
+    public void registrarNodos(Grafo grafo){
+
+        // Restablece el valor del stringBuilder
+        stringBuilder.setLength(0);
+
+        // Guarda lo que retorna el método
+        stringBuilder.append(grafo.toString());
+
+        // se escribe en el txt
+        archivo.escribir("\nNodos existentes en el grafo: " + String.valueOf(stringBuilder) + "\n");
+    }
+
     // Método que se encarga de crear la matriz de adyacencia
-    public String crearMatrizAdyacencia(Grafo grafo){
+    // También, se encarga de escribir la matriz en el txt
+    public void crearMatrizAdyacencia(Grafo grafo){
 
         int m = grafo.totalNodos();
         int i, j;
@@ -318,6 +353,7 @@ public class ConstructorG {
         // Matriz mxm donde m es la cantidad de nodos que tiene el grafo
         String[][] matrizAdyacencia = new String[m][m];
 
+        // Creando la matriz de adyacencia
         for (i = 0; i < m; i++){
             for (j = 0; j < m; j++){
 
@@ -342,18 +378,60 @@ public class ConstructorG {
             }
         }
 
-        /*
-        // Se usa solamente para mostrar la matriz en la terminal
-        for (i = 0; i < m; i++){
-            for (j = 0; j < m; j++) {
+        // Se inicializa el valor de texto
+        texto = "Matriz de adyacencia --> " + Arrays.deepToString(matrizAdyacencia).toString() + "\n";
+        // Se escribe en el txt la matriz en formato [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+        archivo.escribir(texto);
 
-                System.out.print(matrizAdyacencia[i][j] + " ");
+        // Llamado de método
+        registrarMatrizAdyacencia(matrizAdyacencia, m);
+    }
+
+    // Método que se encarga de escribir la matriz de adyacencia en el txt
+    public void registrarMatrizAdyacencia(String[][] matrizAdyacencia, int m){
+
+        // Restablece el valor del stringBuilder
+        stringBuilder.setLength(0);
+
+        // Dando formato a la matriz
+        // Mediante stringBuilder.append() se realiza la concatenación en tod el recorrido de la matriz
+        for (int i = 0; i < m; i++){
+
+            stringBuilder.append("\t\t [ ");
+            for (int j = 0; j < m; j++){
+
+                // Se agrega el valor en la posicion [i][j]
+                stringBuilder.append(matrizAdyacencia[i][j] + " ");
+
             }
-            System.out.println();
-        }
-         */
 
-        // Retorna la matriz en formato String y [[][][]]
-        return Arrays.deepToString(matrizAdyacencia).toString();
+            stringBuilder.append("]");
+            stringBuilder.append("\n");
+        }
+
+        // Se escribe en el txt
+        archivo.escribir(String.valueOf(stringBuilder));
+    }
+
+    // Método que se encarga de escribir los nodos adyacentes de cada nodo en el txt
+    public void registrarAdyacentes(Grafo grafo){
+
+        // Restablece el valor del stringBuilder
+        stringBuilder.setLength(0);
+
+        int limite = grafo.totalNodos();
+
+        for (int i = 0; i < limite; i++){
+
+            // Nodo origen
+            NodoG nodoG = grafo.getNodos().get(i);
+
+            // Agrega el nodo origen y los nodos adyacente en el mismo stringBuilder
+            stringBuilder.append(grafo.nodosAdyacentes(nodoG));
+            stringBuilder.append("\n");
+        }
+
+        // Escribe en el txt
+        archivo.escribir(String.valueOf(stringBuilder));
     }
 }
