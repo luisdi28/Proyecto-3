@@ -1,15 +1,36 @@
 package AntVillageGUI;
 
 import Algorithms.Dijkstra;
+import Graph.ConstructorG;
+import Graph.Grafo;
+import Graph.NodoG;
+import Lists.listaNormal;
+import rsscalelabel.RSScaleLabel;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.util.List;
 
-public class Juego5 extends JFrame {
+public class Juego5 extends JFrame implements ActionListener {
 
     String hormiguero = "imagenes/imagen1.png";
     String comida_juego = "imagenes/Comida.png";
     boolean flag_comida = false;
+
+    pruebaHormiga prueba;
+    ConstructorG constructorG = new ConstructorG();
+    Grafo grafo;
+
+    private List list;
+
+    private int x, y, Gx, Gy, iteraciones;
+    private Image enemy;
+    private boolean flag;
+    private listaNormal listanormal;
+
 
     public Juego5(int alimento) {
 
@@ -24,6 +45,17 @@ public class Juego5 extends JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(C, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(D, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(E, hormiguero);
+
+        Timer timer = new Timer(20,this);
+
+        x = 0;
+        y = 0;
+        Gx = 0;
+        Gy = 0;
+        iteraciones = 0;
+        flag = false;
+
+        enemy = new ImageIcon("imagenes\\hormiga verde.png").getImage();
     }
 
     public Juego5() {
@@ -175,16 +207,21 @@ public class Juego5 extends JFrame {
         pack();
     }// </editor-fold>
 
-    private void Comida_AMouseClicked(java.awt.event.MouseEvent evt) {
-        //pruebaMain obj = new pruebaMain();
-        //pruebaMain.main();
+    private void Comida_AMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+            RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+            grafo = constructorG.crearGrafo(5);
+            Dijkstra dijkstra = new Dijkstra(grafo);
+            List list = dijkstra.rutaCostoMinimoDijkstra(grafo.getNodos().get(4) , grafo.getNodos().get(1));
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
             reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+            RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
         }
 
     }
@@ -266,6 +303,116 @@ public class Juego5 extends JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, null);
     }
 
+    public void setList(List list){
+        this.list = list;
+    }
+
+    public void setFlag(){
+        this.flag = true;
+    }
+
+    public void paint(Graphics g) {
+        super.paint(g);
+        Graphics2D G2D = (Graphics2D) g;
+        G2D.drawImage(enemy, Gx, Gy, null);
+        System.out.println("Se dibuja");
+        //G2D.drawImage(enemy2 , x2 ,y2 , null);
+    }
+
+    public void moverVerde(){
+
+        NodoG nodoG;
+        NodoG punto;
+        int x, y;
+        for (int i = 0; i < list.size(); i++){                  // Lista de puntos
+            for (int j = 0; j < grafo.totalNodos(); j++){       // ArrayList de nodos
+
+                nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
+                punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
+
+                if (nodoG.equals(punto) == true){   // Si ambos valores son iguales
+
+                    x = nodoG.getPosicion_x();      // Toma el valor x del nodo
+                    y = nodoG.getPosicion_y();      // Toma el valor y del nodo
+                    moverHGreen(x, y);              // Llama al método
+                    System.out.println("x" + x + "y" + y);
+                }
+            }
+        }
+        flag = false;
+    }
+    public void moverHGreen(int x, int y) {
+        listanormal.insertFirst(x,y);
+    }
+
+    public void setListanormal(){
+        this.listanormal = new listaNormal();
+    }
+
+    public void checkIteraciones(){
+        if (iteraciones == listanormal.getSize()){
+            flag=false;
+            iteraciones=0;
+            listanormal = null;
+        }
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (flag == true) {
+            if (iteraciones != listanormal.getSize()) {
+                x = listanormal.buscarx(iteraciones);
+                y = listanormal.buscary(iteraciones);
+                if (Gx != x || Gy != y) {
+                    if (Gx == x && Gy < y) {
+                        Gy += 1;
+                        repaint();
+                    }
+                    if (Gx == x && Gy > y) {
+                        Gy -= 1;
+                        repaint();
+                    }
+                    if (Gy == y && Gx < x) {
+                        Gx += 1;
+                        repaint();
+                    }
+                    if (Gy == y && Gx > x) {
+                        Gx -= 1;
+                        repaint();
+                    }
+                    if (Gx > x && Gy < y) {
+                        Gx = Gx - 1;
+                        Gy += 1;
+                        repaint();
+                    } else if (Gx < x && Gy > y) {
+                        Gx = Gx + 1;
+                        Gy -= 1;
+                        repaint();
+                    } else if (Gx < x && Gy < y) {
+                        Gx += 1;
+                        Gy += 1;
+                        repaint();
+                    } else {
+                        Gx -= 1;
+                        Gy -= 1;
+                        repaint();
+                    }
+                } else {
+                    iteraciones += 1;
+                }
+            } else {
+
+                System.out.println("el x es:" + Gx + " el y es:" + Gy);
+                checkIteraciones();
+                flag = false;
+            }
+
+        }
+        repaint();
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -325,8 +472,6 @@ public class Juego5 extends JFrame {
     private static JLabel Comida_C;
     private static JLabel Comida_D;
     private static JLabel Comida_E;
-
-
 
     private JPanel panelInfo;
     private JPanel panelJuego;

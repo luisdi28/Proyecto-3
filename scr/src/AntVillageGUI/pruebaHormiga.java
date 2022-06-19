@@ -1,4 +1,4 @@
-/*package AntVillageGUI;
+package AntVillageGUI;
 
 import Graph.Grafo;
 import Graph.NodoG;
@@ -10,7 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
-//import java.util.Timer;
 
 public class pruebaHormiga extends JPanel implements ActionListener {
     private List list;
@@ -293,26 +292,16 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                 }
             } else {
 
-                System.out.println("el x es:" + Gx + "el y es:" + Gy);
+                System.out.println("el x es:" + Gx + " el y es:" + Gy);
                 checkIteraciones();
                 flag = false;
-
-                System.out.println("la posicion x es:" + Gx);
-                System.out.println("la posicion y es:" + Gy);
-                System.out.println("la posicion que debio moverse en el nodo x:" + x);
-                System.out.println("la posicion que debio moverse en el nodo y:" + y);
-                //System.out.println("se lego al cambio de flag");
-                flag = true;
-                //System.out.println("el flag nuevo es:" + flag);
             }
 
         }
-
-        System.out.println("prueba");
         repaint();
     }
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
         // Método que se encarga de mostrar los recorridos de cada hormiga
 
-}*/
+}

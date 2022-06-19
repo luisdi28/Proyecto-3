@@ -1,8 +1,17 @@
-/*package AntVillageGUI;
+package AntVillageGUI;
 
+import Algorithms.Dijkstra;
+import Graph.ConstructorG;
+import Graph.Grafo;
 
 public class pruebaMain {
+
     public static void main() {
-        new pruebaFrame();
+        ConstructorG constructorG = new ConstructorG();
+        Grafo grafo;
+        grafo = constructorG.crearGrafo(5);
+        new pruebaHormiga(grafo, 0,0);
+
     }
-}*/
+
+}

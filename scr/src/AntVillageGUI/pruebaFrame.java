@@ -1,5 +1,4 @@
-/*package AntVillageGUI;
-
+package AntVillageGUI;
 
 import Algorithms.Dijkstra;
 import Graph.ConstructorG;
@@ -10,7 +9,6 @@ import java.util.List;
 
 public class pruebaFrame extends JFrame {
     pruebaHormiga panel;
-    pruebaGUI panel2;
     ConstructorG constructorG = new ConstructorG();
     Grafo grafo;
     pruebaFrame(){
@@ -32,4 +30,3 @@ public class pruebaFrame extends JFrame {
         panel.setFlag();
     }
 }
-*/
