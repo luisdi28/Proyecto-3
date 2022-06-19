@@ -164,10 +164,10 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                 System.out.println("la iteracion es = " + i);
                 System.out.println("el j es:" + j);
                 System.out.println("el nodo de grafos es:" + grafo.totalNodos());
-                //System.out.println("la flag es:" + flag);
+                System.out.println("la flag es:" + flag);
                 while (j < grafo.totalNodos()) {
                     if (flag == true) {
-                        //System.out.println("flag verdadera");
+                        System.out.println("flag verdadera");
                         nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
                         punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
                         if (nodoG.equals(punto) == true) {   // Si ambos valores son iguales
@@ -177,11 +177,11 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                             this.x = nodoG.getPosicion_x();      // Toma el valor x del nodo
                             this.y = nodoG.getPosicion_y();
                             flag = false;
+                            j += 1;
                             System.out.println("posicion x= " + this.x);
                             System.out.println("posicion y= " + this.y);
-                            j += 1;
                         } else {
-                            //System.out.println("se suma 1");
+                            System.out.println("se suma 1");
                             j += 1;
                         }
                     }
@@ -314,15 +314,15 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     //tener una funcion que asigne las variables de las listas a las x , y
     //tener un flag en la variable que asigna
     //utilizar el timer con esas variables, cuando llega el timer se pone la flag en false, y regresa
-    //al while loop para asignar x y y leer la lista,similar a lo que ya tenemos hecho con las flags 
+    //al while loop para asignar x y y leer la lista,similar a lo que ya tenemos hecho con las flags
     @Override
     public void actionPerformed(ActionEvent e) {
         if (flag==true){
-            if (iteraciones != listanormal.getSize()){
-                x = listanormal.buscarx(iteraciones);
-                y = listanormal.buscary(iteraciones);
-                if (Gx != x || Gy != y){
-                    if (Gx == x && Gy < y) {
+            if (iteraciones != listanormal.getSize()){ //si el numero de iteraciones es distinto
+                x = listanormal.buscarx(iteraciones); //al tamaño de la lista
+                y = listanormal.buscary(iteraciones);//posiciones x y
+                if (Gx != x || Gy != y){ //sumas para mover la imagen en la GUI gx es la posicion actual
+                    if (Gx == x && Gy < y) { //de la imagen y x , y es las posiciones a las que debe ir.
                         Gy += 1;
                         repaint();
                     }
@@ -361,26 +361,14 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                 }
             }
             else{
-<<<<<<< Updated upstream
                 System.out.println("el x es:" + Gx + "el y es:" + Gy);
                 checkIteraciones();
                 flag=false;
-=======
-                System.out.println("la posicion x es:" + Gx);
-                System.out.println("la posicion y es:" + Gy);
-                System.out.println("la posicion que debio moverse en el nodo x:" + x);
-                System.out.println("la posicion que debio moverse en el nodo y:" + y);
-               //System.out.println("se lego al cambio de flag");
-                flag = true;
-                //System.out.println("el flag nuevo es:" + flag);
-            }
->>>>>>> Stashed changes
-
             }
         }
         repaint();
     }
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
-        // Método que se encarga de mostrar los recorridos de cada hormiga
-    }
+    // Método que se encarga de mostrar los recorridos de cada hormiga
+}
