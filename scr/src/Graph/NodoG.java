@@ -1,48 +1,34 @@
 package Graph;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
-public class NodoG {
+public class NodoG implements Comparable<NodoG>{
 
     // Atributos de la clase Nodo
     private String sector;
-    private HashMap<NodoG, Arista> adyacentes = new HashMap<NodoG, Arista>();
-    private String datos;
     private int posicion_x;
     private int posicion_y;
+    private int distanciaMinima = Integer.MAX_VALUE;
+    private boolean visitado;
+    private HashMap<NodoG, AristaH> adyacentes = new HashMap<NodoG, AristaH>();
+    private List<Arista> adyacentesLista;
+    private NodoG nodoAnterior;
 
     // Constructor de la clase Nodo
     public NodoG(String sector){
 
         this.sector = sector;
-        datos = "";
+        this.adyacentesLista = new ArrayList<Arista>();
     }
 
     // Método getter y setter del atributo sector
     public String getSector() {
         return sector;
     }
-
     public void setSector(String sector) {
         this.sector = sector;
-    }
-
-    // Método getter y setter del atributo adyacentes
-    public HashMap<NodoG, Arista> getAdyacentes() {
-        return adyacentes;
-    }
-
-    public void setAdyacentes(HashMap<NodoG, Arista> adyacentes) {
-        this.adyacentes = adyacentes;
-    }
-
-    // Método getter y setter del atributo datos
-    public String getDatos() {
-        return datos;
-    }
-
-    public void setDatos(String datos) {
-        this.datos = datos;
     }
 
     // Método getter y setter del atributo posicion_x
@@ -61,18 +47,62 @@ public class NodoG {
         this.posicion_y = posicion_y;
     }
 
-    // Método para agregar una arista
+    // Método getter y setter del atributo distanciaMinima
+    public int getDistanciaMinima() {
+        return distanciaMinima;
+    }
+    public void setDistanciaMinima(int distanciaMinima) {
+        this.distanciaMinima = distanciaMinima;
+    }
+
+    // Método getter y setter del atributo visitado
+    public boolean isVisitado() {
+        return visitado;
+    }
+    public void setVisitado(boolean visitado) {
+        this.visitado = visitado;
+    }
+
+    // Método getter y setter del atributo adyacentes
+    public List<Arista> getAdyacentesLista() {
+        return adyacentesLista;
+    }
+    public void setAdyacentesLista(List<Arista> adyacentesLista) {
+        this.adyacentesLista = adyacentesLista;
+    }
+
+    // Método getter y setter del atributo nodoAnterior
+    public NodoG getNodoAnterior() {
+        return nodoAnterior;
+    }
+    public void setNodoAnterior(NodoG nodoAnterior) {
+        this.nodoAnterior = nodoAnterior;
+    }
+
+    // Método getter y setter del atributo adyacentes
+    public HashMap<NodoG, AristaH> getAdyacentes() {
+        return adyacentes;
+    }
+    public void setAdyacentes(HashMap<NodoG, AristaH> adyacentes) {
+        this.adyacentes = adyacentes;
+    }
+
+    // Métodos para agregar una arista
     // Por cada nodo se crea un ArrayList
     // Cada ArrayList se guarda en la lista
-    public void agregarArista(Arista arista, NodoG destino) {
+    public void agregarAristaNodos(AristaH arista, NodoG destino){
 
-        if (!Grafo.existeNodo(destino)) {
-            System.out.println("No existe el nodo");
-        } else if (!adyacentes.containsKey(destino)) {
+        if (!adyacentes.containsKey(destino)) {
             adyacentes.put(destino, arista);
-        } else {
-            System.out.println("La arista ya existe");
         }
+    }
+    public void agregarArista(Arista arista) {
+        this.adyacentesLista.add(arista);
+    }
+
+    @Override
+    public int compareTo(NodoG nodoG) {
+        return Integer.compare(this.distanciaMinima, nodoG.getDistanciaMinima());
     }
 
     // Método que se encarga de mostrar el nodo solicitado en formato String
