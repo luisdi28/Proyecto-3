@@ -1,6 +1,8 @@
 package AntVillageGUI;
 
 import Algorithms.Dijkstra;
+import AntNFood.Comida;
+import AntNFood.Hormiga;
 import Graph.ConstructorG;
 import Graph.Grafo;
 import Graph.NodoG;
@@ -20,7 +22,8 @@ public class Juego5 extends JFrame implements ActionListener {
     String comida_juego = "imagenes/Comida.png";
     boolean flag_comida = false;
 
-    pruebaHormiga prueba;
+    private Hormiga hormiga;
+    private Comida comida;
     ConstructorG constructorG = new ConstructorG();
     Grafo grafo;
 
@@ -33,6 +36,7 @@ public class Juego5 extends JFrame implements ActionListener {
 
 
     public Juego5(int alimento) {
+        grafo = constructorG.crearGrafo(5);
 
         initComponents();
 
@@ -212,9 +216,9 @@ public class Juego5 extends JFrame implements ActionListener {
         if (flag_comida == false){
             flag_comida=true;
             RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
-            grafo = constructorG.crearGrafo(5);
-            Dijkstra dijkstra = new Dijkstra(grafo);
-            List list = dijkstra.rutaCostoMinimoDijkstra(grafo.getNodos().get(4) , grafo.getNodos().get(1));
+           // grafo = constructorG.crearGrafo(5);
+            // dijkstra = new Dijkstra(grafo);
+            //List list = dijkstra.rutaCostoMinimoDijkstra(grafo.getNodos().get(4) , grafo.getNodos().get(1));
             setList(list);
             setListanormal();
             moverVerde();

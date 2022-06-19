@@ -5,13 +5,17 @@ import AntVillageGUI.Bienvenida;
 import AntVillageGUI.Juego5;
 import AntVillageGUI.Juego7;
 import AntVillageGUI.Juego9;
+import Graph.Grafo;
+import Graph.NodoG;
 
 import javax.swing.*;
 
 public class Comida {
     int comida_actual;
+    private int Cx;
+    private int Cy;
 
-    public Comida(String modo_juego, int limite_alimento,  String color_hormiga) {
+    public Comida(String modo_juego, int limite_alimento,  String color_hormiga  ) {
 
         if (modo_juego == "Juego 5") {
             if (color_hormiga == "verde") {
@@ -106,7 +110,36 @@ public class Comida {
             }
         }
     }
+    public int getPosicion_x() {
+        return this.Cx;
+    }
+    public int getPosicion_y() {
+        return this.Cy;
+    }
+    public void setComida(int x , int y){
+        this.Cx = x;
+        this.Cy = y;
+    }
+    public NodoG obtenerNodo(Grafo grafo) {
 
+        int i = 0;
+        int cX = getPosicion_x();
+        int cY = getPosicion_y();
+
+        NodoG nodoAux = null;
+
+        for (i = 0; i < grafo.totalNodos(); i++) {
+
+            nodoAux = grafo.getNodos().get(i);
+
+            if (cX == nodoAux.getPosicion_x() && cY == nodoAux.getPosicion_y()) {
+                break;
+            }
+        }
+
+        return nodoAux;
+    }
     public static void main() {
     }
+
 }

@@ -20,11 +20,11 @@ public class pruebaFrame extends JFrame {
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-        Dijkstra dijkstra = new Dijkstra(grafo);
+       // Dijkstra dijkstra = new Dijkstra(grafo);
         //aca se puede hacer el timer de esperar 20 segundos.
-        List list = dijkstra.rutaCostoMinimoDijkstra(grafo.getNodos().get(4) , grafo.getNodos().get(1));
+        //List list = dijkstra.rutaCostoMinimoDijkstra(grafo.getNodos().get(4) , grafo.getNodos().get(1));
         //System.out.println(list);
-        panel.setList(list);
+        //panel.setList(list);
         panel.setListanormal();
         panel.moverVerde();
         panel.setFlag();
