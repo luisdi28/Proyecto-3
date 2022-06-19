@@ -1,8 +1,8 @@
-package AntVillageGUI;
+/*package AntVillageGUI;
 
 
 public class pruebaMain {
-    public static void main(String[] args) {
+    public static void main() {
         new pruebaFrame();
     }
-}
+}*/

@@ -125,49 +125,49 @@ public class Juego7 extends javax.swing.JFrame {
             }
         });
 
-        panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 80, 80));
+        panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 100, 100));
         panelJuego.add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 100, 100));
 
         Nombre_A.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nombre_A.setText("A");
         panelJuego.add(Nombre_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 205, 100, 100));
 
-        panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 80, 80));
+        panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 100, 100));
         panelJuego.add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 100, 100));
 
         Nombre_B.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nombre_B.setText("B");
         panelJuego.add(Nombre_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 100, 100));
 
-        panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 80, 80));
+        panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 100, 100));
         panelJuego.add(C, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 100, 100));
 
         Nombre_C.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nombre_C.setText("C");
         panelJuego.add(Nombre_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 50, 100));
 
-        panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 80, 80));
+        panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, 100));
         panelJuego.add(D, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, 100));
 
         Nombre_D.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nombre_D.setText("D");
         panelJuego.add(Nombre_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 100, 100));
 
-        panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 80, 80));
+        panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 100, 100));
         panelJuego.add(E, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 100, 100));
 
         Nombre_E.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nombre_E.setText("E");
         panelJuego.add(Nombre_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 100, 100));
 
-        panelJuego.add(Comida_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 80, 80));
+        panelJuego.add(Comida_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 101, 100));
         panelJuego.add(F, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 101, 100));
 
         Nombre_F.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         Nombre_F.setText("F");
         panelJuego.add(Nombre_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 50, 100));
 
-        panelJuego.add(Comida_G, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 80, 80));
+        panelJuego.add(Comida_G, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 100, 100));
         panelJuego.add(G, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 100, 100));
 
         Nombre_G.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N

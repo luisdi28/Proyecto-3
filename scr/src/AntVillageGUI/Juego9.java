@@ -149,15 +149,16 @@ public class Juego9 extends JFrame {
         });
 
         panelJuego.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 633, -1));
-        panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 80, 80));
-        panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 80, 80));
-        panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 80, 80));
-        panelJuego.add(Comida_I, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 80, 80));
-        panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 80, 80));
-        panelJuego.add(Comida_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 80, 80));
-        panelJuego.add(Comida_H, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 80, 80));
-        panelJuego.add(Comida_G, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 80, 80));
-        panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 520, 80, 80));
+
+        panelJuego.add(Comida_A, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 119, 100, 100));
+        panelJuego.add(Comida_B, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 105, 100, 100));
+        panelJuego.add(Comida_C, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 100, 100));
+        panelJuego.add(Comida_I, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 100, 100));
+        panelJuego.add(Comida_E, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 100, 100));
+        panelJuego.add(Comida_F, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, 100, 100));
+        panelJuego.add(Comida_H, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, 100, 100));
+        panelJuego.add(Comida_G, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, 100, 100));
+        panelJuego.add(Comida_D, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 510, 100, 100));
 
         panelJuego.add(A, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 119, 100, 100));
         panelJuego.add(B, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 105, 100, 100));

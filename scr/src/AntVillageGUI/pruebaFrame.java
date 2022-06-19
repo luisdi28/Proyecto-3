@@ -1,4 +1,4 @@
-package AntVillageGUI;
+/*package AntVillageGUI;
 
 
 import Algorithms.Dijkstra;
@@ -32,3 +32,4 @@ public class pruebaFrame extends JFrame {
         panel.setFlag();
     }
 }
+*/

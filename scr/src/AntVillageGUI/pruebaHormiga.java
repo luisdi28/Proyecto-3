@@ -1,4 +1,4 @@
-package AntVillageGUI;
+/*package AntVillageGUI;
 
 import Graph.Grafo;
 import Graph.NodoG;
@@ -231,71 +231,6 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     public void getListanormal(){
         listanormal.displayList();
     }
-    // Método que se encarga de mover y actualizar la posición de la hormiga Verde
-    public void moverHVerde(int x, int y) {
-        /*
-        if(Gx != x && Gy != y){
-            System.out.println("el x sumado es:" + Gx);
-            if (Gx>x && Gy < y){
-                Gx = Gx-1;
-                Gy+=1;
-                repaint();
-                Timer timer = new Timer();
-
-                TimerTask tarea = new TimerTask() {
-                    @Override
-                    public void run() {
-                        moverHVerde(x, y);
-                    }
-                };
-                timer.schedule(tarea, 10);
-            }
-            else if(Gx<x && Gy > y){
-                Gx = Gx+1;
-                Gy-=1;
-                repaint();
-                Timer timer = new Timer();
-
-                TimerTask tarea = new TimerTask() {
-                    @Override
-                    public void run() {
-                        moverHVerde(x, y);
-                    }
-                };
-                timer.schedule(tarea, 10);
-            }
-            else if(Gx<x && Gy < y){
-                Gx +=1;
-                Gy +=1;
-                repaint();
-                Timer timer = new Timer();
-
-                TimerTask tarea = new TimerTask() {
-                    @Override
-                    public void run() {
-                        moverHVerde(x, y);
-                    }
-                };
-                timer.schedule(tarea, 10);
-            }
-            else{
-                Gx -=1;
-                Gy -=1;
-                repaint();
-                Timer timer = new Timer();
-
-                TimerTask tarea = new TimerTask() {
-                    @Override
-                    public void run() {
-                        moverHVerde(x, y);
-                    }
-                };
-                timer.schedule(tarea, 10);
-            }
-        }
-    }
-         */
-    }
 
     // Método que se encarga de mover la hormiga mediante el algoritmo de fuerza bruta
     public void moverHormigaVAzul(int x, int y) {
@@ -380,4 +315,4 @@ public class pruebaHormiga extends JPanel implements ActionListener {
 
         // Método que se encarga de mostrar los recorridos de cada hormiga
 
-}
+}*/
