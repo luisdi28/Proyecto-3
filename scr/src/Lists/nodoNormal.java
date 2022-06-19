@@ -1,5 +1,6 @@
 package Lists;
 
+
 public class nodoNormal {
 
     private int X;

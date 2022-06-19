@@ -1,6 +1,5 @@
 package AntVillageGUI;
 
-import Graph.Arista;
 import Graph.Grafo;
 import Graph.NodoG;
 import Lists.listaNormal;
@@ -11,7 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TimerTask;
 //import java.util.Timer;
 
 public class pruebaHormiga extends JPanel implements ActionListener {

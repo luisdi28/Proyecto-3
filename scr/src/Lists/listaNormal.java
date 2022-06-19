@@ -1,5 +1,6 @@
 package Lists;
 
+
 public class listaNormal {
     //cambiar node a nodo por si no funciona
     private nodoNormal head;

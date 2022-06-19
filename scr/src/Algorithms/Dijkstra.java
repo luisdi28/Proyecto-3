@@ -1,13 +1,12 @@
 package Algorithms;
 
+import Graph.Arista;
+import Graph.Grafo;
+import Graph.NodoG;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-// Se hace el llamado de las clases que están el paquete Graph
-import Graph.NodoG;
-import Graph.Arista;
-import Graph.Grafo;
 
 public class Dijkstra {
 

@@ -1,5 +1,6 @@
 package Lists;
 
+
 public class Nodo {
 
     private String data;

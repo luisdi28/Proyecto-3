@@ -1,11 +1,10 @@
 package AntNFood;
 
-import Graph.Arista;
 import Graph.Grafo;
 import Graph.NodoG;
 
 import javax.swing.*;
-import java.awt.Image;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 

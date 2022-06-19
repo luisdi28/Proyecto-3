@@ -2,6 +2,7 @@ package AntVillageGUI;
 
 public class Historial extends javax.swing.JFrame {
 
+
     /**
      * Creates new form Historial
      */

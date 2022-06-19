@@ -3,7 +3,8 @@ package Algorithms;
 import Graph.Grafo;
 import Graph.NodoG;
 
-import java.util.*;
+import java.util.List;
+import java.util.Stack;
 
 public class FuerzaBruta {
 

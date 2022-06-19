@@ -2,7 +2,7 @@ package AntVillageGUI;
 
 import javax.swing.*;
 
-public class Juego5 extends javax.swing.JFrame {
+public class Juego5 extends JFrame {
 
     String hormiguero = "imagenes/imagen1.png";
     String comida_juego = "imagenes/Comida.png";
@@ -36,31 +36,31 @@ public class Juego5 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
-        panelJuego = new javax.swing.JPanel();
-        Comida_A = new javax.swing.JLabel();
-        A = new javax.swing.JLabel();
-        Nombre_A = new javax.swing.JLabel();
-        Comida_B = new javax.swing.JLabel();
-        B = new javax.swing.JLabel();
-        Nombre_B = new javax.swing.JLabel();
-        Comida_C = new javax.swing.JLabel();
-        C = new javax.swing.JLabel();
-        Nombre_C = new javax.swing.JLabel();
-        Comida_D = new javax.swing.JLabel();
-        D = new javax.swing.JLabel();
-        Nombre_D = new javax.swing.JLabel();
-        Comida_E = new javax.swing.JLabel();
-        E = new javax.swing.JLabel();
-        Nombre_E = new javax.swing.JLabel();
-        panelInfo = new javax.swing.JPanel();
-        Cantidad = new javax.swing.JLabel();
-        Comida_Esco = new javax.swing.JLabel();
-        Hormiga_v = new javax.swing.JLabel();
-        Hormiga_a = new javax.swing.JLabel();
-        Comida_azul = new javax.swing.JLabel();
-        Comida_verde = new javax.swing.JLabel();
+        panelJuego = new JPanel();
+        Comida_A = new JLabel();
+        A = new JLabel();
+        Nombre_A = new JLabel();
+        Comida_B = new JLabel();
+        B = new JLabel();
+        Nombre_B = new JLabel();
+        Comida_C = new JLabel();
+        C = new JLabel();
+        Nombre_C = new JLabel();
+        Comida_D = new JLabel();
+        D = new JLabel();
+        Nombre_D = new JLabel();
+        Comida_E = new JLabel();
+        E = new JLabel();
+        Nombre_E = new JLabel();
+        panelInfo = new JPanel();
+        Cantidad = new JLabel();
+        Comida_Esco = new JLabel();
+        Hormiga_v = new JLabel();
+        Hormiga_a = new JLabel();
+        Comida_azul = new JLabel();
+        Comida_verde = new JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(102, 102, 102));
         setResizable(false);
@@ -158,15 +158,15 @@ public class Juego5 extends javax.swing.JFrame {
 
         panelJuego.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 80));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelJuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(panelJuego, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelJuego, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(panelJuego, GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
@@ -271,9 +271,9 @@ public class Juego5 extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
@@ -283,7 +283,7 @@ public class Juego5 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Juego5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Juego5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Juego5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -296,34 +296,34 @@ public class Juego5 extends javax.swing.JFrame {
         });
     }
 
-    private javax.swing.JLabel Cantidad;
-    private javax.swing.JLabel Comida_Esco;
-    private static javax.swing.JLabel Comida_azul;
-    private static javax.swing.JLabel Comida_verde;
-    private javax.swing.JLabel Hormiga_a;
-    private javax.swing.JLabel Hormiga_v;
+    private JLabel Cantidad;
+    private JLabel Comida_Esco;
+    private static JLabel Comida_azul;
+    private static JLabel Comida_verde;
+    private JLabel Hormiga_a;
+    private JLabel Hormiga_v;
 
-    private javax.swing.JLabel Nombre_A;
-    private javax.swing.JLabel Nombre_B;
-    private javax.swing.JLabel Nombre_C;
-    private javax.swing.JLabel Nombre_D;
-    private javax.swing.JLabel Nombre_E;
+    private JLabel Nombre_A;
+    private JLabel Nombre_B;
+    private JLabel Nombre_C;
+    private JLabel Nombre_D;
+    private JLabel Nombre_E;
 
-    private javax.swing.JLabel A;
-    private javax.swing.JLabel B;
-    private javax.swing.JLabel C;
-    private javax.swing.JLabel D;
-    private javax.swing.JLabel E;
+    private JLabel A;
+    private JLabel B;
+    private JLabel C;
+    private JLabel D;
+    private JLabel E;
 
-    private static javax.swing.JLabel Comida_A;
-    private static javax.swing.JLabel Comida_B;
-    private static javax.swing.JLabel Comida_C;
-    private static javax.swing.JLabel Comida_D;
-    private static javax.swing.JLabel Comida_E;
+    private static JLabel Comida_A;
+    private static JLabel Comida_B;
+    private static JLabel Comida_C;
+    private static JLabel Comida_D;
+    private static JLabel Comida_E;
 
 
 
-    private javax.swing.JPanel panelInfo;
-    private javax.swing.JPanel panelJuego;
+    private JPanel panelInfo;
+    private JPanel panelJuego;
     // End of variables declaration
 }

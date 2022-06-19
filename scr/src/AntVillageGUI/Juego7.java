@@ -2,6 +2,7 @@ package AntVillageGUI;
 
 public class Juego7 extends javax.swing.JFrame {
 
+
     String hormiguero = "imagenes/imagen1.png";
     String comida_juego = "imagenes/Comida.png";
     boolean flag_comida = false;

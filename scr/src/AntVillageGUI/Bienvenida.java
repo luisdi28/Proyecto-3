@@ -1,8 +1,6 @@
 package AntVillageGUI;
 
-import AntNFood.Comida;
-
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class Bienvenida extends javax.swing.JFrame {
 
@@ -178,43 +176,53 @@ public class Bienvenida extends javax.swing.JFrame {
         alimento = Integer.parseInt(alimen);
 
         if (elegir_grafo1.isSelected() == true) {
-            if (alimento <= 5){
-                Bienvenida.this.dispose();
-                modo_juego = "Juego 5";
-                new Juego5(alimento).setVisible(true);
-                //Comida obj = new Comida(modo_juego, alimento, "verde");
-                //Comida.main();
-            }
-            else{
+            if (alimento <= 5) {
+                if (alimento > 0) {
+                    Bienvenida.this.dispose();
+                    modo_juego = "Juego 5";
+                    new Juego5(alimento).setVisible(true);
+                    JOptionPane.showMessageDialog(null, "ATENCIÓN: Para que el juego empiece, " +
+                            "seleccione una aldea para colocar la comida");
+                    //Comida obj = new Comida(modo_juego, alimento, "verde");
+                    //Comida.main();
+                } else {
+                    JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser mayor que 0");
+                }
+            } else {
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
-        }
-        else if (elegir_grafo2.isSelected() == true){
-            if (alimento <= 5){
-                Bienvenida.this.dispose();
-                modo_juego = "Juego 7";
-                new Juego7(alimento).setVisible(true);
-                //Comida obj = new Comida(modo_juego, alimento, "verde");
-                //Comida.main();
-            }
-            else{
+        } else if (elegir_grafo2.isSelected() == true) {
+            if (alimento <= 5) {
+                if (alimento > 0) {
+                    Bienvenida.this.dispose();
+                    modo_juego = "Juego 7";
+                    new Juego7(alimento).setVisible(true);
+                    JOptionPane.showMessageDialog(null, "ATENCIÓN: Para que el juego empiece, " +
+                            "seleccione una aldea para colocar la comida");
+                    //Comida obj = new Comida(modo_juego, alimento, "verde");
+                    //Comida.main();
+                } else {
+                    JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser mayor que 0");
+                }
+            } else {
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
-        }
-        else if (elegir_grafo3.isSelected() == true){
-            if (alimento <= 5){
-                Bienvenida.this.dispose();
-                modo_juego = "Juego 9";
-                new Juego9(alimento).setVisible(true);
-                //Comida obj = new Comida(modo_juego, alimento, "verde");
-                //Comida.main();
-            }
-            else{
+        } else if (elegir_grafo3.isSelected() == true) {
+            if (alimento <= 5) {
+                if (alimento > 0) {
+                    Bienvenida.this.dispose();
+                    modo_juego = "Juego 9";
+                    new Juego9(alimento).setVisible(true);
+                    JOptionPane.showMessageDialog(null, "ATENCIÓN: Para que el juego empiece, " +
+                            "seleccione una aldea para colocar la comida");
+                    //Comida obj = new Comida(modo_juego, alimento, "verde");
+                    //Comida.main();
+                } else {
+                    JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser mayor que 0");
+                }
+            } else {
                 JOptionPane.showMessageDialog(null, "ATENCIÓN: La cantidad de comida debe ser menor o igual a 5");
             }
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "ATENCIÓN: Debe seleccionar una categoría de juego");
         }
     }
 

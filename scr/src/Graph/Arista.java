@@ -1,5 +1,6 @@
 package Graph;
 
+
 public class Arista {
 
     // Atributo de la clase
