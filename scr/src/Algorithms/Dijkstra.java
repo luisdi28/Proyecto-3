@@ -1,108 +1,86 @@
 package Algorithms;
 
-import Graph.Arista;
-import Graph.Grafo;
+import java.util.*;
+
+// Se hace el llamado de las clases que están el paquete Graph
 import Graph.NodoG;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
+import Graph.Arista;
+import ManejoDeArchivos.Archivo;
 
 public class Dijkstra {
 
     // Atributos de la clase
-    private HashMap<NodoG, Integer> nodos = new HashMap<NodoG, Integer>();
-    private Grafo grafo;
-    private ArrayList<NodoG> grafoNodos;
+    private PriorityQueue<NodoG> priorityQueue;
+    private Archivo archivo;
+    String texto;
 
     // Constructor de la clase
-    public Dijkstra(Grafo grafo){
+    public Dijkstra(){
 
-        this.grafo = grafo;
+        texto = "";
+        archivo = new Archivo();
     }
 
-    // Método que se encarga de detectar la ruta más corta entre dos nodos
-    public List<NodoG> rutaCostoMinimoDijkstra(NodoG origen, NodoG destino){
+    // Método que se encarga de obtener el costo mínimo de la ruta
+    public void rutaCostoMinimoDijkstra(NodoG origen){
 
-        grafoNodos = grafo.getNodos();
+        // Inicia el recorrido con valor 0 desde el nodo origen
+        origen.setDistanciaMinima(0);
+        // Se crea una cola de prioridad fundamental para el algoritmo de Dijkstra
+        priorityQueue = new PriorityQueue<NodoG>();
+        // Se agrega el nodo origen
+        priorityQueue.add(origen);
 
-        for (int i = 0; i < grafo.totalNodos(); i++){
-            nodos.put(grafoNodos.get(i), Integer.MAX_VALUE);
-        }
+        // Mientras la cola de prioridad no esté vacia
+        while (!priorityQueue.isEmpty()){
 
-        // Nodo origen es 0
-        nodos.put(origen, 0);
+            // Se crea un nodo el cual será el primer elemento de la cola
+            NodoG nodoAux = priorityQueue.poll();
 
-        // Variables propias del método
-        int peso, pesoNodo;
-        NodoG nodoAux;
-        HashMap<NodoG, Arista> aristas = null;
-        Object[] adyacentes;
-        List<NodoG> puntos = new ArrayList<>(); // Lista de los puntos (nodos) por recorrer
+            // Se recorren los nodos adyacentes
+            for (Arista arista : nodoAux.getAdyacentesLista()){
 
-        do{
+                // Se crea un nodo y se guarda como el nodo destino
+                NodoG nodoG = arista.getNodoDestino();
+                // Se obtiene la distancia
+                int peso = arista.getDistancia();
+                // Se suma la distancia mínima + peso
+                int rutaDistanciaMin = nodoAux.getDistanciaMinima() + peso;
 
-            nodoAux = obtenerMenor();
-            puntos.add(nodoAux);
-            nodoAux.setDatos("Recorrido");
-            aristas = nodoAux.getAdyacentes();
-            adyacentes = nodoAux.getAdyacentes().keySet().toArray();
-            pesoNodo = nodos.get(nodoAux);
+                // Si la ruta mínima es menor a la distancia mínima
+                if (rutaDistanciaMin < nodoG.getDistanciaMinima()){
 
-            if (nodoAux.equals(destino)){
-
-                break;
-            }
-            else {
-
-                for (int i = 0; i < aristas.size(); i++){
-
-                    peso = aristas.get(adyacentes[i]).getDistancia();
-
-                    if ((pesoNodo + peso) < nodos.get((NodoG)adyacentes[i])){
-                        nodos.put((NodoG) adyacentes[i], pesoNodo + peso);
-                    }
+                    // Se remueve el nodo destino
+                    priorityQueue.remove(nodoG);
+                    // nodoG para a tomar el valor de nodoAux
+                    nodoG.setNodoAnterior(nodoAux);
+                    // Se actualiza la distancia mínima
+                    nodoG.setDistanciaMinima(rutaDistanciaMin);
+                    // Finalmente se agrega el nodoG a la cola de prioridad
+                    priorityQueue.add(nodoG);
                 }
             }
-
-        }while(recorridoCompleto() == false);
-
-        //return nodos.get(destino);
-
-        return puntos;
+        }
     }
 
-    // Método que se encarga de retornar el nodo con la ruta registrada más corta
-    public NodoG obtenerMenor(){
+    // Método que se encarga de obtener y retornar la ruta de costo mínimo
+    public List<NodoG> obtenerRuta(NodoG destino){
 
-        Integer menor = Integer.MAX_VALUE;
-        Integer aux;
-        NodoG nodoMenor = null;
+        // Se crea una lista de tipo ArrayList
+        List<NodoG> ruta = new ArrayList<NodoG>();
 
-        for (int i = 0; i < grafo.totalNodos(); i++){
-
-            aux = nodos.get(grafoNodos.get(i));
-
-            if (aux <= menor && grafoNodos.get(i).getDatos().equals("") == true){
-
-                menor = aux;
-                nodoMenor = grafoNodos.get(i);
-            }
+        // Se recorre la cola o lista mientras sea diferente de null y se agrega el nodo a la lista
+        for (NodoG nodoG = destino; nodoG != null; nodoG = nodoG.getNodoAnterior()){
+            ruta.add(nodoG);
         }
 
-        return nodoMenor;
-    }
+        // Invierte la lista
+        Collections.reverse(ruta);
 
-    // Método que se encarga de verificar si se han recorrido todos los nodos
-    public boolean recorridoCompleto(){
+        // Se escribe en el txt la ruta cuando se llama al método de Dijkstra
+        texto = "Ruta calculada mediante el algoritmo de Dijkstra: \n" + ruta.toString().replace("[", "").replace("]", "").replace(",", "");
+        archivo.escribir(texto);
 
-        for (int i = 0; i < grafo.totalNodos(); i++){
-
-            if (!grafoNodos.get(i).getDatos().equals("Recorrido")){
-                return false;
-            }
-        }
-        return true;
+        return ruta;
     }
 }
