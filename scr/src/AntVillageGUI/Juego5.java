@@ -46,7 +46,8 @@ public class Juego5 extends JFrame implements ActionListener {
         rsscalelabel.RSScaleLabel.setScaleLabel(D, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(E, hormiguero);
 
-        Timer timer = new Timer(20,this);
+        Timer timer = new Timer(200,this);
+        timer.start();
 
         x = 0;
         y = 0;
@@ -315,8 +316,7 @@ public class Juego5 extends JFrame implements ActionListener {
         super.paint(g);
         Graphics2D G2D = (Graphics2D) g;
         G2D.drawImage(enemy, Gx, Gy, null);
-        System.out.println("Se dibuja");
-        //G2D.drawImage(enemy2 , x2 ,y2 , null);
+
     }
 
     public void moverVerde(){
