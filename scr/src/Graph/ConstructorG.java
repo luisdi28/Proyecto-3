@@ -1,7 +1,6 @@
 package Graph;
 
 import ManejoDeArchivos.Archivo;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -12,7 +11,7 @@ public class ConstructorG {
     private Random randomInt;
     private String texto;
     private Archivo archivo;
-    StringBuilder stringBuilder;
+    private StringBuilder stringBuilder;
 
     // Constructor de la clase
     public ConstructorG(){
@@ -107,8 +106,8 @@ public class ConstructorG {
                         // En caso de ser diferentes
                         else{
 
-                            // Se crea un peso aleatorio entre 10 y 41
-                            distancia = randomInt.nextInt(10, 41);
+                            // Se crea un peso aleatorio entre 5 y 12
+                            distancia = randomInt.nextInt(5, 12);
                             // Se realiza la conexión entre nodos con una arista de peso aleatorio
                             nodoO.agregarArista(new Arista(nodoO, nodoD, distancia));
                             grafo.conectarNodos(nodoO, nodoD, new AristaH(distancia));
@@ -151,7 +150,7 @@ public class ConstructorG {
                     while (contador > 0){
 
                         // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
-                        posRandom = randomInt.nextInt(0, 8);
+                        posRandom = randomInt.nextInt(0, 7);
 
                         // Nodo origen
                         NodoG nodoO = grafo.getNodos().get(i);
@@ -166,8 +165,8 @@ public class ConstructorG {
                         // En caso de ser diferentes
                         else{
 
-                            // Se crea un peso aleatorio entre 10 y 41
-                            distancia = randomInt.nextInt(10, 41);
+                            // Se crea un peso aleatorio entre 5 y 12
+                            distancia = randomInt.nextInt(5, 12);
                             // Se realiza la conexión entre nodos con una arista de peso aleatorio
                             nodoO.agregarArista(new Arista(nodoO, nodoD, distancia));
 
@@ -213,7 +212,7 @@ public class ConstructorG {
                     while (contador > 0){
 
                         // Toma una posición aleatoria el cual será la posición del ArrayList de nodos
-                        posRandom = randomInt.nextInt(0, 10);
+                        posRandom = randomInt.nextInt(0, 9);
 
                         // Nodo origen
                         NodoG nodoO = grafo.getNodos().get(i);
@@ -228,8 +227,8 @@ public class ConstructorG {
                         // En caso de ser diferentes
                         else{
 
-                            // Se crea un peso aleatorio entre 10 y 41
-                            distancia = randomInt.nextInt(10, 41);
+                            // Se crea un peso aleatorio entre 5 y 12
+                            distancia = randomInt.nextInt(5, 12);
                             // Se realiza la conexión entre nodos con una arista de peso aleatorio
                             nodoO.agregarArista(new Arista(nodoO, nodoD, distancia));
                             grafo.conectarNodos(nodoO, nodoD, new AristaH(distancia));
