@@ -2,7 +2,7 @@ package AntVillageGUI;
 
 import javax.swing.*;
 
-public class Bienvenida extends javax.swing.JFrame {
+public class Bienvenida extends JFrame {
 
     String alimen;
     String modo_juego;
@@ -24,20 +24,20 @@ public class Bienvenida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
-        categorias = new javax.swing.ButtonGroup();
-        panelPresentacion = new javax.swing.JPanel();
-        Bienvenida = new javax.swing.JLabel();
-        Escogencia_A = new javax.swing.JLabel();
-        ali = new javax.swing.JTextField();
-        Escogencia_C = new javax.swing.JLabel();
-        Boton_validar = new javax.swing.JButton();
-        elegir_grafo3 = new javax.swing.JRadioButton();
-        elegir_grafo1 = new javax.swing.JRadioButton();
-        elegir_grafo2 = new javax.swing.JRadioButton();
-        Boton_registro_partidas = new javax.swing.JButton();
-        Historial = new javax.swing.JLabel();
+        categorias = new ButtonGroup();
+        panelPresentacion = new JPanel();
+        Bienvenida = new JLabel();
+        Escogencia_A = new JLabel();
+        ali = new JTextField();
+        Escogencia_C = new JLabel();
+        Boton_validar = new JButton();
+        elegir_grafo3 = new JRadioButton();
+        elegir_grafo1 = new JRadioButton();
+        elegir_grafo2 = new JRadioButton();
+        Boton_registro_partidas = new JButton();
+        Historial = new JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("ventana_bienvenida");
         setResizable(false);
 
@@ -86,21 +86,21 @@ public class Bienvenida extends javax.swing.JFrame {
         Historial.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         Historial.setText("Si desea ver el historial de partidas puede acceder por medio del siguiente botón");
 
-        javax.swing.GroupLayout panelPresentacionLayout = new javax.swing.GroupLayout(panelPresentacion);
+        GroupLayout panelPresentacionLayout = new GroupLayout(panelPresentacion);
         panelPresentacion.setLayout(panelPresentacionLayout);
         panelPresentacionLayout.setHorizontalGroup(
-                panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                panelPresentacionLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panelPresentacionLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addGroup(panelPresentacionLayout.createSequentialGroup()
                                                 .addContainerGap()
                                                 .addComponent(elegir_grafo1)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(elegir_grafo2)
                                                 .addGap(80, 80, 80)
                                                 .addComponent(elegir_grafo3))
                                         .addGroup(panelPresentacionLayout.createSequentialGroup()
-                                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(panelPresentacionLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                                         .addGroup(panelPresentacionLayout.createSequentialGroup()
                                                                 .addGap(234, 234, 234)
                                                                 .addComponent(Bienvenida))
@@ -109,62 +109,62 @@ public class Bienvenida extends javax.swing.JFrame {
                                                                 .addComponent(Escogencia_A)))
                                                 .addGap(0, 4, Short.MAX_VALUE)))
                                 .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                        .addGroup(GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(panelPresentacionLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addGroup(GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
                                                 .addComponent(Historial)
                                                 .addGap(23, 23, 23))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                        .addGroup(GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
                                                 .addComponent(Boton_registro_partidas)
                                                 .addGap(235, 235, 235))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                        .addGroup(GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
-                                                .addComponent(ali, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panelPresentacionLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addGroup(GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                                .addComponent(ali, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
                                                 .addGap(304, 304, 304))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                        .addGroup(GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
                                                 .addComponent(Escogencia_C)
                                                 .addGap(191, 191, 191))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
+                                        .addGroup(GroupLayout.Alignment.TRAILING, panelPresentacionLayout.createSequentialGroup()
                                                 .addComponent(Boton_validar)
                                                 .addGap(289, 289, 289))))
         );
         panelPresentacionLayout.setVerticalGroup(
-                panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                panelPresentacionLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(panelPresentacionLayout.createSequentialGroup()
                                 .addGap(56, 56, 56)
                                 .addComponent(Bienvenida)
                                 .addGap(50, 50, 50)
                                 .addComponent(Escogencia_A)
                                 .addGap(18, 18, 18)
-                                .addComponent(ali, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ali, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(45, 45, 45)
                                 .addComponent(Escogencia_C)
                                 .addGap(38, 38, 38)
-                                .addGroup(panelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(panelPresentacionLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(elegir_grafo1)
                                         .addComponent(elegir_grafo2)
                                         .addComponent(elegir_grafo3))
                                 .addGap(30, 30, 30)
                                 .addComponent(Boton_validar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                                 .addComponent(Historial)
                                 .addGap(29, 29, 29)
                                 .addComponent(Boton_registro_partidas)
                                 .addGap(75, 75, 75))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelPresentacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(panelPresentacion, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelPresentacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(panelPresentacion, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -241,9 +241,9 @@ public class Bienvenida extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
@@ -253,7 +253,7 @@ public class Bienvenida extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Bienvenida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -267,17 +267,17 @@ public class Bienvenida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify
-    private javax.swing.JLabel Bienvenida;
-    private javax.swing.JButton Boton_registro_partidas;
-    private javax.swing.JButton Boton_validar;
-    private javax.swing.JLabel Escogencia_A;
-    private javax.swing.JLabel Escogencia_C;
-    private javax.swing.JLabel Historial;
-    private javax.swing.JTextField ali;
-    private javax.swing.ButtonGroup categorias;
-    private javax.swing.JRadioButton elegir_grafo1;
-    private javax.swing.JRadioButton elegir_grafo2;
-    private javax.swing.JRadioButton elegir_grafo3;
-    private javax.swing.JPanel panelPresentacion;
+    private JLabel Bienvenida;
+    private JButton Boton_registro_partidas;
+    private JButton Boton_validar;
+    private JLabel Escogencia_A;
+    private JLabel Escogencia_C;
+    private JLabel Historial;
+    private JTextField ali;
+    private ButtonGroup categorias;
+    private JRadioButton elegir_grafo1;
+    private JRadioButton elegir_grafo2;
+    private JRadioButton elegir_grafo3;
+    private JPanel panelPresentacion;
     // End of variables declaration
 }

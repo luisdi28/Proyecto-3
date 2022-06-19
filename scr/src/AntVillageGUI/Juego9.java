@@ -434,3 +434,4 @@ public class Juego9 extends JFrame {
     private JPanel panelJuego;
     // End of variables declaration//GEN-END:variables
 }
+

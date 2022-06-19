@@ -1,8 +1,5 @@
 package Graph;
 
-import ManejoDeArchivos.Archivo;
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -11,17 +8,11 @@ public class ConstructorG {
 
     // Atributos de la clase
     private Random randomInt;
-    private String texto;
-    private Archivo archivo;
-    StringBuilder stringBuilder;
 
     // Constructor de la clase
     public ConstructorG(){
 
         randomInt = new Random();
-        texto = "";
-        archivo = new Archivo();
-        stringBuilder = new StringBuilder();
     }
 
     // Método getter y setter del atributo randomInt
@@ -38,8 +29,6 @@ public class ConstructorG {
     public Grafo crearGrafo(int opcion){
 
         int opcionS = opcion;
-
-        // Arreglo de sectores (para los nodos)
         String[] sectores;
 
         // Se inicializa el grafo
@@ -67,12 +56,15 @@ public class ConstructorG {
                 arrayLength = sectores.length;
 
                 // Cada elemento del arreglo sectores se convierte en un nodo del grafo
-                for(i = 0; i < arrayLength; i++){
+                for(i = 0; i < sectores.length; i++){
 
                     // Se crea un nuevo nodo y se añade al grafo
                     nodoG = new NodoG(sectores[i]);
                     grafo.agregarNodo(nodoG);
                 }
+
+                // La variable creada en este método toma el ArrayList que retorna el método getNodos()
+                nodos = grafo.getNodos();
 
                 // Se crean las conexiones entre nodos para el grafo dirigido
                 // Se ejecuta m veces donde m es igual al tamaño del ArrayList
@@ -318,8 +310,7 @@ public class ConstructorG {
     }
 
     // Método que se encarga de crear la matriz de adyacencia
-    // También, se encarga de escribir la matriz en el txt
-    public void crearMatrizAdyacencia(Grafo grafo){
+    public String crearMatrizAdyacencia(Grafo grafo){
 
         int m = grafo.totalNodos();
         int i, j;
@@ -327,7 +318,6 @@ public class ConstructorG {
         // Matriz mxm donde m es la cantidad de nodos que tiene el grafo
         String[][] matrizAdyacencia = new String[m][m];
 
-        // Creando la matriz de adyacencia
         for (i = 0; i < m; i++){
             for (j = 0; j < m; j++){
 
@@ -352,29 +342,18 @@ public class ConstructorG {
             }
         }
 
-        // Se inicializa el valor de texto
-        texto = "Matriz de adyacencia --> " + Arrays.deepToString(matrizAdyacencia).toString() + "\n";
-        // Se escribe en el txt la matriz en formato [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-        archivo.escribir(texto);
-
-        // Dando formato a la matriz
-        // Mediante stringBuilder.append() se realiza la concatenación en todo el recorrido de la matriz
-
+        /*
+        // Se usa solamente para mostrar la matriz en la terminal
         for (i = 0; i < m; i++){
+            for (j = 0; j < m; j++) {
 
-            stringBuilder.append("[ ");
-            for (j = 0; j < m; j++){
-
-                // Se agrega el valor en la posicion [i][j]
-                stringBuilder.append(matrizAdyacencia[i][j] + " ");
-
+                System.out.print(matrizAdyacencia[i][j] + " ");
             }
-
-            stringBuilder.append("]");
-            stringBuilder.append("\n");
+            System.out.println();
         }
+         */
 
-        // Se escribe en el txt
-        archivo.escribir(String.valueOf(stringBuilder));
+        // Retorna la matriz en formato String y [[][][]]
+        return Arrays.deepToString(matrizAdyacencia).toString();
     }
 }
