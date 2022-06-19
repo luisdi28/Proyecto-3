@@ -317,11 +317,11 @@ public class pruebaHormiga extends JPanel implements ActionListener {
     //al while loop para asignar x y y leer la lista,similar a lo que ya tenemos hecho con las flags 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (flag==true){
-            if (iteraciones != listanormal.getSize()){
+        if (flag == true) {
+            if (iteraciones != listanormal.getSize()) {
                 x = listanormal.buscarx(iteraciones);
                 y = listanormal.buscary(iteraciones);
-                if (Gx != x || Gy != y){
+                if (Gx != x || Gy != y) {
                     if (Gx == x && Gy < y) {
                         Gy += 1;
                         repaint();
@@ -331,7 +331,7 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                         repaint();
                     }
                     if (Gy == y && Gx < x) {
-                        Gx+= 1;
+                        Gx += 1;
                         repaint();
                     }
                     if (Gy == y && Gx > x) {
@@ -355,32 +355,31 @@ public class pruebaHormiga extends JPanel implements ActionListener {
                         Gy -= 1;
                         repaint();
                     }
+                } else {
+                    iteraciones += 1;
                 }
-                else{
-                    iteraciones+=1;
-                }
-            }
-            else{
-<<<<<<< Updated upstream
+            } else {
+
                 System.out.println("el x es:" + Gx + "el y es:" + Gy);
                 checkIteraciones();
-                flag=false;
-=======
+                flag = false;
+
                 System.out.println("la posicion x es:" + Gx);
                 System.out.println("la posicion y es:" + Gy);
                 System.out.println("la posicion que debio moverse en el nodo x:" + x);
                 System.out.println("la posicion que debio moverse en el nodo y:" + y);
-               //System.out.println("se lego al cambio de flag");
+                //System.out.println("se lego al cambio de flag");
                 flag = true;
                 //System.out.println("el flag nuevo es:" + flag);
             }
->>>>>>> Stashed changes
 
-            }
         }
+
+        System.out.println("prueba");
         repaint();
     }
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
 
         // Método que se encarga de mostrar los recorridos de cada hormiga
-    }
+
+}
