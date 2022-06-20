@@ -232,7 +232,6 @@ public class Bienvenida extends JFrame {
     }
 
     private void Boton_registro_partidasActionPerformed(java.awt.event.ActionEvent evt) {
-
         Bienvenida.this.dispose();
         new Historial().setVisible(true);
     }

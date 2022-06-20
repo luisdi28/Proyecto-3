@@ -1,17 +1,29 @@
 package AntVillageGUI;
 
 import XML.FileReader;
+import Lists.circularList;
 
 public class Historial extends javax.swing.JFrame {
-    private FileReader fileReader;
 
+    private FileReader fileReader;
+    private circularList circularlist;
+    private String name;
+    private int n;
 
     /**
      * Creates new form Historial
      */
     public Historial() {
+
         initComponents();
+
+        fileReader = new FileReader();
+        fileReader.readFolder();
+
+        circularlist = fileReader.getCircularlist();
+
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -161,8 +173,20 @@ public class Historial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void bton_siguienteActionPerformed(java.awt.event.ActionEvent evt) {
+    public int getn() {
+        return n;
+    }
 
+    public void minus_n() {
+        n--;
+    }
+
+    public void plus_n() {
+        n++;
+    }
+
+    private void bton_siguienteActionPerformed(java.awt.event.ActionEvent evt) {
+        plus_n();
     }
 
     private void bton_VolverActionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +195,8 @@ public class Historial extends javax.swing.JFrame {
     }
 
     private void bton_ElinarActionPerformed(java.awt.event.ActionEvent evt) {
-
+        circularlist.delete(name);
+        minus_n();
     }
 
     /**

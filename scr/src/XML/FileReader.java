@@ -30,6 +30,10 @@ public class FileReader {
         circularlist.displayList();
     }
 
+    public circularList getCircularlist(){
+        return this.circularlist;
+    }
+
     public static void main(String[] args) {
         FileReader fileReader = new FileReader();
         fileReader.readFolder();
