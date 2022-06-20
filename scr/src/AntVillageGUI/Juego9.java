@@ -68,7 +68,7 @@ public class Juego9 extends JFrame implements ActionListener {
         rsscalelabel.RSScaleLabel.setScaleLabel(H, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(I, hormiguero);
 
-        timer = new Timer(75,this);
+        timer = new Timer(500,this);
         timer.start();
 
         x = 0;
@@ -585,36 +585,36 @@ public class Juego9 extends JFrame implements ActionListener {
                 y = listanormal.buscary(iteraciones);
                 if (Gx != x || Gy != y) {
                     if (Gx == x && Gy < y) {
-                        Gy += 1;
+                        Gy += 10;
                         repaint();
                     }
                     if (Gx == x && Gy > y) {
-                        Gy -= 1;
+                        Gy -= 10;
                         repaint();
                     }
                     if (Gy == y && Gx < x) {
-                        Gx += 1;
+                        Gx += 10;
                         repaint();
                     }
                     if (Gy == y && Gx > x) {
-                        Gx -= 1;
+                        Gx -= 10;
                         repaint();
                     }
                     if (Gx > x && Gy < y) {
-                        Gx = Gx - 1;
-                        Gy += 1;
+                        Gx = Gx - 10;
+                        Gy += 10;
                         repaint();
                     } else if (Gx < x && Gy > y) {
-                        Gx = Gx + 1;
-                        Gy -= 1;
+                        Gx = Gx + 10;
+                        Gy -= 10;
                         repaint();
                     } else if (Gx < x && Gy < y) {
-                        Gx += 1;
-                        Gy += 1;
+                        Gx += 10;
+                        Gy += 10;
                         repaint();
                     } else {
-                        Gx -= 1;
-                        Gy -= 1;
+                        Gx -= 10;
+                        Gy -= 10;
                         repaint();
                     }
                 } else {
