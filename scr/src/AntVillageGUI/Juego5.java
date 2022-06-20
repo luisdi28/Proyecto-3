@@ -3,6 +3,7 @@ package AntVillageGUI;
 import Algorithms.Dijkstra;
 import AntNFood.Comida;
 import AntNFood.Hormiga;
+import AntNFood.comidaP;
 import Graph.ConstructorG;
 import Graph.Grafo;
 import Graph.NodoG;
@@ -23,7 +24,8 @@ public class Juego5 extends JFrame implements ActionListener {
     boolean flag_comida = false;
 
     private Hormiga hormiga;
-    private Comida comida;
+    private comidaP comida;
+    private Dijkstra dijkstra;
     ConstructorG constructorG = new ConstructorG();
     Grafo grafo;
 
@@ -36,8 +38,10 @@ public class Juego5 extends JFrame implements ActionListener {
 
 
     public Juego5(int alimento) {
+        comida = new comidaP(50,450);
         grafo = constructorG.crearGrafo(5);
-
+        hormiga = new Hormiga(grafo ,"5" ,"5" ,  60 , 160 ,0 , 0);
+        dijkstra = new Dijkstra();
         initComponents();
 
         Comida_Esco.setText(String.valueOf(alimento));
@@ -50,7 +54,7 @@ public class Juego5 extends JFrame implements ActionListener {
         RSScaleLabel.setScaleLabel(D, hormiguero);
         RSScaleLabel.setScaleLabel(E, hormiguero);
 
-        Timer timer = new Timer(500,this);
+        Timer timer = new Timer(75,this);
         timer.start();
 
         x = 0;
@@ -215,7 +219,12 @@ public class Juego5 extends JFrame implements ActionListener {
     private void Comida_AMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
+            comida.setComida(50,450);
             RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
            // grafo = constructorG.crearGrafo(5);
             // dijkstra = new Dijkstra(grafo);
             //List list = dijkstra.rutaCostoMinimoDijkstra(grafo.getNodos().get(4) , grafo.getNodos().get(1));

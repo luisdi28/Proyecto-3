@@ -35,8 +35,8 @@ public class Hormiga{
         this.posicion_y = posicion_y;
         this.posicion_dx = posicion_dx;
         this.posicion_dy = posicion_dy;
-        ImageIcon imageIcon = new ImageIcon(this.getClass().getResource(tipo));
-        this.image = imageIcon.getImage();
+        //ImageIcon imageIcon = new ImageIcon(this.getClass().getResource(tipo));
+        //this.image = imageIcon.getImage();
     }
 
     // Métodos getter y setter
@@ -181,6 +181,25 @@ public class Hormiga{
                 "\n Comida recolectada: " + recolectado +
                 "\n Registro de movimiento: " +
                 "\n" + registro;
+    }
+    public NodoG obtenerNodo(Grafo grafo) {
+
+        int i = 0;
+        int cX = getPosicion_x();
+        int cY = getPosicion_y();
+
+        NodoG nodoAux = null;
+
+        for (i = 0; i < grafo.totalNodos(); i++) {
+
+            nodoAux = grafo.getNodos().get(i);
+
+            if (cX == nodoAux.getPosicion_x() && cY == nodoAux.getPosicion_y()) {
+                break;
+            }
+        }
+
+        return nodoAux;
     }
 
     // ####################### Métodos de prueba agenos a la lógica de la clase Hormiga ####################### //
