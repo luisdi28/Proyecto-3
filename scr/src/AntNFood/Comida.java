@@ -1,6 +1,5 @@
 package AntNFood;
 
-
 import AntVillageGUI.Bienvenida;
 import AntVillageGUI.Juego5;
 import AntVillageGUI.Juego7;
@@ -15,7 +14,7 @@ public class Comida {
     private int Cx;
     private int Cy;
 
-    public Comida(String modo_juego, int limite_alimento,  String color_hormiga  ) {
+    public Comida(String modo_juego, int limite_alimento,  String color_hormiga) {
 
         if (modo_juego == "Juego 5") {
             if (color_hormiga == "verde") {
@@ -33,7 +32,6 @@ public class Comida {
                 }
             }
             else {
-
                 comida_actual = Integer.parseInt(Juego5.getComida_azul());
                 comida_actual++;
                 Juego5.setComida_azul(String.valueOf(comida_actual));
@@ -110,6 +108,7 @@ public class Comida {
             }
         }
     }
+
     public int getPosicion_x() {
         return this.Cx;
     }

@@ -59,8 +59,8 @@ public class Juego5 extends JFrame implements ActionListener {
 
         x = 0;
         y = 0;
-        Gx = 0;
-        Gy = 0;
+        Gx = 60;
+        Gy = 160;
         iteraciones = 0;
         flag = false;
 
@@ -219,15 +219,12 @@ public class Juego5 extends JFrame implements ActionListener {
     private void Comida_AMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            comida.setComida(50,450);
+            comida.setComida(A.getX(),A.getY());
             RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
             NodoG nodoH = hormiga.obtenerNodo(grafo);
             NodoG nodoC = comida.obtenerNodo(grafo);
             dijkstra.rutaCostoMinimoDijkstra(nodoH);
             List list = dijkstra.obtenerRuta(nodoC);
-           // grafo = constructorG.crearGrafo(5);
-            // dijkstra = new Dijkstra(grafo);
-            //List list = dijkstra.rutaCostoMinimoDijkstra(grafo.getNodos().get(4) , grafo.getNodos().get(1));
             setList(list);
             setListanormal();
             moverVerde();
@@ -243,7 +240,16 @@ public class Juego5 extends JFrame implements ActionListener {
     private void Comida_BMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
+            comida.setComida(B.getX(),B.getY());
             RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
             reinicia_labels();
@@ -255,7 +261,16 @@ public class Juego5 extends JFrame implements ActionListener {
     private void Comida_CMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
+            comida.setComida(C.getX(),C.getY());
             RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
             reinicia_labels();
@@ -266,7 +281,16 @@ public class Juego5 extends JFrame implements ActionListener {
     private void Comida_DMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
+            comida.setComida(D.getX(),D.getY());
             RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
             reinicia_labels();
@@ -277,7 +301,16 @@ public class Juego5 extends JFrame implements ActionListener {
     private void Comida_EMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
+            comida.setComida(E.getX(),E.getY());
             RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
             reinicia_labels();
@@ -419,10 +452,11 @@ public class Juego5 extends JFrame implements ActionListener {
                 System.out.println("el x es:" + Gx + " el y es:" + Gy);
                 checkIteraciones();
                 flag = false;
+                Comida obj = new Comida("Juego 5", Integer.parseInt(Comida_Esco.getText()), "verde");
+                Comida.main();
             }
 
         }
-        repaint();
     }
 
     /**
