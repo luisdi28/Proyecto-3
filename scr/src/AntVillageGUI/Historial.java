@@ -1,6 +1,9 @@
 package AntVillageGUI;
 
+import XML.FileReader;
+
 public class Historial extends javax.swing.JFrame {
+    private FileReader fileReader;
 
 
     /**

@@ -1,73 +1,95 @@
 package Algorithms;
 
+import Graph.AristaH;
 import Graph.Grafo;
 import Graph.NodoG;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Stack;
 
 public class FuerzaBruta {
 
-    // La clase será modificada implemnetando otra lógica
-
     // Atributos de la clase
+    private HashMap<NodoG, Integer> nodos = new HashMap<NodoG, Integer>();
     private Grafo grafo;
-    private NodoG nodoG;
+    private ArrayList<NodoG> grafoVertices;
+    private boolean continuar;
+    private HashMap<NodoG, AristaH> aristas = new HashMap<NodoG, AristaH>();
+    private Object[] adyacentes;
 
-    // Constructor de la clase
-    public FuerzaBruta(Grafo grafo){
+    public FuerzaBruta(Grafo grafo) {
 
         this.grafo = grafo;
+        this.continuar = true;
+    }
+//esto deberia de estar
+    public List rutaCostoMinimoFuerzaBruta(NodoG inicial) { //meterlo en interfaz?
+
+        grafoVertices = grafo.getNodos();
+        for (int i = 0; i < grafo.totalNodos(); i++) {
+            nodos.put(grafoVertices.get(i), Integer.MAX_VALUE);
+        }
+
+        List<NodoG> ruta = new ArrayList<>();
+
+        ruta.add(inicial);
+
+        int contador = 3;
+        NodoG nodoG = inicial;
+
+        do {
+
+            aristas = nodoG.getAdyacentes();
+            adyacentes = nodoG.getAdyacentes().keySet().toArray();
+            nodoG = obtenerMenor();
+            //aca se llama a moverblue
+            ruta.add(nodoG); //solo para imprimir
+            nodoG.setVisitado(true);
+
+            if (contador == 0){
+                continuar = false;
+            }
+
+            contador--;
+
+        } while (continuar == true);
+
+        return ruta; //esto debe pasar directamente al moververde
     }
 
-    // Método que se encarga de encontrar la ruta mínima entre dos nodos del grafo
-    public void rutaCostoMinimoFuerzaBruta(NodoG nodoOrigen, NodoG nodoDestino){
+    private NodoG obtenerMenor() {
 
-        // Se crea una pila para almacenar cada ruta que se evaluará
-        Stack<NodoG> rutas = new Stack<NodoG>();
-        // Se agregar el nodo origen a la pila
-        rutas.add(nodoOrigen);
-        // Se dirige al método recorrerRuta()
-        recorrerRuta(nodoOrigen, nodoDestino, rutas);
-    }
+        Integer menor = Integer.MAX_VALUE;
+        Integer aux;
+        NodoG nodoMenor = null;
+        AristaH nodoAux;
 
-    // Método que se encarga de recorrer las rutas entre el nodo origen y el nodo final
-    // Se efectúa de forma recursiva
-    public void recorrerRuta(NodoG nodoOrigen, NodoG nodoDestino, Stack<NodoG> rutas){
+        for (int i = 0; i < aristas.size(); i++) {
 
-        int total, i;
-        total= grafo.totalNodos();
+            nodoAux = aristas.get(adyacentes[i]);
 
-        // Si el nodo origen es igual al nodo destino
-        if (nodoOrigen == nodoDestino){
+            aux = aristas.get(adyacentes[i]).getDistancia();
 
-            for (NodoG nodoG : rutas){
+            if (aux <= menor && grafoVertices.get(i).isVisitado() == false) {
 
-                System.out.print(nodoG.getSector());
-                System.out.print(" : " + evaluarRuta(rutas));
-                System.out.println();
+                menor = aux;
+                nodoMenor = (NodoG) adyacentes[i];
             }
         }
-        // Si el nodo origen y nodo final son diferentes
-        else{
 
-            List<NodoG> nodoGList = (List<NodoG>) nodoG.getAdyacentes();
+        return nodoMenor;
+    }
+/*
+    private boolean recorrido() {
 
-            // Se realiza un for - each loop para recorrer las rutas adyacentes
-            for (NodoG nodoG1 : nodoGList){
-
-                rutas.push(nodoG1);
-                recorrerRuta(nodoG1, nodoDestino, rutas);
-                rutas.pop();
+        for (int i = 0; i < aristas.size(); i++) {
+            if (!aristas.get(i).isVisitado() == true) {
+                return false;
             }
         }
+        return true;
     }
 
-    // Método que se encarga de evaluar la longitud de la ruta
-    public int evaluarRuta(Stack<NodoG> rutas){
-
-        int resultado = 0;
-
-        return resultado;
-    }
+ */
 }

@@ -1,50 +1,72 @@
 package AntVillageGUI;
 
 import Algorithms.Dijkstra;
+import Algorithms.FuerzaBruta;
 import AntNFood.Comida;
 import AntNFood.Hormiga;
 import AntNFood.comidaP;
 import Graph.ConstructorG;
 import Graph.Grafo;
 import Graph.NodoG;
+import Lists.Nodo;
 import Lists.listaNormal;
+import XML.xmlBuilder;
+import XML.xmlReader;
+import org.xml.sax.SAXException;
 import rsscalelabel.RSScaleLabel;
 import javax.swing.*;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.util.List;
 
 public class Juego5 extends JFrame implements ActionListener {
+    private int comidaConseguida;
 
     String hormiguero = "imagenes/imagen1.png";
     String comida_juego = "imagenes/Comida.png";
     boolean flag_comida = false;
-
+    private Hormiga hormigazul; //2 INSTANCIA DE HORMIGA.
     private Hormiga hormiga;
     private comidaP comida;
     private Dijkstra dijkstra;
+    private FuerzaBruta fuerzaBruta;
     ConstructorG constructorG = new ConstructorG();
     Grafo grafo;
-
+    private int iteracionesAzul;
     private List list;
+    private List listazul;
 
     private int x, y, Gx, Gy, iteraciones;
     private Image enemy;
+    private Image Hazul;
     private boolean flag;
     private listaNormal listanormal;
+    private listaNormal listanormalAzul;
+    private int Ax, Ay ,x2 ,y2; //POSICIONES HORMIGA AZUL
 
     private Timer timer;
+    private Timer timer2;// SEGUNDO TIMER.
+    //xml builders
+    private XML.xmlBuilder xmlBuilder;
+    private XML.xmlReader xmlReader;
 
-    public Juego5(int alimento) {
+    public Juego5(int alimento) throws ParserConfigurationException {
 
         initComponents();
-
+        comidaConseguida = 0;
         comida = new comidaP(50,450);
         grafo = constructorG.crearGrafo(5);
+        //HORMIGAS
         hormiga = new Hormiga(grafo ,"5" ,"5" ,  A.getX() , A.getY() ,0 , 0);
+        hormigazul = new Hormiga(grafo ,"5" ,"5" ,  A.getX() , A.getY() ,0 , 0);
+        //ALGORITMOS
         dijkstra = new Dijkstra();
+        fuerzaBruta = new FuerzaBruta(grafo); //ACA ESTA FUERZABRUTA
 
         Comida_Esco.setText(String.valueOf(alimento));
         Comida_azul.setText("0");
@@ -55,18 +77,27 @@ public class Juego5 extends JFrame implements ActionListener {
         RSScaleLabel.setScaleLabel(C, hormiguero);
         RSScaleLabel.setScaleLabel(D, hormiguero);
         RSScaleLabel.setScaleLabel(E, hormiguero);
-
-        timer = new Timer(75,this);
+//timers
+        timer = new Timer(500,this);
         timer.start();
-
+//posiciones iniciales de hormigas
         x = 0;
         y = 0;
+        x2=0;
+        y2=0;
+
         Gx = A.getX();
         Gy = A.getY();
+        Ax = A.getX();
+        Ay = A.getY();
         iteraciones = 0;
+        this.iteracionesAzul = 0;
         flag = false;
-
+//imagenes de hormigaas
         enemy = new ImageIcon("imagenes\\hormiga verde.png").getImage();
+        Hazul =new ImageIcon("imagenes\\hormiga azul.png").getImage();
+        //se instancia xmlbuilder
+
     }
 
     public Juego5() {
@@ -140,7 +171,11 @@ public class Juego5 extends JFrame implements ActionListener {
         });
         Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
-                Cerrar(evt);
+                try {
+                    Cerrar(evt);
+                } catch (ParserConfigurationException | IOException | SAXException | TransformerException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -238,6 +273,7 @@ public class Juego5 extends JFrame implements ActionListener {
             setList(list);
             setListanormal();
             moverVerde();
+
             setFlag();
         }
         else{
@@ -263,7 +299,7 @@ public class Juego5 extends JFrame implements ActionListener {
         }
 
     }
-
+//ACA ESTA LA PRUEBA PARA LA HORMIGA AZUL
     private void Comida_CMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
@@ -276,6 +312,12 @@ public class Juego5 extends JFrame implements ActionListener {
             setList(list);
             setListanormal();
             moverVerde();
+            //logica de hormiga azul
+            NodoG nodoA= hormigazul.obtenerNodo(grafo); //nodo inicial
+            setListA(fuerzaBruta.rutaCostoMinimoFuerzaBruta(nodoA)); //fuerza bruta no debe ir en listas
+            setListanormalAzul(); //debe ir en interfaz y mo
+            moverAzul();
+
             setFlag();
         }
         else{
@@ -317,9 +359,16 @@ public class Juego5 extends JFrame implements ActionListener {
         else{
         }
     }
+//ACA ESTA EL CERRAR VENTANA!!!!!
+    private void Cerrar(MouseEvent evt) throws ParserConfigurationException, IOException, SAXException, TransformerException {
+        xmlBuilder = new xmlBuilder();
+        xmlReader = new xmlReader();
+        xmlReader.readLoops("GameLoops\\gameplayed.xml");
+        int loops = xmlReader.getgamelop();
+        int loops2 = loops +1;
 
-    private void Cerrar(MouseEvent evt) {
-
+        xmlBuilder.xmlLoops(Integer.toString(loops2));
+        xmlBuilder.endGamexml(getComida_verde() , getComida_verde() , Integer.toString(loops2));
         //Espacio para crear el XML Builder
         timer.stop();
         Juego5.this.dispose();
@@ -362,6 +411,9 @@ public class Juego5 extends JFrame implements ActionListener {
     public void setList(List list){
         this.list = list;
     }
+    public void setListA(List list){
+        this.listazul = list;
+    }
 
     public void setFlag(){
         this.flag = true;
@@ -371,6 +423,7 @@ public class Juego5 extends JFrame implements ActionListener {
         super.paint(g);
         Graphics2D G2D = (Graphics2D) g;
         G2D.drawImage(enemy, Gx, Gy, null);
+        G2D.drawImage(Hazul , Ax , Ay , null);
     }
 
     public void moverVerde(){
@@ -394,15 +447,50 @@ public class Juego5 extends JFrame implements ActionListener {
             }
         }
         flag = false;
+    } //pasar todo el algoritmo de fuerza bruta.
+    public void moverAzul(){ //aca como parametros recibe la lista de fuerza bruta
+
+        NodoG nodoG;
+        NodoG punto;
+        int x, y;
+        for (int i = 0; i < listazul.size(); i++){                  // Lista de puntos
+            for (int j = 0; j < grafo.totalNodos(); j++){       // ArrayList de nodos
+
+                nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
+                punto = (NodoG) listazul.get(i);       // Toma el valor del punto (Lista de puntos)
+
+                if (nodoG.equals(punto) == true){   // Si ambos valores son iguales
+
+                    x = nodoG.getPosicion_x();      // Toma el valor x del nodo
+                    y = nodoG.getPosicion_y();      // Toma el valor y del nodo
+                    moverHBlue(x, y);              // Llama al método
+                    System.out.println("x" + x + "y" + y);
+                }
+            }
+        }
+        flag = false;
     }
     public void moverHGreen(int x, int y) {
+        listanormal.insertFirst(x,y);
+    }
+    public void moverHBlue(int x, int y) {
         listanormal.insertFirst(x,y);
     }
 
     public void setListanormal(){
         this.listanormal = new listaNormal();
     }
+    public void setListanormalAzul(){
+        this.listanormalAzul = new listaNormal();
+    }
 
+    public void checkIteracionesAzul(){
+        if (iteracionesAzul == listanormalAzul.getSize()){
+            flag=false;
+            iteracionesAzul=0;
+            listanormalAzul = null;
+        }
+    }
     public void checkIteraciones(){
         if (iteraciones == listanormal.getSize()){
             flag=false;
@@ -410,63 +498,119 @@ public class Juego5 extends JFrame implements ActionListener {
             listanormal = null;
         }
     }
+    public void moveBlue() { //hay que hacer un if extra para ver si colisiono con la comida
+        System.out.println("el largo de la bluelist es:" + listanormalAzul.getSize() );
+        if (iteracionesAzul != listanormalAzul.getSize()) {
+            x2 = listanormalAzul.buscarx(iteraciones);
+            y2 = listanormalAzul.buscary(iteraciones);
+            if (Ax != x2 || Ay != y2) {
+                if (Ax == x2 && Ay < y2) {
+                    Ay += 10;
+                    repaint();
+                }
+                if (Ax == x2 && Ay > y2) {
+                    Ay -= 10;
+                    repaint();
+                }
+                if (Ay == y2 && Ax < x2) {
+                    Ax += 10;
+                    repaint();
+                }
+                if (Ay == y2 && Ax > x2) {
+                    Ax -= 10;
+                    repaint();
+                }
+                if (Ax > x2 && Ay < y2) {
+                    Ax = Gx - 10;
+                    Ay += 10;
+                    repaint();
+                } else if (Ax < x2 && Ay > y2) {
+                    Ax = Gx + 10;
+                    Ay -= 10;
+                    repaint();
+                } else if (Ax < x2 && Ay < y2) {
+                    Ax += 10;
+                    Ay += 10;
+                    repaint();
+                } else {
+                    Ax -= 10;
+                    Ay -= 10;
+                    repaint();
+                }
+            } else {
+                iteracionesAzul += 1;
+            }
+        }
+        else {
+            System.out.println("el x es:" + Gx + " el y es:" + Gy);
+            checkIteraciones();
+            checkIteracionesAzul();
+            flag = false;
+            flag_comida = false;
+            Comida obj = new Comida("Juego 5", Integer.parseInt(Comida_Esco.getText()), "verde");
+            Comida.main();
+        }
+    }
+    public void moverHverde(){
+        if (iteraciones != listanormal.getSize()) {
+            x = listanormal.buscarx(iteraciones);
+            y = listanormal.buscary(iteraciones);
+            if (Gx != x || Gy != y) {
+                if (Gx == x && Gy < y) {
+                    Gy += 10;
+                    repaint();
+                }
+                if (Gx == x && Gy > y) {
+                    Gy -= 10;
+                    repaint();
+                }
+                if (Gy == y && Gx < x) {
+                    Gx += 10;
+                    repaint();
+                }
+                if (Gy == y && Gx > x) {
+                    Gx -= 10;
+                    repaint();
+                }
+                if (Gx > x && Gy < y) {
+                    Gx = Gx - 10;
+                    Gy += 10;
+                    repaint();
+                } else if (Gx < x && Gy > y) {
+                    Gx = Gx + 10;
+                    Gy -= 10;
+                    repaint();
+                } else if (Gx < x && Gy < y) {
+                    Gx += 10;
+                    Gy += 10;
+                    repaint();
+                } else {
+                    Gx -= 10;
+                    Gy -= 10;
+                    repaint();
+                }
+            } else {
+                iteraciones += 1;
+            }
+        }
+        else {
+            System.out.println("el x es:" + Gx + " el y es:" + Gy);
+            checkIteraciones();
+            //checkIteracionesAzul();
+            flag = false;
+            flag_comida = false;
+            Comida obj = new Comida("Juego 5", Integer.parseInt(Comida_Esco.getText()), "verde");
+            Comida.main();
+        }
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if (flag == true) {
-            if (iteraciones != listanormal.getSize()) {
-                x = listanormal.buscarx(iteraciones);
-                y = listanormal.buscary(iteraciones);
-                if (Gx != x || Gy != y) {
-                    if (Gx == x && Gy < y) {
-                        Gy += 10;
-                        repaint();
-                    }
-                    if (Gx == x && Gy > y) {
-                        Gy -= 10;
-                        repaint();
-                    }
-                    if (Gy == y && Gx < x) {
-                        Gx += 10;
-                        repaint();
-                    }
-                    if (Gy == y && Gx > x) {
-                        Gx -= 10;
-                        repaint();
-                    }
-                    if (Gx > x && Gy < y) {
-                        Gx = Gx - 10;
-                        Gy += 10;
-                        repaint();
-                    } else if (Gx < x && Gy > y) {
-                        Gx = Gx + 10;
-                        Gy -= 10;
-                        repaint();
-                    } else if (Gx < x && Gy < y) {
-                        Gx += 10;
-                        Gy += 10;
-                        repaint();
-                    } else {
-                        Gx -= 10;
-                        Gy -= 10;
-                        repaint();
-                    }
-                } else {
-                    iteraciones += 1;
-                }
-            } else {
+            moverHverde();
 
-                System.out.println("el x es:" + Gx + " el y es:" + Gy);
-                checkIteraciones();
-                flag = false;
-                flag_comida = false;
-                Comida obj = new Comida("Juego 5", Integer.parseInt(Comida_Esco.getText()), "verde");
-                Comida.main();
             }
-
         }
-    }
 
     /**
      * @param args the command line arguments

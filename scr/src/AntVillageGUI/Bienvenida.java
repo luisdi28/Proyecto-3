@@ -1,6 +1,7 @@
 package AntVillageGUI;
 
 import javax.swing.*;
+import javax.xml.parsers.ParserConfigurationException;
 
 public class Bienvenida extends JFrame {
 
@@ -59,7 +60,11 @@ public class Bienvenida extends JFrame {
         Boton_validar.setText("Jugar");
         Boton_validar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_validarActionPerformed(evt);
+                try {
+                    Boton_validarActionPerformed(evt);
+                } catch (ParserConfigurationException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -170,7 +175,7 @@ public class Bienvenida extends JFrame {
         pack();
     }// </editor-fold>
 
-    private void Boton_validarActionPerformed(java.awt.event.ActionEvent evt) {
+    private void Boton_validarActionPerformed(java.awt.event.ActionEvent evt) throws ParserConfigurationException {
 
         alimen = ali.getText();
         alimento = Integer.parseInt(alimen);
