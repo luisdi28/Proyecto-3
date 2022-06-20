@@ -684,3 +684,2485 @@ Ruta calculada mediante el algoritmo de Dijkstra:
 
 Clase --> NodoG --> Sector = SectorA  
 Clase --> NodoG --> Sector = SectorD 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 1], [1, 0, 1, 1, 0], [1, 0, 0, 1, 1], [1, 1, 0, 0, 1], [0, 1, 1, 1, 0]]
+
+		 [ 0 1 1 1 1 ]
+		 [ 1 0 1 1 0 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 0 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 0], [0, 0, 1, 0, 1], [1, 0, 0, 1, 1], [1, 1, 0, 0, 1], [1, 1, 1, 1, 0]]
+
+		 [ 0 1 1 1 0 ]
+		 [ 0 0 1 0 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 0], [0, 0, 1, 1, 1], [1, 1, 0, 0, 1], [0, 1, 0, 0, 1], [1, 1, 1, 0, 0]]
+
+		 [ 0 1 0 1 0 ]
+		 [ 0 0 1 1 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 0 1 0 0 1 ]
+		 [ 1 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 1], [1, 0, 1, 1, 1], [0, 0, 0, 1, 1], [0, 0, 1, 0, 1], [0, 1, 1, 0, 0]]
+
+		 [ 0 0 1 1 1 ]
+		 [ 1 0 1 1 1 ]
+		 [ 0 0 0 1 1 ]
+		 [ 0 0 1 0 1 ]
+		 [ 0 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 0], [1, 0, 0, 1, 1], [1, 1, 0, 1, 1], [1, 0, 0, 0, 0], [0, 1, 1, 0, 0]]
+
+		 [ 0 1 1 1 0 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 0 1 1 ]
+		 [ 1 0 0 0 0 ]
+		 [ 0 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 0, 1], [1, 0, 1, 1, 1], [0, 0, 0, 1, 1], [0, 0, 1, 0, 1], [0, 1, 1, 0, 0]]
+
+		 [ 0 0 1 0 1 ]
+		 [ 1 0 1 1 1 ]
+		 [ 0 0 0 1 1 ]
+		 [ 0 0 1 0 1 ]
+		 [ 0 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 0, 0], [1, 0, 1, 0, 0], [1, 1, 0, 1, 1], [1, 0, 0, 0, 1], [1, 1, 1, 1, 0]]
+
+		 [ 0 1 1 0 0 ]
+		 [ 1 0 1 0 0 ]
+		 [ 1 1 0 1 1 ]
+		 [ 1 0 0 0 1 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorE 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 1], [1, 0, 1, 1, 0], [1, 0, 0, 1, 1], [0, 1, 1, 0, 0], [0, 1, 1, 0, 0]]
+
+		 [ 0 0 1 1 1 ]
+		 [ 1 0 1 1 0 ]
+		 [ 1 0 0 1 1 ]
+		 [ 0 1 1 0 0 ]
+		 [ 0 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 0, 1], [1, 0, 1, 1, 0], [0, 1, 0, 0, 1], [1, 1, 1, 0, 1], [1, 0, 1, 1, 0]]
+
+		 [ 0 1 0 0 1 ]
+		 [ 1 0 1 1 0 ]
+		 [ 0 1 0 0 1 ]
+		 [ 1 1 1 0 1 ]
+		 [ 1 0 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 0, 0], [1, 0, 1, 0, 1], [1, 0, 0, 1, 1], [1, 1, 1, 0, 0], [1, 1, 1, 1, 0]]
+
+		 [ 0 0 1 0 0 ]
+		 [ 1 0 1 0 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 1 0 0 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 0], [1, 0, 0, 1, 1], [0, 1, 0, 1, 0], [0, 1, 1, 0, 1], [1, 0, 1, 0, 0]]
+
+		 [ 0 0 1 1 0 ]
+		 [ 1 0 0 1 1 ]
+		 [ 0 1 0 1 0 ]
+		 [ 0 1 1 0 1 ]
+		 [ 1 0 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 1], [1, 0, 0, 1, 1], [1, 1, 0, 0, 1], [1, 1, 1, 0, 0], [1, 1, 0, 1, 0]]
+
+		 [ 0 1 1 1 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 1 1 1 0 0 ]
+		 [ 1 1 0 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorE 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 1, 0, 0], [0, 0, 0, 0, 1, 1, 1], [1, 1, 0, 1, 1, 0, 0], [0, 0, 1, 0, 1, 1, 1], [1, 0, 1, 1, 0, 0, 0], [0, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 1, 0, 0]]
+
+		 [ 0 0 1 1 1 0 0 ]
+		 [ 0 0 0 0 1 1 1 ]
+		 [ 1 1 0 1 1 0 0 ]
+		 [ 0 0 1 0 1 1 1 ]
+		 [ 1 0 1 1 0 0 0 ]
+		 [ 0 0 0 1 1 0 1 ]
+		 [ 1 0 0 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 1], [0, 0, 1, 1, 1], [1, 0, 0, 1, 0], [0, 1, 1, 0, 1], [1, 1, 1, 1, 0]]
+
+		 [ 0 1 0 1 1 ]
+		 [ 0 0 1 1 1 ]
+		 [ 1 0 0 1 0 ]
+		 [ 0 1 1 0 1 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 1], [1, 0, 1, 0, 1], [0, 1, 0, 1, 1], [1, 1, 1, 0, 1], [1, 0, 1, 0, 0]]
+
+		 [ 0 0 1 1 1 ]
+		 [ 1 0 1 0 1 ]
+		 [ 0 1 0 1 1 ]
+		 [ 1 1 1 0 1 ]
+		 [ 1 0 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 0, 1], [1, 0, 1, 0, 1], [1, 0, 0, 1, 1], [1, 1, 1, 0, 0], [1, 1, 0, 1, 0]]
+
+		 [ 0 1 0 0 1 ]
+		 [ 1 0 1 0 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 1 0 0 ]
+		 [ 1 1 0 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 1], [0, 0, 0, 0, 1], [1, 1, 0, 0, 1], [0, 1, 0, 0, 1], [0, 1, 1, 1, 0]]
+
+		 [ 0 0 1 1 1 ]
+		 [ 0 0 0 0 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 0 1 0 0 1 ]
+		 [ 0 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 1], [1, 0, 0, 1, 0], [1, 0, 0, 1, 0], [1, 1, 1, 0, 0], [1, 1, 1, 1, 0]]
+
+		 [ 0 1 1 1 1 ]
+		 [ 1 0 0 1 0 ]
+		 [ 1 0 0 1 0 ]
+		 [ 1 1 1 0 0 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG 
+
+Matriz de adyacencia --> [[0, 1, 0, 0, 1, 0, 1], [1, 0, 1, 0, 1, 0, 1], [1, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1], [1, 1, 1, 0, 0, 1, 0], [0, 0, 1, 0, 1, 0, 1], [1, 1, 1, 1, 0, 1, 0]]
+
+		 [ 0 1 0 0 1 0 1 ]
+		 [ 1 0 1 0 1 0 1 ]
+		 [ 1 0 0 1 0 0 0 ]
+		 [ 0 0 0 0 1 0 1 ]
+		 [ 1 1 1 0 0 1 0 ]
+		 [ 0 0 1 0 1 0 1 ]
+		 [ 1 1 1 1 0 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorD 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorH  
+Clase --> NodoG --> Sector = SectorI 
+
+Matriz de adyacencia --> [[0, 0, 0, 0, 1, 1, 0, 1, 0], [0, 0, 0, 1, 0, 1, 1, 1, 1], [0, 1, 0, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 1, 0, 1, 0, 0], [0, 0, 0, 0, 0, 1, 1, 0, 1], [0, 1, 0, 1, 0, 0, 0, 0, 0], [1, 1, 1, 1, 0, 1, 0, 1, 0], [0, 0, 0, 1, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 0, 1, 0, 0]]
+
+		 [ 0 0 0 0 1 1 0 1 0 ]
+		 [ 0 0 0 1 0 1 1 1 1 ]
+		 [ 0 1 0 1 1 1 1 1 1 ]
+		 [ 1 0 0 0 1 0 1 0 0 ]
+		 [ 0 0 0 0 0 1 1 0 1 ]
+		 [ 0 1 0 1 0 0 0 0 0 ]
+		 [ 1 1 1 1 0 1 0 1 0 ]
+		 [ 0 0 0 1 1 0 1 0 0 ]
+		 [ 1 1 0 0 1 0 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorH
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorI
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorB 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorH  
+Clase --> NodoG --> Sector = SectorI 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 1, 1, 0, 0, 0], [1, 0, 1, 1, 1, 1, 0, 0, 1], [1, 1, 0, 1, 0, 0, 0, 1, 1], [0, 1, 0, 0, 0, 0, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 1, 1], [1, 0, 1, 1, 0, 0, 0, 0, 0], [1, 0, 1, 0, 1, 1, 0, 0, 0], [0, 1, 0, 1, 0, 1, 0, 0, 0], [0, 0, 1, 0, 1, 1, 1, 1, 0]]
+
+		 [ 0 1 1 1 1 1 0 0 0 ]
+		 [ 1 0 1 1 1 1 0 0 1 ]
+		 [ 1 1 0 1 0 0 0 1 1 ]
+		 [ 0 1 0 0 0 0 1 1 1 ]
+		 [ 1 0 0 0 0 0 0 1 1 ]
+		 [ 1 0 1 1 0 0 0 0 0 ]
+		 [ 1 0 1 0 1 1 0 0 0 ]
+		 [ 0 1 0 1 0 1 0 0 0 ]
+		 [ 0 0 1 0 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorH
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorI
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 0], [0, 0, 1, 0, 1], [1, 0, 0, 1, 1], [1, 1, 0, 0, 1], [1, 1, 1, 1, 0]]
+
+		 [ 0 1 1 1 0 ]
+		 [ 0 0 1 0 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 0, 0], [1, 0, 0, 1, 1], [0, 1, 0, 1, 0], [1, 1, 0, 0, 1], [1, 1, 1, 0, 0]]
+
+		 [ 0 0 1 0 0 ]
+		 [ 1 0 0 1 1 ]
+		 [ 0 1 0 1 0 ]
+		 [ 1 1 0 0 1 ]
+		 [ 1 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 1], [0, 0, 1, 1, 0], [0, 0, 0, 0, 1], [0, 1, 1, 0, 1], [1, 0, 1, 1, 0]]
+
+		 [ 0 1 0 1 1 ]
+		 [ 0 0 1 1 0 ]
+		 [ 0 0 0 0 1 ]
+		 [ 0 1 1 0 1 ]
+		 [ 1 0 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 0, 1], [0, 0, 0, 1, 1], [1, 0, 0, 1, 1], [1, 0, 1, 0, 0], [1, 0, 0, 1, 0]]
+
+		 [ 0 1 1 0 1 ]
+		 [ 0 0 0 1 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 0 1 0 0 ]
+		 [ 1 0 0 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 0, 1], [1, 0, 0, 1, 1], [0, 1, 0, 1, 0], [1, 1, 1, 0, 1], [0, 1, 1, 1, 0]]
+
+		 [ 0 0 1 0 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 0 1 0 1 0 ]
+		 [ 1 1 1 0 1 ]
+		 [ 0 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 1], [0, 0, 1, 1, 0], [1, 1, 0, 0, 0], [1, 0, 0, 0, 1], [1, 1, 1, 0, 0]]
+
+		 [ 0 0 1 1 1 ]
+		 [ 0 0 1 1 0 ]
+		 [ 1 1 0 0 0 ]
+		 [ 1 0 0 0 1 ]
+		 [ 1 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorB 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 1, 1, 1], [1, 0, 0, 1, 1], [1, 1, 0, 0, 0], [1, 0, 1, 0, 1], [0, 1, 1, 1, 0]]
+
+		 [ 0 0 1 1 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 0 0 0 ]
+		 [ 1 0 1 0 1 ]
+		 [ 0 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 1], [0, 0, 1, 0, 1], [1, 1, 0, 1, 1], [0, 1, 1, 0, 1], [1, 1, 1, 1, 0]]
+
+		 [ 0 1 0 1 1 ]
+		 [ 0 0 1 0 1 ]
+		 [ 1 1 0 1 1 ]
+		 [ 0 1 1 0 1 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 1, 1], [0, 1, 1, 0, 0], [0, 1, 0, 0, 0]]
+
+		 [ 0 1 0 1 1 ]
+		 [ 0 0 1 1 1 ]
+		 [ 0 0 0 1 1 ]
+		 [ 0 1 1 0 0 ]
+		 [ 0 1 0 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 0, 1], [1, 0, 1, 0, 1], [0, 1, 0, 1, 1], [1, 1, 1, 0, 1], [0, 1, 0, 1, 0]]
+
+		 [ 0 1 1 0 1 ]
+		 [ 1 0 1 0 1 ]
+		 [ 0 1 0 1 1 ]
+		 [ 1 1 1 0 1 ]
+		 [ 0 1 0 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 1], [1, 0, 1, 1, 1], [0, 1, 0, 1, 0], [0, 1, 1, 0, 1], [1, 1, 1, 1, 0]]
+
+		 [ 0 1 0 1 1 ]
+		 [ 1 0 1 1 1 ]
+		 [ 0 1 0 1 0 ]
+		 [ 0 1 1 0 1 ]
+		 [ 1 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorE 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 0], [0, 0, 1, 1, 1], [1, 1, 0, 0, 1], [1, 1, 0, 0, 1], [1, 1, 0, 1, 0]]
+
+		 [ 0 1 1 1 0 ]
+		 [ 0 0 1 1 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 1 1 0 0 1 ]
+		 [ 1 1 0 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 0, 0, 1, 0], [1, 0, 1, 0, 0], [1, 1, 0, 1, 0], [1, 1, 0, 0, 0], [0, 1, 1, 1, 0]]
+
+		 [ 0 0 0 1 0 ]
+		 [ 1 0 1 0 0 ]
+		 [ 1 1 0 1 0 ]
+		 [ 1 1 0 0 0 ]
+		 [ 0 1 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 0], [1, 0, 1, 0, 1], [1, 0, 0, 1, 1], [1, 1, 0, 0, 0], [1, 0, 1, 1, 0]]
+
+		 [ 0 1 1 1 0 ]
+		 [ 1 0 1 0 1 ]
+		 [ 1 0 0 1 1 ]
+		 [ 1 1 0 0 0 ]
+		 [ 1 0 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorC 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG 
+
+Matriz de adyacencia --> [[0, 1, 1, 1, 0, 1, 0], [1, 0, 0, 1, 1, 1, 0], [1, 0, 0, 1, 0, 1, 1], [1, 1, 1, 0, 1, 0, 1], [1, 1, 1, 0, 0, 1, 1], [1, 0, 1, 0, 1, 0, 1], [1, 0, 1, 0, 0, 1, 0]]
+
+		 [ 0 1 1 1 0 1 0 ]
+		 [ 1 0 0 1 1 1 0 ]
+		 [ 1 0 0 1 0 1 1 ]
+		 [ 1 1 1 0 1 0 1 ]
+		 [ 1 1 1 0 0 1 1 ]
+		 [ 1 0 1 0 1 0 1 ]
+		 [ 1 0 1 0 0 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorD 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorH  
+Clase --> NodoG --> Sector = SectorI 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 1, 1, 0, 1, 1], [1, 0, 0, 0, 0, 0, 1, 1, 1], [1, 0, 0, 1, 1, 0, 0, 0, 0], [1, 0, 0, 0, 1, 1, 0, 0, 0], [1, 0, 1, 1, 0, 1, 1, 1, 1], [0, 0, 0, 0, 1, 0, 1, 1, 1], [0, 1, 0, 1, 0, 1, 0, 1, 1], [1, 1, 1, 0, 0, 1, 1, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0]]
+
+		 [ 0 1 0 1 1 1 0 1 1 ]
+		 [ 1 0 0 0 0 0 1 1 1 ]
+		 [ 1 0 0 1 1 0 0 0 0 ]
+		 [ 1 0 0 0 1 1 0 0 0 ]
+		 [ 1 0 1 1 0 1 1 1 1 ]
+		 [ 0 0 0 0 1 0 1 1 1 ]
+		 [ 0 1 0 1 0 1 0 1 1 ]
+		 [ 1 1 1 0 0 1 1 0 0 ]
+		 [ 1 1 1 1 1 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorH
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorI
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorH  
+Clase --> NodoG --> Sector = SectorI 
+
+Matriz de adyacencia --> [[0, 1, 1, 0, 1, 1, 0, 1, 1], [1, 0, 0, 0, 0, 0, 1, 1, 1], [1, 1, 0, 0, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 1, 0, 1, 1, 1, 1], [1, 1, 0, 0, 1, 0, 1, 1, 0], [0, 0, 1, 1, 1, 1, 0, 1, 1], [1, 1, 1, 1, 0, 1, 0, 0, 0], [1, 0, 0, 0, 1, 1, 1, 0, 0]]
+
+		 [ 0 1 1 0 1 1 0 1 1 ]
+		 [ 1 0 0 0 0 0 1 1 1 ]
+		 [ 1 1 0 0 0 0 1 1 0 ]
+		 [ 1 1 1 0 0 1 0 0 1 ]
+		 [ 0 0 0 1 0 1 1 1 1 ]
+		 [ 1 1 0 0 1 0 1 1 0 ]
+		 [ 0 0 1 1 1 1 0 1 1 ]
+		 [ 1 1 1 1 0 1 0 0 0 ]
+		 [ 1 0 0 0 1 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorH
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorI
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 9
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorH  
+Clase --> NodoG --> Sector = SectorI 
+
+Matriz de adyacencia --> [[0, 1, 0, 1, 1, 0, 0, 1, 0], [0, 0, 0, 1, 1, 1, 1, 0, 0], [1, 1, 0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 1], [1, 0, 0, 0, 0, 1, 0, 1, 0], [1, 0, 0, 1, 0, 0, 1, 1, 1], [0, 0, 1, 1, 0, 1, 0, 1, 0], [0, 1, 0, 1, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0]]
+
+		 [ 0 1 0 1 1 0 0 1 0 ]
+		 [ 0 0 0 1 1 1 1 0 0 ]
+		 [ 1 1 0 0 0 1 0 0 0 ]
+		 [ 0 0 0 0 1 0 1 1 1 ]
+		 [ 1 0 0 0 0 1 0 1 0 ]
+		 [ 1 0 0 1 0 0 1 1 1 ]
+		 [ 0 0 1 1 0 1 0 1 0 ]
+		 [ 0 1 0 1 1 0 0 0 1 ]
+		 [ 1 0 0 0 0 0 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorH
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorI
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB 
+Ruta calculada mediante el algoritmo de Dijkstra: 
+
+Clase --> NodoG --> Sector = SectorA 
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE 
+
+Matriz de adyacencia --> [[0, 1, 1, 0, 0], [1, 0, 1, 0, 1], [1, 0, 0, 1, 0], [1, 0, 1, 0, 1], [1, 1, 0, 0, 0]]
+
+		 [ 0 1 1 0 0 ]
+		 [ 1 0 1 0 1 ]
+		 [ 1 0 0 1 0 ]
+		 [ 1 0 1 0 1 ]
+		 [ 1 1 0 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 8
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorH  
+Clase --> NodoG --> Sector = SectorI 
+
+Matriz de adyacencia --> [[0, 0, 0, 1, 0, 0, 1, 1, 0], [0, 0, 0, 1, 0, 1, 1, 1, 1], [1, 0, 0, 1, 1, 1, 1, 0, 1], [0, 1, 1, 0, 1, 1, 1, 1, 0], [1, 1, 1, 1, 0, 0, 1, 1, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0], [1, 1, 1, 0, 0, 0, 0, 0, 1], [1, 0, 0, 1, 0, 1, 1, 0, 1], [0, 1, 1, 0, 1, 1, 1, 0, 0]]
+
+		 [ 0 0 0 1 0 0 1 1 0 ]
+		 [ 0 0 0 1 0 1 1 1 1 ]
+		 [ 1 0 0 1 1 1 1 0 1 ]
+		 [ 0 1 1 0 1 1 1 1 0 ]
+		 [ 1 1 1 1 0 0 1 1 0 ]
+		 [ 0 0 1 1 0 0 1 1 0 ]
+		 [ 1 1 1 0 0 0 0 0 1 ]
+		 [ 1 0 0 1 0 1 1 0 1 ]
+		 [ 0 1 1 0 1 1 1 0 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 11
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorH
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorI
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7
+
+
+Nodos existentes en el grafo: 
+Clase --> NodoG --> Sector = SectorA  
+Clase --> NodoG --> Sector = SectorB  
+Clase --> NodoG --> Sector = SectorC  
+Clase --> NodoG --> Sector = SectorD  
+Clase --> NodoG --> Sector = SectorE  
+Clase --> NodoG --> Sector = SectorF  
+Clase --> NodoG --> Sector = SectorG  
+Clase --> NodoG --> Sector = SectorH  
+Clase --> NodoG --> Sector = SectorI 
+
+Matriz de adyacencia --> [[0, 0, 0, 1, 0, 0, 1, 0, 0], [1, 0, 1, 1, 1, 0, 0, 1, 1], [1, 0, 0, 1, 0, 1, 0, 0, 1], [0, 1, 1, 0, 0, 1, 1, 1, 1], [1, 1, 0, 0, 0, 1, 1, 1, 1], [1, 0, 0, 0, 1, 0, 0, 1, 1], [0, 0, 1, 0, 1, 1, 0, 0, 1], [1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 1, 0, 0, 1, 1, 0]]
+
+		 [ 0 0 0 1 0 0 1 0 0 ]
+		 [ 1 0 1 1 1 0 0 1 1 ]
+		 [ 1 0 0 1 0 1 0 0 1 ]
+		 [ 0 1 1 0 0 1 1 1 1 ]
+		 [ 1 1 0 0 0 1 1 1 1 ]
+		 [ 1 0 0 0 1 0 0 1 1 ]
+		 [ 0 0 1 0 1 1 0 0 1 ]
+		 [ 1 1 0 0 1 1 1 0 0 ]
+		 [ 0 1 1 1 0 0 1 1 0 ]
+
+
+Clase --> Grafo --> Nodo --> SectorA
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorB
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorC
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 6
+
+Clase --> Grafo --> Nodo --> SectorD
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorE
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 9 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 5
+
+Clase --> Grafo --> Nodo --> SectorF
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 10
+
+Clase --> Grafo --> Nodo --> SectorG
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 10 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorI = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 7
+
+Clase --> Grafo --> Nodo --> SectorH
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorE = Clase --> AristaH --> Distancia = 11 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorA = Clase --> AristaH --> Distancia = 6 
+Clase --> NodoG --> Sector = SectorF = Clase --> AristaH --> Distancia = 9
+
+Clase --> Grafo --> Nodo --> SectorI
+Nodos Adyacentes:
+Clase --> NodoG --> Sector = SectorG = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorD = Clase --> AristaH --> Distancia = 8 
+Clase --> NodoG --> Sector = SectorC = Clase --> AristaH --> Distancia = 7 
+Clase --> NodoG --> Sector = SectorH = Clase --> AristaH --> Distancia = 5 
+Clase --> NodoG --> Sector = SectorB = Clase --> AristaH --> Distancia = 7
+

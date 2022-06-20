@@ -1,16 +1,52 @@
 package AntVillageGUI;
 
-public class Juego7 extends javax.swing.JFrame {
+import Algorithms.Dijkstra;
+import AntNFood.Comida;
+import AntNFood.Hormiga;
+import AntNFood.comidaP;
+import Graph.ConstructorG;
+import Graph.Grafo;
+import Graph.NodoG;
+import Lists.listaNormal;
+import rsscalelabel.RSScaleLabel;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.util.List;
 
+public class Juego7 extends javax.swing.JFrame implements ActionListener  {
 
     String hormiguero = "imagenes/imagen1.png";
     String comida_juego = "imagenes/Comida.png";
     boolean flag_comida = false;
 
+    private Hormiga hormiga;
+    private comidaP comida;
+    private Dijkstra dijkstra;
+    ConstructorG constructorG = new ConstructorG();
+    Grafo grafo;
+
+    private List list;
+
+    private int x, y, Gx, Gy, iteraciones;
+    private Image enemy;
+    private boolean flag;
+    private listaNormal listanormal;
+
+    private Timer timer;
+
 
     public Juego7(int alimento) {
 
         initComponents();
+
+        comida = new comidaP(0,0);
+        grafo = constructorG.crearGrafo(7);
+        hormiga = new Hormiga(grafo ,"7" ,"7" ,  A.getX() , A.getY() ,0 , 0);
+        dijkstra = new Dijkstra();
+
         Comida_Esco.setText(String.valueOf(alimento));
         Comida_azul.setText("0");
         Comida_verde.setText("0");
@@ -23,24 +59,19 @@ public class Juego7 extends javax.swing.JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(F, hormiguero);
         rsscalelabel.RSScaleLabel.setScaleLabel(G, hormiguero);
 
-    }
+        timer = new Timer(75,this);
+        timer.start();
 
-    public static String getComida_verde() {
-        return Comida_verde.getText();
-    }
+        x = 0;
+        y = 0;
+        Gx = A.getX();
+        Gy = A.getY();
+        iteraciones = 0;
+        flag = false;
 
-    public static void setComida_verde(String comida_verde) {
-        Comida_verde.setText(comida_verde);
-    }
+        enemy = new ImageIcon("imagenes\\hormiga verde.png").getImage();
 
-    public static String getComida_azul() {
-        return Comida_azul.getText();
     }
-
-    public static void setComida_azul(String comida_azul) {
-        Comida_azul.setText(comida_azul);
-    }
-
     private Juego7() {
     }
 
@@ -82,6 +113,8 @@ public class Juego7 extends javax.swing.JFrame {
         Hormiga_a = new javax.swing.JLabel();
         Comida_azul = new javax.swing.JLabel();
         Comida_verde = new javax.swing.JLabel();
+        Cerrar = new JButton();
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -122,6 +155,11 @@ public class Juego7 extends javax.swing.JFrame {
         Comida_G.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Comida_GMouseClicked(evt);
+            }
+        });
+        Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                Cerrar(evt);
             }
         });
 
@@ -201,6 +239,10 @@ public class Juego7 extends javax.swing.JFrame {
         Hormiga_v.setText("Hormigas Verdes:");
         panelInfo.add(Hormiga_v, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
+        Cerrar.setFont(new Font("Times New Roman", 1, 16)); // NOI18N
+        Cerrar.setText("Cerrar");
+        panelJuego.add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 570, 100, -1));
+
         panelJuego.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,85 +259,166 @@ public class Juego7 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    private void Comida_AMouseClicked(java.awt.event.MouseEvent evt) {
+    private void Comida_AMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+            comida.setComida(A.getX(),A.getY());
+            RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
-            reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
         }
 
     }
 
-    private void Comida_BMouseClicked(java.awt.event.MouseEvent evt) {
+    private void Comida_BMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
+            comida.setComida(B.getX(),B.getY());
+            RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
-            reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
         }
 
     }
 
-    private void Comida_CMouseClicked(java.awt.event.MouseEvent evt) {
+    private void Comida_CMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
+            comida.setComida(C.getX(),C.getY());
+            RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
-            reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
         }
     }
 
-    private void Comida_DMouseClicked(java.awt.event.MouseEvent evt) {
+    private void Comida_DMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
+            comida.setComida(D.getX(),D.getY());
+            RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
-            reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
         }
     }
 
-    private void Comida_EMouseClicked(java.awt.event.MouseEvent evt) {
+    private void Comida_EMouseClicked(MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
+            comida.setComida(E.getX(),E.getY());
+            RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
-            reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
         }
     }
 
     private void Comida_FMouseClicked(java.awt.event.MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_F, comida_juego);
+            comida.setComida(F.getX(),F.getY());
+            RSScaleLabel.setScaleLabel(Comida_F, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
-            reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_F, comida_juego);
         }
     }
 
     private void Comida_GMouseClicked(java.awt.event.MouseEvent evt) {
         if (flag_comida == false){
             flag_comida=true;
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_G, comida_juego);
+            comida.setComida(G.getX(),G.getY());
+            RSScaleLabel.setScaleLabel(Comida_G, comida_juego);
+            NodoG nodoH = hormiga.obtenerNodo(grafo);
+            NodoG nodoC = comida.obtenerNodo(grafo);
+            dijkstra.rutaCostoMinimoDijkstra(nodoH);
+            List list = dijkstra.obtenerRuta(nodoC);
+            setList(list);
+            setListanormal();
+            moverVerde();
+            setFlag();
         }
         else{
-            reinicia_labels();
-            rsscalelabel.RSScaleLabel.setScaleLabel(Comida_G, comida_juego);
         }
     }
 
+    private void Cerrar(MouseEvent evt) {
+
+        //Espacio para crear el XML Builder
+        timer.stop();
+        Juego7.this.dispose();
+        new Bienvenida().setVisible(true);
+
+    }
+
+    public static String getComida_verde() {
+        return Comida_verde.getText();
+    }
+
+    public static void setComida_verde(String comida_verde) {
+        Comida_verde.setText(comida_verde);
+    }
+
+    public static String getComida_azul() {
+        return Comida_azul.getText();
+    }
+
+    public static void setComida_azul(String comida_azul) {
+        Comida_azul.setText(comida_azul);
+    }
+
+    public boolean isFlag_comida() {
+        return flag_comida;
+    }
+
+    public void setFlag_comida(boolean flag_comida) {
+        this.flag_comida = flag_comida;
+    }
 
     public static void reinicia_labels(){
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_A, null);
@@ -307,6 +430,114 @@ public class Juego7 extends javax.swing.JFrame {
         rsscalelabel.RSScaleLabel.setScaleLabel(Comida_G, null);
     }
 
+    public void setList(List list){
+        this.list = list;
+    }
+
+    public void setFlag(){
+        this.flag = true;
+    }
+
+    public void paint(Graphics g) {
+        super.paint(g);
+        Graphics2D G2D = (Graphics2D) g;
+        G2D.drawImage(enemy, Gx, Gy, null);
+    }
+
+    public void moverVerde(){
+
+        NodoG nodoG;
+        NodoG punto;
+        int x, y;
+        for (int i = 0; i < list.size(); i++){                  // Lista de puntos
+            for (int j = 0; j < grafo.totalNodos(); j++){       // ArrayList de nodos
+
+                nodoG = grafo.getNodos().get(j);    // Toma el valor del nodo (Grafo)
+                punto = (NodoG) list.get(i);       // Toma el valor del punto (Lista de puntos)
+
+                if (nodoG.equals(punto) == true){   // Si ambos valores son iguales
+
+                    x = nodoG.getPosicion_x();      // Toma el valor x del nodo
+                    y = nodoG.getPosicion_y();      // Toma el valor y del nodo
+                    moverHGreen(x, y);              // Llama al método
+                    System.out.println("x" + x + "y" + y);
+                }
+            }
+        }
+        flag = false;
+    }
+    public void moverHGreen(int x, int y) {
+        listanormal.insertFirst(x,y);
+    }
+
+    public void setListanormal(){
+        this.listanormal = new listaNormal();
+    }
+
+    public void checkIteraciones(){
+        if (iteraciones == listanormal.getSize()){
+            flag=false;
+            iteraciones=0;
+            listanormal = null;
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (flag == true) {
+            if (iteraciones != listanormal.getSize()) {
+                x = listanormal.buscarx(iteraciones);
+                y = listanormal.buscary(iteraciones);
+                if (Gx != x || Gy != y) {
+                    if (Gx == x && Gy < y) {
+                        Gy += 1;
+                        repaint();
+                    }
+                    if (Gx == x && Gy > y) {
+                        Gy -= 1;
+                        repaint();
+                    }
+                    if (Gy == y && Gx < x) {
+                        Gx += 1;
+                        repaint();
+                    }
+                    if (Gy == y && Gx > x) {
+                        Gx -= 1;
+                        repaint();
+                    }
+                    if (Gx > x && Gy < y) {
+                        Gx = Gx - 1;
+                        Gy += 1;
+                        repaint();
+                    } else if (Gx < x && Gy > y) {
+                        Gx = Gx + 1;
+                        Gy -= 1;
+                        repaint();
+                    } else if (Gx < x && Gy < y) {
+                        Gx += 1;
+                        Gy += 1;
+                        repaint();
+                    } else {
+                        Gx -= 1;
+                        Gy -= 1;
+                        repaint();
+                    }
+                } else {
+                    iteraciones += 1;
+                }
+            } else {
+
+                System.out.println("el x es:" + Gx + " el y es:" + Gy);
+                checkIteraciones();
+                flag = false;
+                flag_comida = false;
+                Comida obj = new Comida("Juego 7", Integer.parseInt(Comida_Esco.getText()), "verde");
+                Comida.main();
+            }
+
+        }
+    }
 
 
     /**
@@ -373,6 +604,8 @@ public class Juego7 extends javax.swing.JFrame {
     private static javax.swing.JLabel Comida_E;
     private static javax.swing.JLabel Comida_F;
     private static javax.swing.JLabel Comida_G;
+
+    private static JButton Cerrar;
 
     private javax.swing.JPanel panelInfo;
     private javax.swing.JPanel panelJuego;

@@ -9,7 +9,6 @@ import Graph.Grafo;
 import Graph.NodoG;
 import Lists.listaNormal;
 import rsscalelabel.RSScaleLabel;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -36,13 +35,16 @@ public class Juego5 extends JFrame implements ActionListener {
     private boolean flag;
     private listaNormal listanormal;
 
+    private Timer timer;
 
     public Juego5(int alimento) {
+
+        initComponents();
+
         comida = new comidaP(50,450);
         grafo = constructorG.crearGrafo(5);
-        hormiga = new Hormiga(grafo ,"5" ,"5" ,  60 , 160 ,0 , 0);
+        hormiga = new Hormiga(grafo ,"5" ,"5" ,  A.getX() , A.getY() ,0 , 0);
         dijkstra = new Dijkstra();
-        initComponents();
 
         Comida_Esco.setText(String.valueOf(alimento));
         Comida_azul.setText("0");
@@ -54,13 +56,13 @@ public class Juego5 extends JFrame implements ActionListener {
         RSScaleLabel.setScaleLabel(D, hormiguero);
         RSScaleLabel.setScaleLabel(E, hormiguero);
 
-        Timer timer = new Timer(75,this);
+        timer = new Timer(75,this);
         timer.start();
 
         x = 0;
         y = 0;
-        Gx = 60;
-        Gy = 160;
+        Gx = A.getX();
+        Gy = A.getY();
         iteraciones = 0;
         flag = false;
 
@@ -68,7 +70,6 @@ public class Juego5 extends JFrame implements ActionListener {
     }
 
     public Juego5() {
-
     }
 
     /**
@@ -103,6 +104,7 @@ public class Juego5 extends JFrame implements ActionListener {
         Hormiga_a = new JLabel();
         Comida_azul = new JLabel();
         Comida_verde = new JLabel();
+        Cerrar = new JButton();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -134,6 +136,11 @@ public class Juego5 extends JFrame implements ActionListener {
         Comida_E.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 Comida_EMouseClicked(evt);
+            }
+        });
+        Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                Cerrar(evt);
             }
         });
 
@@ -199,6 +206,9 @@ public class Juego5 extends JFrame implements ActionListener {
         Hormiga_v.setText("Hormigas Verdes:");
         panelInfo.add(Hormiga_v, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
+        Cerrar.setFont(new Font("Times New Roman", 1, 16)); // NOI18N
+        Cerrar.setText("Cerrar");
+        panelJuego.add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 570, 100, -1));
 
         panelJuego.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 80));
 
@@ -231,8 +241,6 @@ public class Juego5 extends JFrame implements ActionListener {
             setFlag();
         }
         else{
-            reinicia_labels();
-            RSScaleLabel.setScaleLabel(Comida_A, comida_juego);
         }
 
     }
@@ -252,8 +260,6 @@ public class Juego5 extends JFrame implements ActionListener {
             setFlag();
         }
         else{
-            reinicia_labels();
-            RSScaleLabel.setScaleLabel(Comida_B, comida_juego);
         }
 
     }
@@ -273,8 +279,6 @@ public class Juego5 extends JFrame implements ActionListener {
             setFlag();
         }
         else{
-            reinicia_labels();
-            RSScaleLabel.setScaleLabel(Comida_C, comida_juego);
         }
     }
 
@@ -293,8 +297,6 @@ public class Juego5 extends JFrame implements ActionListener {
             setFlag();
         }
         else{
-            reinicia_labels();
-            RSScaleLabel.setScaleLabel(Comida_D, comida_juego);
         }
     }
 
@@ -313,9 +315,16 @@ public class Juego5 extends JFrame implements ActionListener {
             setFlag();
         }
         else{
-            reinicia_labels();
-            RSScaleLabel.setScaleLabel(Comida_E, comida_juego);
         }
+    }
+
+    private void Cerrar(MouseEvent evt) {
+
+        //Espacio para crear el XML Builder
+        timer.stop();
+        Juego5.this.dispose();
+        new Bienvenida().setVisible(true);
+
     }
 
     public static String getComida_verde() {
@@ -402,7 +411,6 @@ public class Juego5 extends JFrame implements ActionListener {
         }
     }
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -412,36 +420,36 @@ public class Juego5 extends JFrame implements ActionListener {
                 y = listanormal.buscary(iteraciones);
                 if (Gx != x || Gy != y) {
                     if (Gx == x && Gy < y) {
-                        Gy += 1;
+                        Gy += 10;
                         repaint();
                     }
                     if (Gx == x && Gy > y) {
-                        Gy -= 1;
+                        Gy -= 10;
                         repaint();
                     }
                     if (Gy == y && Gx < x) {
-                        Gx += 1;
+                        Gx += 10;
                         repaint();
                     }
                     if (Gy == y && Gx > x) {
-                        Gx -= 1;
+                        Gx -= 10;
                         repaint();
                     }
                     if (Gx > x && Gy < y) {
-                        Gx = Gx - 1;
-                        Gy += 1;
+                        Gx = Gx - 10;
+                        Gy += 10;
                         repaint();
                     } else if (Gx < x && Gy > y) {
-                        Gx = Gx + 1;
-                        Gy -= 1;
+                        Gx = Gx + 10;
+                        Gy -= 10;
                         repaint();
                     } else if (Gx < x && Gy < y) {
-                        Gx += 1;
-                        Gy += 1;
+                        Gx += 10;
+                        Gy += 10;
                         repaint();
                     } else {
-                        Gx -= 1;
-                        Gy -= 1;
+                        Gx -= 10;
+                        Gy -= 10;
                         repaint();
                     }
                 } else {
@@ -452,6 +460,7 @@ public class Juego5 extends JFrame implements ActionListener {
                 System.out.println("el x es:" + Gx + " el y es:" + Gy);
                 checkIteraciones();
                 flag = false;
+                flag_comida = false;
                 Comida obj = new Comida("Juego 5", Integer.parseInt(Comida_Esco.getText()), "verde");
                 Comida.main();
             }
@@ -518,6 +527,8 @@ public class Juego5 extends JFrame implements ActionListener {
     private static JLabel Comida_C;
     private static JLabel Comida_D;
     private static JLabel Comida_E;
+
+    private static JButton Cerrar;
 
     private JPanel panelInfo;
     private JPanel panelJuego;

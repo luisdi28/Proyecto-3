@@ -22,9 +22,7 @@ public class Comida {
                 comida_actual++;                                                // Se le suma 1 a la comida
                 Juego5.setComida_verde(String.valueOf(comida_actual));          //Se convierte en string la comida actualizada
                 if (comida_actual == limite_alimento) {                         //Se verifica si llegaron al limite
-                    JOptionPane.showMessageDialog(null, "El juego ha terminado");
-                    new Juego5(limite_alimento).setVisible(false);
-                    new Bienvenida().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "El juego ha terminado, presione el botón Cerrar para salir");
                 }
                 else {
                     Juego5.reinicia_labels();
@@ -36,9 +34,7 @@ public class Comida {
                 comida_actual++;
                 Juego5.setComida_azul(String.valueOf(comida_actual));
                 if (comida_actual == limite_alimento) {
-                    JOptionPane.showMessageDialog(null, "El juego ha terminado");
-                    new Juego5(limite_alimento).setVisible(false);
-                    new Bienvenida().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "El juego ha terminado, presione el botón Cerrar para salir");
                 }
                 else{
                     Juego5.reinicia_labels();
@@ -52,9 +48,7 @@ public class Comida {
                 comida_actual++;                                                // Se le suma 1 a la comida
                 Juego7.setComida_verde(String.valueOf(comida_actual));          //Se convierte en string la comida actualizada
                 if (comida_actual == limite_alimento) {                         //Se verifica si llegaron al limite
-                    JOptionPane.showMessageDialog(null, "El juego ha terminado");
-                    new Juego7(limite_alimento).setVisible(false);
-                    new Bienvenida().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "El juego ha terminado, presione el botón Cerrar para salir");
                 }
                 else{
                     Juego7.reinicia_labels();
@@ -66,9 +60,7 @@ public class Comida {
                 comida_actual++;
                 Juego7.setComida_azul(String.valueOf(comida_actual));
                 if (comida_actual == limite_alimento) {
-                    JOptionPane.showMessageDialog(null, "El juego ha terminado");
-                    new Juego7(limite_alimento).setVisible(false);
-                    new Bienvenida().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "El juego ha terminado, presione el botón Cerrar para salir");
                 }
                 else{
                     Juego7.reinicia_labels();
@@ -82,9 +74,7 @@ public class Comida {
                 comida_actual++;                                                // Se le suma 1 a la comida
                 Juego9.setComida_verde(String.valueOf(comida_actual));          //Se convierte en string la comida actualizada
                 if (comida_actual == limite_alimento) {                         //Se verifica si llegaron al limite
-                    JOptionPane.showMessageDialog(null, "El juego ha terminado");
-                    new Juego9(limite_alimento).setVisible(false);
-                    new Bienvenida().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "El juego ha terminado, presione el botón Cerrar para salir");
                 }
                 else{
                     Juego9.reinicia_labels();
@@ -92,14 +82,11 @@ public class Comida {
                 }
             }
             else {
-
                 comida_actual = Integer.parseInt(Juego9.getComida_azul());
                 comida_actual++;
                 Juego9.setComida_azul(String.valueOf(comida_actual));
                 if (comida_actual == limite_alimento) {
-                    JOptionPane.showMessageDialog(null, "El juego ha terminado");
-                    new Juego9(limite_alimento).setVisible(false);
-                    new Bienvenida().setVisible(true);
+                    JOptionPane.showMessageDialog(null, "El juego ha terminado, presione el botón Cerrar para salir");
                 }
                 else{
                     Juego9.reinicia_labels();
