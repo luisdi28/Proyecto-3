@@ -8,12 +8,18 @@ import Graph.ConstructorG;
 import Graph.Grafo;
 import Graph.NodoG;
 import Lists.listaNormal;
+import XML.xmlBuilder;
+import XML.xmlReader;
+import org.xml.sax.SAXException;
 import rsscalelabel.RSScaleLabel;
 import javax.swing.*;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.util.List;
 
 public class Juego7 extends javax.swing.JFrame implements ActionListener  {
@@ -36,6 +42,9 @@ public class Juego7 extends javax.swing.JFrame implements ActionListener  {
     private listaNormal listanormal;
 
     private Timer timer;
+
+    private XML.xmlBuilder xmlBuilder;
+    private XML.xmlReader xmlReader;
 
 
     public Juego7(int alimento) {
@@ -159,7 +168,17 @@ public class Juego7 extends javax.swing.JFrame implements ActionListener  {
         });
         Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
-                Cerrar(evt);
+                try {
+                    Cerrar(evt);
+                } catch (ParserConfigurationException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (SAXException e) {
+                    e.printStackTrace();
+                } catch (TransformerException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -387,7 +406,15 @@ public class Juego7 extends javax.swing.JFrame implements ActionListener  {
         }
     }
 
-    private void Cerrar(MouseEvent evt) {
+    private void Cerrar(MouseEvent evt) throws ParserConfigurationException, IOException, SAXException, TransformerException {
+        xmlBuilder = new xmlBuilder();
+        xmlReader = new xmlReader();
+        xmlReader.readLoops("GameLoops\\gameplayed.xml");
+        int loops = xmlReader.getgamelop();
+        int loops2 = loops +1;
+
+        xmlBuilder.xmlLoops(Integer.toString(loops2));
+        xmlBuilder.endGamexml(getComida_verde() , getComida_azul() , Integer.toString(loops2));
 
         //Espacio para crear el XML Builder
         timer.stop();
