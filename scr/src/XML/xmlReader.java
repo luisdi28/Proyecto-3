@@ -46,6 +46,7 @@ the argument is a path name, which is taken from a list when the game ends.
         hijo = e.getFirstChild();
         System.out.println("el contenido es: " + hijo.getTextContent());
         blueScore = hijo.getTextContent();
+
     }
     public void readLoops(String name) throws ParserConfigurationException, IOException, SAXException {
         System.out.println("el nombre del archivo es: " + name);
@@ -61,6 +62,12 @@ the argument is a path name, which is taken from a list when the game ends.
     }
     public int getgamelop(){
         return Integer.parseInt(this.gameloop);
+    }
+    public String getGreenscore(){
+        return this.greenscore;
+    }
+    public String getBlueScore(){
+        return this.blueScore;
     }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {

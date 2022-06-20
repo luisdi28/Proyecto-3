@@ -84,7 +84,11 @@ public class Bienvenida extends JFrame {
         Boton_registro_partidas.setText("Historial de partidas");
         Boton_registro_partidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_registro_partidasActionPerformed(evt);
+                try {
+                    Boton_registro_partidasActionPerformed(evt);
+                } catch (ParserConfigurationException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -231,7 +235,7 @@ public class Bienvenida extends JFrame {
         }
     }
 
-    private void Boton_registro_partidasActionPerformed(java.awt.event.ActionEvent evt) {
+    private void Boton_registro_partidasActionPerformed(java.awt.event.ActionEvent evt) throws ParserConfigurationException {
         Bienvenida.this.dispose();
         new Historial().setVisible(true);
     }

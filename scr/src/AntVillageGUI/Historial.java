@@ -2,6 +2,11 @@ package AntVillageGUI;
 
 import XML.FileReader;
 import Lists.circularList;
+import XML.xmlReader;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 public class Historial extends javax.swing.JFrame {
 
@@ -9,21 +14,23 @@ public class Historial extends javax.swing.JFrame {
     private circularList circularlist;
     private String name;
     private int n;
+    private int largo;
+    private XML.xmlReader xmlReader;
 
     /**
      * Creates new form Historial
      */
-    public Historial() {
+    public Historial() throws ParserConfigurationException {
 
         initComponents();
         n = 0;
 
-        System.out.println(getn());
 
         fileReader = new FileReader();
         fileReader.readFolder();
 
         circularlist = fileReader.getCircularlist();
+        xmlReader = new xmlReader();
 
     }
 
@@ -71,7 +78,15 @@ public class Historial extends javax.swing.JFrame {
         bton_siguiente.setText("Siguiente");
         bton_siguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bton_siguienteActionPerformed(evt);
+                try {
+                    bton_siguienteActionPerformed(evt);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ParserConfigurationException e) {
+                    e.printStackTrace();
+                } catch (SAXException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -189,8 +204,11 @@ public class Historial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    public String getn() {
-        return circularlist.displayList(n);
+    public int getn() {
+        return this.n;
+    }
+    public void setlargo(){
+        this.largo = circularlist.getSize();
     }
 
     public void minus_n() {
@@ -204,8 +222,30 @@ public class Historial extends javax.swing.JFrame {
         circularlist.displayList(n);
     }
 
-    private void bton_siguienteActionPerformed(java.awt.event.ActionEvent evt) {
+    private void bton_siguienteActionPerformed(java.awt.event.ActionEvent evt) throws IOException, ParserConfigurationException, SAXException {
         plus_n();
+        setlargo();
+        if (n < largo){
+            name = circularlist.displayList(n);
+            xmlReader.readXML(name);
+            String greenscore = xmlReader.getGreenscore();
+            String bluescore = xmlReader.getBlueScore();
+            String partida = xmlReader.getBlueScore();
+            alimento_verde.setText(greenscore);
+            alimento_azul.setText(bluescore);
+            System.out.println(name);
+
+        }
+        else{
+            n = 0;
+            name = circularlist.displayList(n);
+            xmlReader.readXML(name);
+            String greenscore = xmlReader.getGreenscore();
+            String bluescore = xmlReader.getBlueScore();
+            alimento_verde.setText(greenscore);
+            alimento_azul.setText(bluescore);
+            System.out.println(name);
+        }
     }
 
     private void bton_AtrasActionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,7 +292,11 @@ public class Historial extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Historial().setVisible(true);
+                try {
+                    new Historial().setVisible(true);
+                } catch (ParserConfigurationException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
