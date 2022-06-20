@@ -16,6 +16,9 @@ public class Historial extends javax.swing.JFrame {
     public Historial() {
 
         initComponents();
+        n = 0;
+
+        System.out.println(getn());
 
         fileReader = new FileReader();
         fileReader.readFolder();
@@ -44,7 +47,8 @@ public class Historial extends javax.swing.JFrame {
         número_Partida = new javax.swing.JLabel();
         alimento_verde = new javax.swing.JLabel();
         alimento_azul = new javax.swing.JLabel();
-        bton_Elinar = new javax.swing.JButton();
+        bton_Eliminar = new javax.swing.JButton();
+        bton_Atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -79,6 +83,14 @@ public class Historial extends javax.swing.JFrame {
             }
         });
 
+        bton_Atras.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        bton_Atras.setText("Atras");
+        bton_Atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bton_AtrasActionPerformed(evt);
+            }
+        });
+
         número_Partida.setBackground(new java.awt.Color(102, 102, 102));
         número_Partida.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         número_Partida.setText("...........");
@@ -91,11 +103,11 @@ public class Historial extends javax.swing.JFrame {
         alimento_azul.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         alimento_azul.setText("...........");
 
-        bton_Elinar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        bton_Elinar.setText("Eliminar");
-        bton_Elinar.addActionListener(new java.awt.event.ActionListener() {
+        bton_Eliminar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        bton_Eliminar.setText("Eliminar");
+        bton_Eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bton_ElinarActionPerformed(evt);
+                bton_EliminarActionPerformed(evt);
             }
         });
 
@@ -122,12 +134,15 @@ public class Historial extends javax.swing.JFrame {
                                                                 .addComponent(alimento_azul)))
                                                 .addContainerGap())
                                         .addGroup(panelHistorialLayout.createSequentialGroup()
-                                                .addGap(64, 64, 64)
+                                                .addGap(44, 44, 44)
+                                                .addComponent(bton_Atras)
+                                                .addGap(51, 51, 51)
                                                 .addComponent(bton_siguiente)
-                                                .addGap(80, 80, 80)
+                                                .addGap(60, 60, 60)
+                                                .addComponent(bton_Eliminar)
+                                                .addGap(69, 69, 69)
                                                 .addComponent(bton_Volver)
-                                                .addGap(71, 71, 71)
-                                                .addComponent(bton_Elinar)
+
                                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHistorialLayout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -155,7 +170,8 @@ public class Historial extends javax.swing.JFrame {
                                 .addGroup(panelHistorialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(bton_siguiente)
                                         .addComponent(bton_Volver)
-                                        .addComponent(bton_Elinar))
+                                        .addComponent(bton_Eliminar)
+                                        .addComponent(bton_Atras))
                                 .addGap(56, 56, 56))
         );
 
@@ -173,20 +189,27 @@ public class Historial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
-    public int getn() {
-        return n;
+    public String getn() {
+        return circularlist.displayList(n);
     }
 
     public void minus_n() {
         n--;
+        circularlist.displayList(n);
+
     }
 
     public void plus_n() {
         n++;
+        circularlist.displayList(n);
     }
 
     private void bton_siguienteActionPerformed(java.awt.event.ActionEvent evt) {
         plus_n();
+    }
+
+    private void bton_AtrasActionPerformed(java.awt.event.ActionEvent evt) {
+        minus_n();
     }
 
     private void bton_VolverActionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,7 +217,7 @@ public class Historial extends javax.swing.JFrame {
         new Bienvenida().setVisible(true);
     }
 
-    private void bton_ElinarActionPerformed(java.awt.event.ActionEvent evt) {
+    private void bton_EliminarActionPerformed(java.awt.event.ActionEvent evt) {
         circularlist.delete(name);
         minus_n();
     }
@@ -241,10 +264,12 @@ public class Historial extends javax.swing.JFrame {
     private javax.swing.JLabel Partida;
     private javax.swing.JLabel alimento_azul;
     private javax.swing.JLabel alimento_verde;
-    private javax.swing.JButton bton_Elinar;
+    private javax.swing.JButton bton_Eliminar;
     private javax.swing.JButton bton_Volver;
     private javax.swing.JButton bton_siguiente;
+    private javax.swing.JButton bton_Atras;
     private javax.swing.JLabel número_Partida;
     private javax.swing.JPanel panelHistorial;
+
     // End of variables declaration
 }

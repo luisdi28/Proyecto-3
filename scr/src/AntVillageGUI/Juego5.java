@@ -368,7 +368,7 @@ public class Juego5 extends JFrame implements ActionListener {
         int loops2 = loops +1;
 
         xmlBuilder.xmlLoops(Integer.toString(loops2));
-        xmlBuilder.endGamexml(getComida_verde() , getComida_verde() , Integer.toString(loops2));
+        xmlBuilder.endGamexml(getComida_verde() , getComida_azul() , Integer.toString(loops2));
         //Espacio para crear el XML Builder
         timer.stop();
         Juego5.this.dispose();

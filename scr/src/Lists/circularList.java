@@ -57,15 +57,23 @@ public class circularList {
         return this.Size;
     }
 
-    public void displayList() {//arreglar este metodo , seria cambiarlo a que recorra por largo de lista
+    public String displayList(int n) {//arreglar este metodo , seria cambiarlo a que recorra por largo de lista
+        int contador = 0;
         Nodo current = getHead();
         System.out.println("el head es:" + getTail().getNext().getData());
-        while (current.getNext() != getHead()) {
-            System.out.println("se llego aca");
-            System.out.println(current.getData());
+
+        while (contador != n) {
+
+            contador++;
             current = current.getNext(); //al recorrer la lista hay un error
+
         }
         System.out.println(current.getData());
+        String A;
+        A = (String) current.getData();
+        return A;
+
+
     }
 
     public void delete(String name) {
@@ -138,7 +146,7 @@ public class circularList {
     }
 
     public static void main(String[] args) {
-        circularList circularList = new circularList();
+        /*circularList circularList = new circularList();
         circularList.insertFirst("1");
         circularList.insertFirst("2");
         circularList.insertFirst("3");
@@ -157,7 +165,7 @@ public class circularList {
         circularList.insertFirst("2");
         circularList.insertFirst("3");
         circularList.insertFirst("4");
-        circularList.displayList();
+        circularList.displayList();*/
 
     }
 }

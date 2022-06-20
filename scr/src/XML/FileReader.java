@@ -26,8 +26,8 @@ public class FileReader {
             System.out.println("the filename is" + file.getAbsolutePath());
         }
     }
-    public void displayList(){
-        circularlist.displayList();
+    public void displayList(int n){
+            circularlist.displayList(n);
     }
 
     public circularList getCircularlist(){
@@ -37,7 +37,7 @@ public class FileReader {
     public static void main(String[] args) {
         FileReader fileReader = new FileReader();
         fileReader.readFolder();
-        fileReader.displayList();
+        //fileReader.displayList();
     }
 }
 
