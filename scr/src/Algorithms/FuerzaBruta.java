@@ -3,6 +3,7 @@ package Algorithms;
 import Graph.AristaH;
 import Graph.Grafo;
 import Graph.NodoG;
+import ManejoDeArchivos.Archivo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,16 +16,18 @@ public class FuerzaBruta {
     private Grafo grafo;
     private ArrayList<NodoG> grafoVertices;
     private boolean continuar;
-    private HashMap<NodoG, AristaH> aristas = new HashMap<NodoG, AristaH>();
-    private Object[] adyacentes;
+    private Archivo archivo;
+    String texto;
 
     public FuerzaBruta(Grafo grafo) {
 
         this.grafo = grafo;
         this.continuar = true;
+        texto = "";
+        archivo = new Archivo();
     }
-//esto deberia de estar
-    public List rutaCostoMinimoFuerzaBruta(NodoG inicial) { //meterlo en interfaz?
+
+    public List rutaCostoMinimoFuerzaBruta(NodoG inicial) {
 
         grafoVertices = grafo.getNodos();
         for (int i = 0; i < grafo.totalNodos(); i++) {
@@ -35,61 +38,72 @@ public class FuerzaBruta {
 
         ruta.add(inicial);
 
-        int contador = 3;
-        NodoG nodoG = inicial;
+        int x, y;
+        NodoG nodoG;
+        HashMap<NodoG, AristaH> aristas = null;
 
         do {
 
-            aristas = nodoG.getAdyacentes();
-            adyacentes = nodoG.getAdyacentes().keySet().toArray();
+            // Se obtiene el nodo menor
             nodoG = obtenerMenor();
-            //aca se llama a moverblue
-            ruta.add(nodoG); //solo para imprimir
+
+            // Se agrega en la lista del registro
+            ruta.add(nodoG);
             nodoG.setVisitado(true);
 
-            if (contador == 0){
-                continuar = false;
-            }
+            // Se obtienen las posiciones del nodo retornado
+            x = nodoG.getPosicion_x();
+            y = nodoG.getPosicion_y();
 
-            contador--;
+            // Se llama al método que mueve la imagen
+            moverHBlue(x, y);
 
-        } while (continuar == true);
+        } while (recorrido() == false);
 
-        return ruta; //esto debe pasar directamente al moververde
+        // No se toma en cuenta
+        // Se escribe en el txt
+        texto = "\nRuta calculada efectuada mediante el algoritmo de Fuerza Bruta: \n" + ruta.toString().replace("[", "").replace("]", "").replace(",", "");
+        archivo.escribir(texto);
+        return ruta;
     }
 
+    // Método que se encarga de obtener el menor
     private NodoG obtenerMenor() {
 
         Integer menor = Integer.MAX_VALUE;
         Integer aux;
         NodoG nodoMenor = null;
-        AristaH nodoAux;
+        NodoG nodoAux;
 
-        for (int i = 0; i < aristas.size(); i++) {
+        HashMap<NodoG, AristaH> aristas;
 
-            nodoAux = aristas.get(adyacentes[i]);
+        for (int i = 0; i < grafo.totalNodos(); i++) {
 
-            aux = aristas.get(adyacentes[i]).getDistancia();
+            aux = nodos.get(grafoVertices.get(i));
 
             if (aux <= menor && grafoVertices.get(i).isVisitado() == false) {
 
                 menor = aux;
-                nodoMenor = (NodoG) adyacentes[i];
+                nodoMenor = grafoVertices.get(i);
             }
         }
 
         return nodoMenor;
     }
-/*
+
     private boolean recorrido() {
 
-        for (int i = 0; i < aristas.size(); i++) {
-            if (!aristas.get(i).isVisitado() == true) {
+        for (int i = 0; i < grafo.totalNodos(); i++) {
+            if (grafoVertices.get(i).isVisitado() == false) {
                 return false;
             }
         }
         return true;
     }
 
- */
+    public void moverHBlue(int x, int y){
+
+        System.out.println("X: " + x + " Y: " + y);
+
+    }
 }

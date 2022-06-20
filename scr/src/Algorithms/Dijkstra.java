@@ -78,7 +78,7 @@ public class Dijkstra {
         Collections.reverse(ruta);
 
         // Se escribe en el txt la ruta cuando se llama al método de Dijkstra
-        texto = "Ruta calculada mediante el algoritmo de Dijkstra: \n" + ruta.toString().replace("[", "").replace("]", "").replace(",", "");
+        texto = "\nRuta calculada mediante el algoritmo de Dijkstra: \n" + ruta.toString().replace("[", "").replace("]", "").replace(",", "");
         archivo.escribir(texto);
 
         return ruta;
